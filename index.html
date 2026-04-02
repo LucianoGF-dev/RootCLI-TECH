@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desarrollo de Soluciones Digitales y mantenimiento de hardware. Servicios tecnológicos profesionales.">
+  <title>RootCLI | Desarrollo Digital & Mantenimiento</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Root<span class="logo-highlight">CLI</span></span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#hero" class="nav-link active">Inicio</a></li>
+        <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-on-scroll">
+        <span class="badge-dot"></span>
+        Disponibles para proyectos
+      </div>
+
+      <h1 class="hero-title animate-on-scroll">
+        Desarrollo de<br>
+        <span class="text-gradient">Soluciones Digitales</span>
+      </h1>
+
+      <p class="hero-subtitle animate-on-scroll" id="typing-container">
+      </p>
+
+      <div class="hero-cta animate-on-scroll">
+        <a href="#contacto" class="btn btn-primary btn-glow">
+          <span>Contáctanos</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#servicios" class="btn btn-outline">
+          <span>Ver Servicios</span>
+        </a>
+      </div>
+
+      <div class="hero-stats animate-on-scroll">
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Proyectos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Clientes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Años Exp.</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#servicios" class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <section class="section services" id="servicios">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Lo que hacemos</span>
+        <h2 class="section-title">Nuestros <span class="text-gradient">Servicios</span></h2>
+        <p class="section-description">
+          Ofrecemos soluciones integrales en tecnología, desde el desarrollo digital
+          hasta el mantenimiento de tu hardware.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+              <path d="M7 8h2M7 11h4"/>
+              <rect x="14" y="8" width="3" height="6" rx="1"/>
+            </svg>
+          </div>
+          <div class="service-number">01</div>
+          <h3 class="service-title">Desarrollo Web</h3>
+          <p class="service-desc">
+            Sitios web modernos, rápidos y responsivos. Landing pages, portfolios,
+            e-commerce y aplicaciones web a medida.
+          </p>
+          <ul class="service-features">
+            <li>Diseño Responsive</li>
+            <li>SEO Optimizado</li>
+            <li>Alto Rendimiento</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar servicio
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="service-number">02</div>
+          <h3 class="service-title">APIs & Backend</h3>
+          <p class="service-desc">
+            Desarrollo de APIs RESTful robustas, arquitecturas de servidor escalables
+            y bases de datos optimizadas.
+          </p>
+          <ul class="service-features">
+            <li>APIs RESTful</li>
+            <li>Arquitectura Escalable</li>
+            <li>Seguridad Avanzada</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar servicio
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <div class="service-number">03</div>
+          <h3 class="service-title">Mantenimiento de PC</h3>
+          <p class="service-desc">
+            Limpieza, optimización, diagnóstico y reparación de equipos de escritorio
+            y laptops. Servicio a domicilio disponible.
+          </p>
+          <ul class="service-features">
+            <li>Limpieza Profunda</li>
+            <li>Upgrade Hardware</li>
+            <li>Optimización SO</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar servicio
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="6" width="20" height="12" rx="3"/>
+              <circle cx="8.5" cy="12" r="1.5"/>
+              <circle cx="15.5" cy="12" r="1.5"/>
+              <path d="M6 10h1M17 10h1"/>
+              <path d="M12 6v-2M8 4h8"/>
+            </svg>
+          </div>
+          <div class="service-number">04</div>
+          <h3 class="service-title">Reparación de Consolas</h3>
+          <p class="service-desc">
+            Reparación y mantenimiento de PlayStation, Xbox, Nintendo Switch y más.
+            Cambio de pasta térmica, joysticks y más.
+          </p>
+          <ul class="service-features">
+            <li>PS4 / PS5 / Xbox</li>
+            <li>Nintendo Switch</li>
+            <li>Garantía Incluida</li>
+          </ul>
+          <a href="#contacto" class="service-link">
+            Solicitar servicio
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual animate-on-scroll">
+          <div class="about-image-wrapper">
+            <div class="about-image-placeholder">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="about-image-border"></div>
+          </div>
+
+          <div class="about-float-card float-card-1">
+            <span class="float-number">99%</span>
+            <span class="float-label">Satisfacción</span>
+          </div>
+          <div class="about-float-card float-card-2">
+            <span class="float-number">24/7</span>
+            <span class="float-label">Soporte</span>
+          </div>
+        </div>
+
+        <div class="about-content animate-on-scroll">
+          <span class="section-tag">Quiénes somos</span>
+          <h2 class="section-title">Tecnología con <span class="text-gradient">Pasión</span></h2>
+          <p class="about-text">
+            Somos un equipo de profesionales apasionados por la tecnología, con más de
+            5 años de experiencia en desarrollo digital y mantenimiento de hardware.
+          </p>
+          <p class="about-text">
+            Nuestro objetivo es brindar soluciones eficientes, innovadoras y de alta
+            calidad tanto para empresas como para usuarios individuales. Cada proyecto
+            es una oportunidad para superar expectativas.
+          </p>
+
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon">🎯</div>
+              <div>
+                <h4>Precisión</h4>
+                <p>Atención al detalle en cada línea de código</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🚀</div>
+              <div>
+                <h4>Innovación</h4>
+                <p>Tecnologías actuales y mejores prácticas</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🤝</div>
+              <div>
+                <h4>Compromiso</h4>
+                <p>Soporte continuo post-entrega</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contacto" class="btn btn-primary btn-glow">
+            <span>Trabaja con nosotros</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section projects" id="proyectos">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Proyectos <span class="text-gradient">Destacados</span></h2>
+        <p class="section-description">
+          Una muestra de nuestro trabajo más reciente y los resultados que hemos logrado.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card animate-on-scroll">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-overlay-btn">Ver Proyecto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
+              <span class="tag tag-api">API</span>
+            </div>
+            <h3 class="project-title">E-Commerce Dashboard</h3>
+            <p class="project-desc">
+              Panel de administración completo con analíticas en tiempo real,
+              gestión de inventario y reportes automatizados.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card animate-on-scroll">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-overlay-btn">Ver Proyecto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-backend">Backend</span>
+              <span class="tag tag-api">API</span>
+            </div>
+            <h3 class="project-title">API de Gestión Empresarial</h3>
+            <p class="project-desc">
+              Sistema RESTful completo para gestión de clientes, facturación
+              y reportes con autenticación JWT.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card animate-on-scroll">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-overlay-btn">Ver Proyecto</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-hardware">Hardware</span>
+              <span class="tag tag-web">Setup</span>
+            </div>
+            <h3 class="project-title">Gaming Setup Pro</h3>
+            <p class="project-desc">
+              Armado y optimización completa de estaciones de trabajo gaming
+              con水冷 systems y overclocking seguro.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info animate-on-scroll">
+          <span class="section-tag">Hablemos</span>
+          <h2 class="section-title">Contáctanos <span class="text-gradient">Hoy</span></h2>
+          <p class="contact-description">
+            ¿Tienes un proyecto en mente? Cuéntanos tu idea y te ayudaremos
+            a hacerla realidad. Respuesta garantizada en menos de 24 horas.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:contacto@techsolutions.com">contacto@techsolutions.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <h4>Teléfono</h4>
+                <a href="tel:+5491100000000">+54 9 11 0000-0000</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Ubicación</h4>
+                <span>Buenos Aires, Argentina</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter/X">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper animate-on-scroll">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Nombre completo</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Tu nombre"
+                required
+                autocomplete="name"
+              >
+              <span class="form-error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="tu@email.com"
+                required
+                autocomplete="email"
+              >
+              <span class="form-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Cuéntanos sobre tu proyecto..."
+                rows="5"
+                required
+              ></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-glow btn-full" id="submit-btn">
+              <span class="btn-text">Enviar Mensaje</span>
+              <span class="btn-loader" hidden>
+                <span class="spinner"></span>
+              </span>
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+              </svg>
+            </button>
+
+            <div class="form-success" id="form-success" hidden>
+              <div class="success-icon">✓</div>
+              <h4>¡Mensaje Enviado!</h4>
+              <p>Te responderemos en menos de 24 horas.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="#hero" class="footer-logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">Tech<span class="logo-highlight">Solutions</span></span>
+          </a>
+          <p class="footer-desc">
+            Soluciones tecnológicas integrales para impulsar tu presencia digital
+            y mantener tu hardware funcionando al máximo.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Desarrollo Web</a></li>
+            <li><a href="#servicios">APIs & Backend</a></li>
+            <li><a href="#servicios">Mantenimiento PC</a></li>
+            <li><a href="#servicios">Reparación Consolas</a></li>
+            <li><a href="#contacto">Consultoría</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contacto</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contacto@techsolutions.com">contacto@techsolutions.com</a></li>
+            <li><a href="tel:+5491100000000">+54 9 11 0000-0000</a></li>
+            <li><span>Buenos Aires, Argentina</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> TechSolutions. Todos los derechos reservados.</p>
+        <p class="footer-credit">Hecho con <span class="heart">❤️</span> y mucho ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init({
+      publicKey: 'iue1o-aumZvmMhLaV',
+      blockHeadless: false,
+      limitRate: { throttle: 5000 }
+    });
+  })();
+</script>
+</body>
+</html>
