@@ -224,11 +224,6 @@
   const submitBtn = document.getElementById('submit-btn');
   const successMessage = document.getElementById('form-success');
 
-  const EMAILJS_CONFIG = {
-    serviceId: 'service_pfpaubi',
-    templateId: 'template_2ussk2c',
-    publicKey: 'iue1o-aumZvmMhLaV'
-  };
 
 
   const fields = {
