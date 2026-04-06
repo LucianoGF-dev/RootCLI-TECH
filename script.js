@@ -544,3 +544,296 @@
     }
   });
 })();
+
+// ==========================================
+// CARRUSEL DE PROYECTOS + MODAL
+// ==========================================
+(function initProjectGallery() {
+  // Datos de los proyectos (agrega tus propias imágenes aquí)
+ const projectsData = [
+  {
+    title: 'Sistema de administración y gestión para banco de sangre',
+    description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación, almacenamiento y distribución de sangre.',
+    images: [
+      { src: 'bancoSangre/bloodbank.png', alt: 'Sistema de gestión de banco de sangre' },
+      { src: 'bancoSangre/Captura de pantalla 2025-11-27 193448.png', alt: 'Sistema de gestión de banco de sangre' },
+      { src: 'bancoSangre/Captura de pantalla 2025-11-27 193512.png', alt: 'Sistema de gestión de banco de sangre' },
+      { src: 'bancoSangre/Captura de pantalla 2025-11-27 193712.png', alt: 'Sistema de gestión de banco de sangre' }
+    ]
+  },
+  {
+    title: 'Sistema de administración y gestión para empresa de transporte',
+    description: 'Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías o fletes.',
+    images: [
+      { src: 'siempreCargo/siempreCargo.png', alt: 'Sistema de gestión de transporte' },
+      { src: 'siempreCargo/Captura de pantalla 2025-11-28 145542.png', alt: 'Sistema de gestión de transporte' },
+      { src: 'siempreCargo/Captura de pantalla 2025-11-28 145454.png', alt: 'Sistema de gestión de transporte' },
+      { src: 'siempreCargo/Captura de pantalla 2025-11-28 145304.png', alt: 'Sistema de gestión de transporte' }
+    ]
+  },
+  {
+    title: 'Sistema de gestión de stock',
+    description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con el inventario, permitiendo una gestión eficiente de productos y recursos.',
+    images: [
+      { src: 'gestock/image.png', alt: 'Sistema de gestión de stock' },
+      { src: 'gestock/image-2.png', alt: 'Sistema de gestión de stock' },
+      { src: 'gestock/image-3.png', alt: 'Sistema de gestión de stock' },
+      { src: 'gestock/image-4.png', alt: 'Sistema de gestión de stock' }
+    ]
+  }
+];
+
+  // Estado del modal
+  let currentProject = 0;
+  let currentSlide = 0;
+  let isAnimating = false;
+
+  // Elementos del DOM
+  const modal = document.getElementById('gallery-modal');
+  const modalContent = modal?.querySelector('.modal-content');
+  const modalOverlay = document.getElementById('modal-overlay');
+  const modalClose = document.getElementById('modal-close');
+  const modalTitle = document.getElementById('modal-title');
+  const modalCounter = document.getElementById('modal-counter');
+  const modalImage = document.getElementById('modal-image');
+  const modalPrev = document.getElementById('modal-prev');
+  const modalNext = document.getElementById('modal-next');
+  const modalThumbnails = document.getElementById('modal-thumbnails');
+  const modalDescription = document.getElementById('modal-description');
+
+  // ==========================================
+  // CARRUSELES DE CADA PROYECTO (en las cards)
+  // ==========================================
+  
+  document.querySelectorAll('.project-carousel').forEach((carousel, carouselIndex) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const expandBtn = carousel.querySelector('.carousel-expand');
+    let currentIndex = 0;
+
+    function goToSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      
+      currentIndex = index;
+      
+      // Actualizar slides
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentIndex);
+      });
+      
+      // Actualizar dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    // Event listeners del carrusel
+    prevBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevSlide();
+    });
+
+    nextBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextSlide();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goToSlide(i);
+      });
+    });
+
+    // Touch/swipe en carruseles
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+      }
+    }, { passive: true });
+
+    // Abrir modal al hacer clic en la imagen
+    const firstImg = slides[0]?.querySelector('.carousel-img');
+    if (firstImg) {
+      firstImg.style.cursor = 'pointer';
+      firstImg.addEventListener('click', () => openModal(carouselIndex, currentIndex));
+    }
+
+    // Abrir modal con botón expandir
+    expandBtn?.addEventListener('click', () => openModal(carouselIndex, currentIndex));
+  });
+
+  // ==========================================
+  // MODAL DE GALERÍA
+  // ==========================================
+
+  function openModal(projectIndex, slideIndex = 0) {
+    if (!modal) return;
+    
+    currentProject = projectIndex;
+    currentSlide = slideIndex;
+    const project = projectsData[projectIndex];
+
+    // Configurar contenido
+    modalTitle.textContent = project.title;
+    modalDescription.textContent = project.description;
+    modalCounter.textContent = `${slideIndex + 1} / ${project.images.length}`;
+    
+    // Generar miniaturas
+    modalThumbnails.innerHTML = '';
+    project.images.forEach((img, i) => {
+      const thumb = document.createElement('div');
+      thumb.className = `modal-thumb${i === slideIndex ? ' active' : ''}`;
+      thumb.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy">`;
+      thumb.addEventListener('click', () => goToModalSlide(i));
+      modalThumbnails.appendChild(thumb);
+    });
+
+    // Mostrar imagen principal
+    updateModalImage();
+
+    // Mostrar modal
+    modal.hidden = false;
+    requestAnimationFrame(() => {
+      modal.classList.add('active');
+      document.body.classList.add('modal-open');
+    });
+
+    // Foco para accesibilidad
+    setTimeout(() => modalClose?.focus(), 300);
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    
+    setTimeout(() => {
+      modal.hidden = true;
+    }, 300);
+  }
+
+  function goToModalSlide(index) {
+    if (isAnimating || index === currentSlide) return;
+    
+    isAnimating = true;
+    currentSlide = index;
+    const project = projectsData[currentProject];
+
+    // Actualizar contador
+    modalCounter.textContent = `${index + 1} / ${project.images.length}`;
+
+    // Actualizar miniaturas
+    const thumbs = modalThumbnails.querySelectorAll('.modal-thumb');
+    thumbs.forEach((thumb, i) => {
+      thumb.classList.toggle('active', i === index);
+    });
+
+    // Scroll la miniatura activa a la vista
+    if (thumbs[index]) {
+      thumbs[index].scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'nearest', 
+        inline: 'center' 
+      });
+    }
+
+    // Transición de imagen
+    modalImage.classList.add('changing');
+    
+    setTimeout(() => {
+      updateModalImage();
+      modalImage.classList.remove('changing');
+      isAnimating = false;
+    }, 200);
+  }
+
+  function updateModalImage() {
+    const project = projectsData[currentProject];
+    if (!project?.images[currentSlide]) return;
+    
+    const img = project.images[currentSlide];
+    modalImage.src = img.src;
+    modalImage.alt = img.alt;
+  }
+
+  function nextModalSlide() {
+    const project = projectsData[currentProject];
+    const next = (currentSlide + 1) % project.images.length;
+    goToModalSlide(next);
+  }
+
+  function prevModalSlide() {
+    const project = projectsData[currentProject];
+    const prev = (currentSlide - 1 + project.images.length) % project.images.length;
+    goToModalSlide(prev);
+  }
+
+  // Event listeners del modal
+  modalClose?.addEventListener('click', closeModal);
+  modalOverlay?.addEventListener('click', closeModal);
+  modalNext?.addEventListener('click', nextModalSlide);
+  modalPrev?.addEventListener('click', prevModalSlide);
+
+  // Teclado en modal
+  document.addEventListener('keydown', (e) => {
+    if (modal?.classList.contains('active')) {
+      switch(e.key) {
+        case 'Escape':
+          closeModal();
+          break;
+        case 'ArrowRight':
+          nextModalSlide();
+          break;
+        case 'ArrowLeft':
+          prevModalSlide();
+          break;
+      }
+    }
+  });
+
+  // Swipe en modal (móvil)
+  let modalTouchStartX = 0;
+  
+  modal?.addEventListener('touchstart', (e) => {
+    modalTouchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  modal?.addEventListener('touchend', (e) => {
+    const diff = modalTouchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 60) {
+      if (diff > 0) nextModalSlide();
+      else prevModalSlide();
+    }
+  }, { passive: true });
+
+  // Prevenir cierre al hacer clic dentro del contenido
+  modalContent?.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  console.log('✅ Galería de proyectos inicializada');
+})();
