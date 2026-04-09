@@ -201,6 +201,7 @@ body {
   padding: 16px 0;
   transition: all var(--transition-base);
   background: transparent;
+  
 }
 
 .navbar.scrolled {
@@ -228,14 +229,20 @@ body {
   color: var(--color-text);
 }
 
-.logo-icon {
-  font-size: 1.5rem;
+.logo-img
+{
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
 }
+
+
 
 .logo-text {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .logo-highlight {
