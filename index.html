@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="styles.css">
 
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  
+    href="img/logo.png">
+
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -36,10 +36,10 @@
 
       <ul class="nav-menu" id="nav-menu">
         <li class="nav-item"><a href="#hero" class="nav-link active">Inicio</a></li>
+        <li class="nav-item"><a href="#planes" class="nav-link">Planes</a></li>
         <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
         <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
         <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li class="nav-item"><a href="#planes" class="nav-link">Planes</a></li>
         <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
 
@@ -74,9 +74,12 @@
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
-        <a href="#servicios" class="btn btn-outline">
-          <span>Ver Servicios</span>
-        </a>
+        <div class="btn-container">
+          <span class="pointing-hand" aria-hidden="true">👉</span>
+          <a href="#planes" class="btn btn-outline">
+            <span>Ver Planes y precios</span>
+          </a>
+        </div>
       </div>
 
       <div class="hero-stats animate-on-scroll">
@@ -95,7 +98,340 @@
       </div>
     </div>
 
-   
+
+  </section>
+
+  <section class="section pricing" id="planes">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Inversión</span>
+        <h2 class="section-title">Planes y <span class="text-gradient">Precios</span></h2>
+        <p class="section-description">
+          Elige el plan que mejor se adapte a tus necesidades. Todos incluyen
+          diseño profesional, responsive y optimizado.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card animate-on-scroll">
+          <div class="pricing-badge">
+            <span class="badge-icon">🟢</span>
+            <span class="badge-text">Más Popular</span>
+          </div>
+          <div class="pricing-header">
+            <h3 class="pricing-title">Plan Inicio</h3>
+            <p class="pricing-subtitle">Landing Page</p>
+            <div class="pricing-price">
+              <span class="price-currency">USD</span>
+              <span class="price-amount">300</span>
+            </div>
+          </div>
+
+          <div class="pricing-features">
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Diseño moderno y adaptable</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Estructura optimizada para conversión</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Botón directo a WhatsApp</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Formulario de contacto</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Integración con redes sociales</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>SEO básico</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Configuración de dominio y hosting</span>
+            </div>
+          </div>
+
+          <div class="pricing-footer">
+            <div class="pricing-note">
+              <span class="note-icon">📌</span>
+              <p>Incluye ajustes durante el desarrollo y revisión final</p>
+            </div>
+            <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Inicio%20-%20Landing%20Page%20(USD%20300).%20Me%20gustaría%20más%20información."
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
+              <span>Consultar por WhatsApp</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="pricing-card animate-on-scroll">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Plan Crecimiento</h3>
+            <p class="pricing-subtitle">Catálogo Web</p>
+            <div class="pricing-price">
+              <span class="price-currency">USD</span>
+              <span class="price-amount">500</span>
+            </div>
+          </div>
+
+          <div class="pricing-features">
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Catálogo de productos organizado</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Categorías y buscador interno</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Panel para gestionar productos</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Diseño adaptable (celular y PC)</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Código QR para compartir</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Integración con redes sociales</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>SEO básico + dominio y hosting</span>
+            </div>
+          </div>
+
+          <div class="pricing-footer">
+            <div class="pricing-note">
+              <span class="note-icon"></span>
+              <p>Escalable a tienda online cuando lo necesites</p>
+            </div>
+            <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Crecimiento%20-%20Cat%C3%A1logo%20Web%20(USD%20500).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
+              <span>Consultar por WhatsApp</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="pricing-card pricing-card-featured animate-on-scroll">
+          <div class="featured-ribbon">Recomendado</div>
+          <div class="pricing-header">
+            <h3 class="pricing-title">Plan Pro</h3>
+            <p class="pricing-subtitle">Tienda Online</p>
+            <div class="pricing-price">
+              <span class="price-currency">USD</span>
+              <span class="price-amount">750</span>
+            </div>
+          </div>
+
+          <div class="pricing-features">
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Catálogo de productos completo</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Carrito de compras</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Checkout completo</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Pagos: MercadoPago y PayPal</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Diseño adaptable (celular y PC)</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Integración con redes sociales</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>SEO básico + dominio y hosting</span>
+            </div>
+          </div>
+
+          <div class="pricing-footer">
+            <div class="pricing-note">
+              <span class="note-icon"></span>
+              <p>Lista para vender automáticamente desde el primer día</p>
+            </div>
+            <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Pro%20-%20Tienda%20Online%20(USD%20750).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
+              <span>Consultar por WhatsApp</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="pricing-card animate-on-scroll">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Plan Premium</h3>
+            <p class="pricing-subtitle">Web + Estrategia</p>
+            <div class="pricing-price">
+              <span class="price-currency">USD</span>
+              <span class="price-amount">900-1200</span>
+            </div>
+            <p class="pricing-note-price">Según alcance</p>
+          </div>
+
+          <div class="pricing-features">
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Todo lo de tienda o catálogo</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Optimización para conversión</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Textos estratégicos (copywriting)</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Configuración de métricas</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Integración con campañas de marketing</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Soporte prioritario</span>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span>Enfoque en resultados reales</span>
+            </div>
+          </div>
+
+          <div class="pricing-footer">
+            <div class="pricing-note">
+              <span class="note-icon"></span>
+              <p>Ideal para negocios que quieren crecer y escalar</p>
+            </div>
+            <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Premium%20-%20Web%20%2B%20Estrategia%20(USD%20900-1200).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
+              <span>Consultar por WhatsApp</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pricing-info animate-on-scroll">
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-icon">💳</div>
+            <h4>Forma de Pago</h4>
+            <p>50% al iniciar y 50% al finalizar todos los planes</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🔧</div>
+            <h4>Mantenimiento</h4>
+            <p>Costo evaluado según requerimientos, complejidad y tráfico del proyecto</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📝</div>
+            <h4>Ajustes</h4>
+            <p>Incluye ajustes durante el desarrollo y revisión final antes de la entrega</p>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">⚡</div>
+            <h4>Funcionalidades Extra</h4>
+            <p>Cambios o funcionalidades adicionales se cotizan por separado</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section class="section services" id="servicios">
@@ -275,501 +611,170 @@
     </div>
   </section>
 
-<section class="section projects" id="proyectos">
-  <div class="container">
-    <div class="section-header animate-on-scroll">
-      <span class="section-tag">Portfolio</span>
-      <h2 class="section-title">Proyectos <span class="text-gradient">Destacados</span></h2>
-      <p class="section-description">
-        Una muestra de nuestro trabajo más reciente y los resultados que hemos logrado.
-      </p>
-    </div>
+  <section class="section projects" id="proyectos">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Proyectos <span class="text-gradient">Destacados</span></h2>
+        <p class="section-description">
+          Una muestra de nuestro trabajo más reciente y los resultados que hemos logrado.
+        </p>
+      </div>
 
-    <div class="projects-grid">
+      <div class="projects-grid">
 
-      <article class="project-card animate-on-scroll" data-project="0">
-        <div class="project-carousel" role="region" aria-label="Galería del proyecto E-Commerce Dashboard">
-          <div class="carousel-track">
-            <div class="carousel-slide active">
-              <img src="bancoSangre/Captura de pantalla 2025-11-27 193448.png" alt="Dashboard de analíticas en tiempo real" class="carousel-img">
+        <article class="project-card animate-on-scroll" data-project="0">
+          <div class="project-carousel" role="region" aria-label="Galería del proyecto E-Commerce Dashboard">
+            <div class="carousel-track">
+              <div class="carousel-slide active">
+                <img src="bancoSangre/Captura de pantalla 2025-11-27 193448.png"
+                  alt="Dashboard de analíticas en tiempo real" class="carousel-img">
+              </div>
+
             </div>
-            
-          </div>
-        
-          <div class="carousel-dots">
-            <span class="carousel-dot active" data-slide="0"></span>
-            <span class="carousel-dot" data-slide="1"></span>
-            <span class="carousel-dot" data-slide="2"></span>
-          </div>
-        
-          <button class="carousel-expand" aria-label="Ver galería completa">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-            </svg>
-          </button>
-        </div>
 
-        <div class="project-info">
-          <div class="project-tags">
-            <span class="tag tag-web">Web</span>
-            <span class="tag tag-api">API</span>
-             <span class="tag tag-backend">Backend</span>
-          </div>
-          <h3 class="project-title">Sistema de administración y gestión para banco de sangre.</h3>
-          <p class="project-desc">
-            Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación, almacenamiento y distribución de sangre.
-          </p>
-        </div>
-      </article>
-
-      <article class="project-card animate-on-scroll" data-project="1">
-        <div class="project-carousel" role="region" aria-label="Galería del proyecto API de Gestión Empresarial">
-          <div class="carousel-track">
-            <div class="carousel-slide active">
-              <img src="siempreCargo/siempreCargo.png" alt="Arquitectura de servidor" class="carousel-img">
+            <div class="carousel-dots">
+              <span class="carousel-dot active" data-slide="0"></span>
+              <span class="carousel-dot" data-slide="1"></span>
+              <span class="carousel-dot" data-slide="2"></span>
             </div>
+
+            <button class="carousel-expand" aria-label="Ver galería completa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </button>
           </div>
 
-          <div class="carousel-dots">
-            <span class="carousel-dot active" data-slide="0"></span>
-            <span class="carousel-dot" data-slide="1"></span>
-            <span class="carousel-dot" data-slide="2"></span>
-          </div>
-          
-          <button class="carousel-expand" aria-label="Ver galería completa">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-            </svg>
-          </button>
-        </div>
-
-        <div class="project-info">
-          <div class="project-tags">
-            <span class="tag tag-backend">Backend</span>
-            <span class="tag tag-api">API</span>
-            <span class="tag tag-web">Web</span>
-          </div>
-          <h3 class="project-title">Sistema de administración y gestión para empresa de transporte.</h3>
-          <p class="project-desc">
-            Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías o fletes.
-          </p>
-        </div>
-      </article>
-
-      <article class="project-card animate-on-scroll" data-project="2">
-        <div class="project-carousel" role="region" aria-label="Galería del proyecto Gaming Setup Pro">
-          <div class="carousel-track">
-            <div class="carousel-slide active">
-              <img src="gestock/image.png" alt="Estación de trabajo gaming" class="carousel-img">
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
+              <span class="tag tag-api">API</span>
+              <span class="tag tag-backend">Backend</span>
             </div>
-            
+            <h3 class="project-title">Sistema de administración y gestión para banco de sangre.</h3>
+            <p class="project-desc">
+              Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación,
+              almacenamiento y distribución de sangre.
+            </p>
           </div>
-         
+        </article>
 
-          <div class="carousel-dots">
-            <span class="carousel-dot active" data-slide="0"></span>
-            
-          </div>
-          
-          <button class="carousel-expand" aria-label="Ver galería completa">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-            </svg>
-          </button>
-        </div>
+        <article class="project-card animate-on-scroll" data-project="1">
+          <div class="project-carousel" role="region" aria-label="Galería del proyecto API de Gestión Empresarial">
+            <div class="carousel-track">
+              <div class="carousel-slide active">
+                <img src="siempreCargo/siempreCargo.png" alt="Arquitectura de servidor" class="carousel-img">
+              </div>
+            </div>
 
-        <div class="project-info">
-          <div class="project-tags">
-            <span class="tag tag-backend">Backend</span>
-            <span class="tag tag-api">API</span>
-            <span class="tag tag-web">Web</span>
-          </div>
-          <h3 class="project-title">Sistema de gestión de stock.</h3>
-          <p class="project-desc">
-            Plataforma digital diseñada para controlar y optimizar todos los procesos.
-          </p>
-        </div>
-      </article>
+            <div class="carousel-dots">
+              <span class="carousel-dot active" data-slide="0"></span>
+              <span class="carousel-dot" data-slide="1"></span>
+              <span class="carousel-dot" data-slide="2"></span>
+            </div>
 
-    </div>
-  </div>
-</section>
+            <button class="carousel-expand" aria-label="Ver galería completa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </button>
+          </div>
 
-  <section class="section pricing" id="planes">
-  <div class="container">
-    <div class="section-header animate-on-scroll">
-      <span class="section-tag">Inversión</span>
-      <h2 class="section-title">Planes y <span class="text-gradient">Precios</span></h2>
-      <p class="section-description">
-        Elige el plan que mejor se adapte a tus necesidades. Todos incluyen 
-        diseño profesional, responsive y optimizado.
-      </p>
-    </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-backend">Backend</span>
+              <span class="tag tag-api">API</span>
+              <span class="tag tag-web">Web</span>
+            </div>
+            <h3 class="project-title">Sistema de administración y gestión para empresa de transporte.</h3>
+            <p class="project-desc">
+              Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías
+              o fletes.
+            </p>
+          </div>
+        </article>
 
-    <div class="pricing-grid">
+        <article class="project-card animate-on-scroll" data-project="2">
+          <div class="project-carousel" role="region" aria-label="Galería del proyecto Gaming Setup Pro">
+            <div class="carousel-track">
+              <div class="carousel-slide active">
+                <img src="gestock/image.png" alt="Estación de trabajo gaming" class="carousel-img">
+              </div>
 
-      <div class="pricing-card animate-on-scroll">
-        <div class="pricing-badge">
-          <span class="badge-icon">🟢</span>
-          <span class="badge-text">Más Popular</span>
-        </div>
-        <div class="pricing-header">
-          <h3 class="pricing-title">Plan Inicio</h3>
-          <p class="pricing-subtitle">Landing Page</p>
-          <div class="pricing-price">
-            <span class="price-currency">USD</span>
-            <span class="price-amount">300</span>
-          </div>
-        </div>
-        
-        <div class="pricing-features">
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Diseño moderno y adaptable</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Estructura optimizada para conversión</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Botón directo a WhatsApp</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Formulario de contacto</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Integración con redes sociales</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>SEO básico</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Configuración de dominio y hosting</span>
-          </div>
-        </div>
+            </div>
 
-        <div class="pricing-footer">
-          <div class="pricing-note">
-            <span class="note-icon">📌</span>
-            <p>Incluye ajustes durante el desarrollo y revisión final</p>
-          </div>
-          <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Inicio%20-%20Landing%20Page%20(USD%20300).%20Me%20gustaría%20más%20información." 
-             class="btn btn-primary btn-glow btn-full" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            <span>Consultar por WhatsApp</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
 
-      <div class="pricing-card animate-on-scroll">
-        <div class="pricing-header">
-          <h3 class="pricing-title">Plan Crecimiento</h3>
-          <p class="pricing-subtitle">Catálogo Web</p>
-          <div class="pricing-price">
-            <span class="price-currency">USD</span>
-            <span class="price-amount">500</span>
-          </div>
-        </div>
-        
-        <div class="pricing-features">
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Catálogo de productos organizado</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Categorías y buscador interno</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Panel para gestionar productos</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Diseño adaptable (celular y PC)</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Código QR para compartir</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Integración con redes sociales</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>SEO básico + dominio y hosting</span>
-          </div>
-        </div>
+            <div class="carousel-dots">
+              <span class="carousel-dot active" data-slide="0"></span>
 
-        <div class="pricing-footer">
-          <div class="pricing-note">
-            <span class="note-icon"></span>
-            <p>Escalable a tienda online cuando lo necesites</p>
-          </div>
-          <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Crecimiento%20-%20Cat%C3%A1logo%20Web%20(USD%20500).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n." 
-             class="btn btn-primary btn-glow btn-full" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            <span>Consultar por WhatsApp</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+            </div>
 
-      <div class="pricing-card pricing-card-featured animate-on-scroll">
-        <div class="featured-ribbon">Recomendado</div>
-        <div class="pricing-header">
-          <h3 class="pricing-title">Plan Pro</h3>
-          <p class="pricing-subtitle">Tienda Online</p>
-          <div class="pricing-price">
-            <span class="price-currency">USD</span>
-            <span class="price-amount">750</span>
+            <button class="carousel-expand" aria-label="Ver galería completa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+              </svg>
+            </button>
           </div>
-        </div>
-        
-        <div class="pricing-features">
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Catálogo de productos completo</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Carrito de compras</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Checkout completo</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Pagos: MercadoPago y PayPal</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Diseño adaptable (celular y PC)</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Integración con redes sociales</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>SEO básico + dominio y hosting</span>
-          </div>
-        </div>
 
-        <div class="pricing-footer">
-          <div class="pricing-note">
-            <span class="note-icon"></span>
-            <p>Lista para vender automáticamente desde el primer día</p>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-backend">Backend</span>
+              <span class="tag tag-api">API</span>
+              <span class="tag tag-web">Web</span>
+            </div>
+            <h3 class="project-title">Sistema de gestión de stock.</h3>
+            <p class="project-desc">
+              Plataforma digital diseñada para controlar y optimizar todos los procesos.
+            </p>
           </div>
-          <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Pro%20-%20Tienda%20Online%20(USD%20750).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n." 
-             class="btn btn-primary btn-glow btn-full" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            <span>Consultar por WhatsApp</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+        </article>
 
-      <div class="pricing-card animate-on-scroll">
-        <div class="pricing-header">
-          <h3 class="pricing-title">Plan Premium</h3>
-          <p class="pricing-subtitle">Web + Estrategia</p>
-          <div class="pricing-price">
-            <span class="price-currency">USD</span>
-            <span class="price-amount">900-1200</span>
-          </div>
-          <p class="pricing-note-price">Según alcance</p>
-        </div>
-        
-        <div class="pricing-features">
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Todo lo de tienda o catálogo</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Optimización para conversión</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Textos estratégicos (copywriting)</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Configuración de métricas</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Integración con campañas de marketing</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Soporte prioritario</span>
-          </div>
-          <div class="feature-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>Enfoque en resultados reales</span>
-          </div>
-        </div>
-
-        <div class="pricing-footer">
-          <div class="pricing-note">
-            <span class="note-icon"></span>
-            <p>Ideal para negocios que quieren crecer y escalar</p>
-          </div>
-          <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Premium%20-%20Web%20%2B%20Estrategia%20(USD%20900-1200).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n." 
-             class="btn btn-primary btn-glow btn-full" 
-             target="_blank" 
-             rel="noopener noreferrer">
-            <span>Consultar por WhatsApp</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="pricing-info animate-on-scroll">
-      <div class="info-grid">
-        <div class="info-item">
-          <div class="info-icon">💳</div>
-          <h4>Forma de Pago</h4>
-          <p>50% al iniciar y 50% al finalizar todos los planes</p>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">🔧</div>
-          <h4>Mantenimiento</h4>
-          <p>Costo evaluado según requerimientos, complejidad y tráfico del proyecto</p>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">📝</div>
-          <h4>Ajustes</h4>
-          <p>Incluye ajustes durante el desarrollo y revisión final antes de la entrega</p>
-        </div>
-        <div class="info-item">
-          <div class="info-icon">⚡</div>
-          <h4>Funcionalidades Extra</h4>
-          <p>Cambios o funcionalidades adicionales se cotizan por separado</p>
-        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
 
-<div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true" aria-label="Galería de imágenes del proyecto" hidden>
-  
-  <div class="modal-overlay" id="modal-overlay"></div>
-  
+
+  <div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true"
+    aria-label="Galería de imágenes del proyecto" hidden>
+
+    <div class="modal-overlay" id="modal-overlay"></div>
+
     <div class="modal-content">
-    
-    <div class="modal-header">
-      <h3 class="modal-title" id="modal-title">Proyecto</h3>
-      <span class="modal-counter" id="modal-counter">1 / 3</span>
-      <button class="modal-close" id="modal-close" aria-label="Cerrar galería">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
-      </button>
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Proyecto</h3>
+        <span class="modal-counter" id="modal-counter">1 / 3</span>
+        <button class="modal-close" id="modal-close" aria-label="Cerrar galería">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-image-container">
+        <img src="" alt="" class="modal-image" id="modal-image">
+
+        <button class="modal-nav modal-prev" id="modal-prev" aria-label="Imagen anterior">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="modal-nav modal-next" id="modal-next" aria-label="Imagen siguiente">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-thumbnails" id="modal-thumbnails">
+      </div>
+
+      <p class="modal-description" id="modal-description"></p>
     </div>
-    
-    <div class="modal-image-container">
-      <img src="" alt="" class="modal-image" id="modal-image">
-      
-      <button class="modal-nav modal-prev" id="modal-prev" aria-label="Imagen anterior">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M15 18l-6-6 6-6"/>
-        </svg>
-      </button>
-      <button class="modal-nav modal-next" id="modal-next" aria-label="Imagen siguiente">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M9 18l6-6-6-6"/>
-        </svg>
-      </button>
-    </div>
-    
-    <div class="modal-thumbnails" id="modal-thumbnails">
-    </div>
-    
-    <p class="modal-description" id="modal-description"></p>
+
   </div>
-  
-</div>
 
   <section class="section contact" id="contacto">
     <div class="container">
@@ -806,7 +811,7 @@
             </div>
           </div>
 
-        
+
         </div>
 
         <div class="contact-form-wrapper animate-on-scroll">
@@ -867,7 +872,8 @@
             y mantener tu hardware funcionando al máximo.
           </p>
           <div class="social-links">
-            <a href="https://www.facebook.com/people/Rootcli-TECH/61574289395704/" class="social-link" aria-label="Facebook" target="_blank">
+            <a href="https://www.facebook.com/people/Rootcli-TECH/61574289395704/" class="social-link"
+              aria-label="Facebook" target="_blank">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="fill: #ffffff;">
                 <path
                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.315 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
