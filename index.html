@@ -981,13 +981,16 @@
 
   <script>
   function trackWhatsApp(e, plan) {
-    e.preventDefault(); // evita que abra instantáneamente
+    e.preventDefault();
 
-    fbq('track', 'Lead', { plan: plan });
+    const link = e.currentTarget.closest('a'); // 🔥 FIX REAL
 
-    // espera 300ms y luego abre WhatsApp
+    fbq('track', 'Contact', {
+      plan: plan
+    });
+
     setTimeout(() => {
-      window.open(e.currentTarget.href, '_blank');
+      window.open(link.href, '_blank');
     }, 300);
   }
 </script>
