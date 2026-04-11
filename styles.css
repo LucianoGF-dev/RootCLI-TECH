@@ -2115,6 +2115,501 @@ body {
   margin: 0;
 }
 
+/* ========================================
+   PRICING CARDS - NUEVOS ELEMENTOS
+   ======================================== */
+
+/* Tiempo de entrega */
+.pricing-delivery {
+  font-size: 0.85rem;
+  color: var(--text-muted, #94a3b8);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border-color, #334155);
+  font-weight: 500;
+}
+
+/* Sección "Ideal para" */
+.pricing-ideal-for {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.08) 0%, 
+    rgba(139, 92, 246, 0.08) 100%);
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.pricing-ideal-for strong {
+  display: block;
+  color: var(--text-primary, #f1f5f9);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.pricing-ideal-for ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.pricing-ideal-for li {
+  color: var(--text-muted, #94a3b8);
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.pricing-ideal-for li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color, #3b82f6);
+  font-weight: bold;
+}
+
+/* Sección de Beneficios */
+.pricing-benefits {
+  background: linear-gradient(135deg, 
+    rgba(16, 185, 129, 0.1) 0%, 
+    rgba(59, 130, 246, 0.05) 100%);
+  border-left: 3px solid var(--success-color, #10b981);
+  border-radius: 0 12px 12px 0;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.pricing-benefits strong {
+  display: block;
+  color: var(--text-primary, #f1f5f9);
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.pricing-benefits p {
+  color: var(--text-muted, #94a3b8);
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.85rem;
+}
+
+/* Badge con emoji */
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+.pricing-badge .badge-icon {
+  font-size: 1rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Ribbon para card destacado */
+.featured-ribbon {
+  position: absolute;
+  top: 0;
+  right: -35px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  padding: 0.4rem 3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+/* Nota con frase de justificación */
+.pricing-note {
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 10px;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.pricing-note .note-icon {
+  font-size: 1.2rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.pricing-note p {
+  display: inline;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #cbd5e1);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Precio con nota adicional */
+.pricing-note-price {
+  font-size: 0.8rem;
+  color: var(--text-muted, #94a3b8);
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+/* ========================================
+   SECCIÓN UPSELLS / SERVICIOS ADICIONALES
+   ======================================== */
+
+.upsells-section {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-color, #334155);
+}
+
+.upsells-title {
+  font-family: var(--font-display, 'Orbitron', sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #f1f5f9);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.upsells-subtitle {
+  color: var(--text-muted, #94a3b8);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upsells-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.upsell-card {
+  background: var(--card-bg, rgba(30, 41, 59, 0.6));
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: var(--transition, all 0.3s ease);
+}
+
+.upsell-card:hover {
+  border-color: var(--accent-color, #3b82f6);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+}
+
+.upsell-card h4 {
+  font-family: var(--font-display, 'Orbitron', sans-serif);
+  font-size: 1.1rem;
+  color: var(--text-primary, #f1f5f9);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color, #334155);
+}
+
+.upsell-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.upsell-card li {
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.upsell-card li strong {
+  color: var(--text-secondary, #cbd5e1);
+  font-weight: 500;
+}
+
+/* ========================================
+   MODELO DE INGRESO RECURRENTE
+   ======================================== */
+
+.recurring-model {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.15) 0%, 
+    rgba(139, 92, 246, 0.1) 50%,
+    rgba(16, 185, 129, 0.1) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.recurring-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.recurring-icon {
+  font-size: 1.5rem;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.recurring-header h4 {
+  font-family: var(--font-display, 'Orbitron', sans-serif);
+  font-size: 1.1rem;
+  color: var(--text-primary, #f1f5f9);
+  margin: 0;
+}
+
+.recurring-description {
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.recurring-description strong {
+  color: var(--success-color, #10b981);
+}
+
+.recurring-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.recurring-tier {
+  background: var(--card-bg, rgba(15, 23, 42, 0.8));
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 10px;
+  padding: 0.75rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  transition: var(--transition, all 0.2s ease);
+}
+
+.recurring-tier:hover {
+  border-color: var(--accent-color, #3b82f6);
+  transform: scale(1.03);
+}
+
+.recurring-tier .tier-name {
+  font-weight: 600;
+  color: var(--text-secondary, #cbd5e1);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.recurring-tier .tier-price {
+  font-family: var(--font-display, 'Orbitron', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-color, #3b82f6);
+}
+
+.recurring-includes {
+  font-size: 0.85rem;
+  color: var(--text-muted, #94a3b8);
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.recurring-includes strong {
+  color: var(--text-secondary, #cbd5e1);
+}
+
+/* ========================================
+   CTA FINAL DE PLANES
+   ======================================== */
+
+.pricing-cta {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  margin-top: 3rem;
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.8) 0%, 
+    rgba(15, 23, 42, 0.9) 100%);
+  border-radius: 20px;
+  border: 1px solid var(--border-color, #334155);
+}
+
+.pricing-cta h3 {
+  font-family: var(--font-display, 'Orbitron', sans-serif);
+  font-size: 1.4rem;
+  color: var(--text-primary, #f1f5f9);
+  margin-bottom: 0.75rem;
+}
+
+.pricing-cta p {
+  color: var(--text-muted, #94a3b8);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-cta .btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+  .pricing-card {
+    padding: 1.5rem 1.2rem;
+  }
+  
+  .pricing-ideal-for,
+  .pricing-benefits,
+  .pricing-note {
+    padding: 0.8rem;
+  }
+  
+  .pricing-ideal-for ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .upsells-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .recurring-tiers {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recurring-tier {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .featured-ribbon {
+    padding: 0.35rem 2.5rem;
+    font-size: 0.7rem;
+    right: -28px;
+  }
+  
+  .pricing-badge {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-price {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  
+  .price-amount {
+    font-size: 2rem;
+  }
+  
+  .pricing-features .feature-item {
+    font-size: 0.85rem;
+  }
+  
+  .upsell-card li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========================================
+   UTILITIES Y ANIMACIONES ADICIONALES
+   ======================================== */
+
+/* Efecto glow sutil en hover para cards */
+.pricing-card:hover {
+  box-shadow: 
+    0 0 0 1px rgba(59, 130, 246, 0.3),
+    0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Card destacado - estilos reforzados */
+.pricing-card-featured {
+  border: 2px solid var(--accent-color, #f97316);
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.pricing-card-featured:hover {
+  transform: scale(1.03);
+  box-shadow: 
+    0 0 0 1px rgba(249, 115, 22, 0.5),
+    0 25px 80px rgba(249, 115, 22, 0.25);
+}
+
+/* Animación de entrada para elementos nuevos */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pricing-ideal-for,
+.pricing-benefits,
+.upsell-card,
+.recurring-model {
+  animation: slideUpFade 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-on-scroll.is-visible .pricing-ideal-for { animation-delay: 0.1s; opacity: 1; }
+.animate-on-scroll.is-visible .pricing-benefits { animation-delay: 0.2s; opacity: 1; }
+.animate-on-scroll.is-visible .upsell-card { animation-delay: 0.3s; opacity: 1; }
+.animate-on-scroll.is-visible .recurring-model { animation-delay: 0.4s; opacity: 1; }
+
 @media (max-width: 1024px) {
   .pricing-card-featured {
     transform: scale(1);
