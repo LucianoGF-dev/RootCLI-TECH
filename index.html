@@ -33,7 +33,7 @@
       'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '3802612696701770');
     fbq('track', 'PageView');
-    fbq('track', 'Contact');
+    
   </script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=3802612696701770&ev=PageView&noscript=1" /></noscript>
@@ -200,7 +200,7 @@
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Inicio%20-%20Landing%20Page%20(USD%20300).%20Me%20gustaría%20más%20información."
               class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'inicio'});">
+              onclick="trackWhatsApp(event, 'inicio');">
               <span>Consultar por WhatsApp</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -272,7 +272,7 @@
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Crecimiento%20-%20Cat%C3%A1logo%20Web%20(USD%20500).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
               class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'crecimiento'});">
+              onclick="trackWhatsApp(event, 'crecimiento');">
               <span>Consultar por WhatsApp</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -345,7 +345,7 @@
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Pro%20-%20Tienda%20Online%20(USD%20750).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
               class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'pro'});">
+              onclick="trackWhatsApp(event, 'pro');">
               <span>Consultar por WhatsApp</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -418,7 +418,7 @@
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Premium%20-%20Web%20%2B%20Estrategia%20(USD%20900-1200).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
               class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'premium'});">
+              onclick="trackWhatsApp(event, 'premium');">
               <span>Consultar por WhatsApp</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -978,6 +978,19 @@
       });
     })();
   </script>
+
+  <script>
+  function trackWhatsApp(e, plan) {
+    e.preventDefault(); // evita que abra instantáneamente
+
+    fbq('track', 'Lead', { plan: plan });
+
+    // espera 300ms y luego abre WhatsApp
+    setTimeout(() => {
+      window.open(e.currentTarget.href, '_blank');
+    }, 300);
+  }
+</script>
 </body>
 
 </html>
