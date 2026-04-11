@@ -980,18 +980,16 @@
   </script>
 
   <script>
-  function trackWhatsApp(e, plan) {
-    e.preventDefault();
-
-    const link = e.currentTarget.closest('a'); // 🔥 FIX REAL
-
+  function trackWhatsApp(element, plan) {
+    // Dispara evento
     fbq('track', 'Contact', {
       plan: plan
     });
 
-    setTimeout(() => {
-      window.open(link.href, '_blank');
-    }, 300);
+    // Delay para asegurar envío
+    setTimeout(function () {
+      window.open(element.href, '_blank');
+    }, 500); // ⬅️ subí a 500ms (más seguro)
   }
 </script>
 </body>
