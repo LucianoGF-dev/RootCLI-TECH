@@ -835,5 +835,4 @@
     e.stopPropagation();
   });
 
-  console.log('✅ Galería de proyectos inicializada');
 })();
