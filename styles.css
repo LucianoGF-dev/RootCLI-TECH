@@ -2348,6 +2348,465 @@ body.modal-open {
   transition: all var(--transition-fast);
 }
 
+/* =========================================
+   18. TRAYECTORIA SECTION (NUEVO)
+   ========================================= */
+.trajectory {
+  background: var(--color-bg-secondary);
+  position: relative;
+  padding: var(--section-padding);
+}
+
+.trajectory::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(255, 26, 26, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.trajectory > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header motivacional */
+.trajectory .section-header.text-center {
+  margin-bottom: 72px;
+}
+
+.trajectory .section-description.max-width-700 {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+}
+
+.trajectory .section-description strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Badges motivacionales */
+.motivation-badges {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.motivation-badges .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 26, 26, 0.08);
+  border: 1px solid rgba(255, 26, 26, 0.2);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.motivation-badges .badge:hover {
+  background: rgba(255, 26, 26, 0.15);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+/* Subsecciones */
+.trajectory-subsection {
+  margin-bottom: 5rem;
+}
+
+.trajectory-subsection:last-of-type {
+  margin-bottom: 0;
+}
+
+.subsection-header {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subsection-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.subsection-description {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.subsection-description em {
+  color: var(--color-primary-light);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Divider motivacional */
+.trajectory-divider {
+  background: linear-gradient(135deg, rgba(255, 26, 26, 0.1), rgba(255, 107, 53, 0.05));
+  border: 1px solid rgba(255, 26, 26, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.trajectory-divider::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 26, 26, 0.1), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+.divider-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.divider-icon {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.divider-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.divider-text strong {
+  color: var(--color-primary-light);
+  font-weight: 600;
+}
+
+/* Variaciones de tarjetas */
+.demo-card {
+  border-top: 3px solid var(--color-primary);
+  position: relative;
+}
+
+.demo-card::after {
+  content: '🚀 Demo';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--gradient-primary);
+  color: var(--color-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(255, 26, 26, 0.3);
+}
+
+.project-real {
+  border-top: 3px solid #22c55e;
+}
+
+.project-real::after {
+  content: '✓ Live';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: var(--color-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* Tags adicionales para proyectos */
+.tag-impact {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.tag-logistics {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.tag-innovation {
+  background: rgba(168, 85, 247, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.tag-ecommerce {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.tag-corporate {
+  background: rgba(100, 116, 139, 0.15);
+  color: #94a3b8;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.tag-tech {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.tag-services {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.tag-fashion {
+  background: rgba(219, 39, 119, 0.15);
+  color: #f43f5e;
+  border: 1px solid rgba(219, 39, 119, 0.3);
+}
+
+.tag-handmade {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.tag-demo {
+  background: rgba(255, 26, 26, 0.15);
+  color: var(--color-primary-light);
+  border: 1px solid rgba(255, 26, 26, 0.3);
+}
+
+.tag-video {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* CTA Final de Trayectoria */
+.trajectory-cta {
+  background: linear-gradient(135deg, rgba(255, 26, 26, 0.15), rgba(255, 107, 53, 0.1));
+  border: 1px solid rgba(255, 26, 26, 0.3);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.trajectory-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 26, 26, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.trajectory-cta h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.trajectory-cta p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cta-buttons .btn-large {
+  padding: 16px 32px;
+  font-size: 1rem;
+}
+
+.cta-note {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.cta-note small {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   19. UTILIDADES ADICIONALES
+   ========================================= */
+.text-center { text-align: center; }
+.max-width-700 { max-width: 700px; margin-left: auto; margin-right: auto; }
+
+/* =========================================
+   20. RESPONSIVE PARA TRAYECTORIA
+   ========================================= */
+@media (max-width: 1024px) {
+  .trajectory-subsection { margin-bottom: 4rem; }
+  .trajectory-divider { padding: 1.5rem; }
+  .trajectory-cta { padding: 2.5rem 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .motivation-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .motivation-badges .badge {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  .subsection-header {
+    margin-bottom: 36px;
+  }
+  
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+  
+  .trajectory-divider {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+  }
+  
+  .divider-text {
+    font-size: 0.9rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn-large {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .trajectory-cta {
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .trajectory-cta h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trajectory {
+    padding: 70px 0;
+  }
+  
+  .subsection-title {
+    font-size: 1.3rem;
+  }
+  
+  .subsection-description {
+    font-size: 0.9rem;
+  }
+  
+  .divider-icon {
+    font-size: 1.5rem;
+  }
+  
+  .divider-text {
+    font-size: 0.85rem;
+  }
+  
+  .trajectory-cta h3 {
+    font-size: 1.2rem;
+  }
+  
+  .trajectory-cta p {
+    font-size: 0.9rem;
+  }
+  
+  .cta-buttons .btn-large {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   21. MEJORAS DE ACCESIBILIDAD
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+  .divider-icon,
+  .trajectory-divider::before,
+  .demo-card::after,
+  .project-real::after {
+    animation: none !important;
+  }
+  
+  .motivation-badges .badge:hover,
+  .project-card:hover {
+    transform: none !important;
+  }
+}
+
+/* Focus visible para navegación por teclado */
+.motivation-badges .badge:focus-visible,
+.video-thumbnail:focus-visible,
+.carousel-expand:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .modal-close:hover {
   background: rgba(255, 26, 26, 0.2);
   border-color: var(--color-primary);
