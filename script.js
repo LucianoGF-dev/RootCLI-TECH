@@ -554,28 +554,28 @@
 (function initProjectGallery() {
   
   // ==========================================
-  // 1. DATOS DE PROYECTOS REALES
+  // 1. DATOS DE PROYECTOS REALES (IMÁGENES)
   // ==========================================
   const projectsData = [
     {
       title: 'Sistema de administración y gestión para banco de sangre',
       description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación, almacenamiento y distribución de sangre.',
       images: [
-        { src: 'bancoSangre/bloodbank.png', alt: 'Sistema de gestión de banco de sangre' },
-        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193448.png', alt: 'Sistema de gestión de banco de sangre' },
-        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193512.png', alt: 'Sistema de gestión de banco de sangre' },
-        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193712.png', alt: 'Sistema de gestión de banco de sangre' }
+        { src: 'bancoSangre/bloodbank.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193448.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193512.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193712.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' }
       ],
-      type: 'project' // ← Identificador
+      type: 'project'
     },
     {
       title: 'Sistema de administración y gestión para empresa de transporte',
       description: 'Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías o fletes.',
       images: [
-        { src: 'siempreCargo/siempreCargo.png', alt: 'Sistema de gestión de transporte' },
-        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145542.png', alt: 'Sistema de gestión de transporte' },
-        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145454.png', alt: 'Sistema de gestión de transporte' },
-        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145304.png', alt: 'Sistema de gestión de transporte' }
+        { src: 'siempreCargo/siempreCargo.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145542.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145454.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145304.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' }
       ],
       type: 'project'
     },
@@ -583,38 +583,46 @@
       title: 'Sistema de gestión de stock',
       description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con el inventario, permitiendo una gestión eficiente de productos y recursos.',
       images: [
-        { src: 'gestock/image.png', alt: 'Sistema de gestión de stock' },
-        { src: 'gestock/image-2.png', alt: 'Sistema de gestión de stock' },
-        { src: 'gestock/image-3.png', alt: 'Sistema de gestión de stock' },
-        { src: 'gestock/image-4.png', alt: 'Sistema de gestión de stock' }
+        { src: 'gestock/image.png', alt: 'Sistema de gestión de stock', mediaType: 'image' },
+        { src: 'gestock/image-2.png', alt: 'Sistema de gestión de stock', mediaType: 'image' },
+        { src: 'gestock/image-3.png', alt: 'Sistema de gestión de stock', mediaType: 'image' },
+        { src: 'gestock/image-4.png', alt: 'Sistema de gestión de stock', mediaType: 'image' }
       ],
       type: 'project'
     }
   ];
 
   // ==========================================
-  // 2. DATOS DE TEMPLATES/DEMOS
+  // 2. DATOS DE TEMPLATES/DEMOS (VIDEOS)
   // ==========================================
   const templatesData = [
     {
       title: '🥐 Prototipo Panadería Artesanal',
       description: 'Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.',
       images: [
-        { src: 'demos/panaderia/hero.jpg', alt: 'Vista principal del template panadería' },
-        { src: 'demos/panaderia/catalogo.jpg', alt: 'Catálogo de productos con precios' },
-        { src: 'demos/panaderia/pedidos-whatsapp.jpg', alt: 'Botón de pedidos por WhatsApp integrado' },
-        { src: 'demos/panaderia/horarios.jpg', alt: 'Sección de horarios y ubicación' }
+        { 
+          src: 'demos/panaderia/hero.jpg', 
+          alt: 'Vista principal del template panadería',
+          mediaType: 'video',
+          videoSrc: 'demos/panaderia/demo.mp4',
+          videoType: 'local',
+          poster: 'demos/panaderia/hero.jpg'
+        }
       ],
-      type: 'demo' // ← Identificador
+      type: 'demo'
     },
     {
       title: '🌲 Template Empresa Forestal',
       description: 'Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad, proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.',
       images: [
-        { src: 'demos/forestal/hero.jpg', alt: 'Vista principal del template forestal' },
-        { src: 'demos/forestal/servicios.jpg', alt: 'Sección de servicios corporativos' },
-        { src: 'demos/forestal/sustentabilidad.jpg', alt: 'Página de sustentabilidad y certificaciones' },
-        { src: 'demos/forestal/proyectos.jpg', alt: 'Galería de proyectos realizados' }
+        { 
+          src: 'demos/forestal/hero.jpg', 
+          alt: 'Vista principal del template forestal',
+          mediaType: 'video',
+          videoSrc: 'demos/forestal/demo.mp4',
+          videoType: 'local',
+          poster: 'demos/forestal/hero.jpg'
+        }
       ],
       type: 'demo'
     },
@@ -622,10 +630,14 @@
       title: '💻 Template Comercio de Tecnología',
       description: 'Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas técnicas, comparador de productos y integración con métodos de pago.',
       images: [
-        { src: 'demos/tecnologia/hero.jpg', alt: 'Vista principal del template tecnología' },
-        { src: 'demos/tecnologia/catalogo.jpg', alt: 'Catálogo con filtros y categorías' },
-        { src: 'demos/tecnologia/ficha-producto.jpg', alt: 'Ficha técnica de producto con especificaciones' },
-        { src: 'demos/tecnologia/carrito.jpg', alt: 'Carrito de compras y checkout' }
+        { 
+          src: 'demos/tecnologia/hero.jpg', 
+          alt: 'Vista principal del template tecnología',
+          mediaType: 'video',
+          videoSrc: 'demos/tecnologia/demo.mp4',
+          videoType: 'local',
+          poster: 'demos/tecnologia/hero.jpg'
+        }
       ],
       type: 'demo'
     },
@@ -633,10 +645,14 @@
       title: '✂️ Template Peluquería & Estética',
       description: 'Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios, reserva de turnos por WhatsApp y sección de promociones.',
       images: [
-        { src: 'demos/peluqueria/hero.jpg', alt: 'Vista principal del template peluquería' },
-        { src: 'demos/peluqueria/servicios.jpg', alt: 'Lista de servicios con precios' },
-        { src: 'demos/peluqueria/galeria.jpg', alt: 'Galería de trabajos y estilos' },
-        { src: 'demos/peluqueria/reservas.jpg', alt: 'Sistema de reserva de turnos por WhatsApp' }
+        { 
+          src: 'demos/peluqueria/hero.jpg', 
+          alt: 'Vista principal del template peluquería',
+          mediaType: 'video',
+          videoSrc: 'demos/peluqueria/demo.mp4',
+          videoType: 'local',
+          poster: 'demos/peluqueria/hero.jpg'
+        }
       ],
       type: 'demo'
     },
@@ -644,10 +660,14 @@
       title: '👗 Template Tienda de Moda',
       description: 'Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de compras y enlaces directos a redes sociales para impulsar ventas.',
       images: [
-        { src: 'demos/ropa/hero.jpg', alt: 'Vista principal del template tienda de ropa' },
-        { src: 'demos/ropa/lookbook.jpg', alt: 'Galería lookbook con modelos' },
-        { src: 'demos/ropa/ficha-producto.jpg', alt: 'Ficha de producto con tallas y colores' },
-        { src: 'demos/ropa/carrito.jpg', alt: 'Carrito de compras integrado' }
+        { 
+          src: 'demos/ropa/hero.jpg', 
+          alt: 'Vista principal del template tienda de ropa',
+          mediaType: 'video',
+          videoSrc: 'demos/ropa/demo.mp4',
+          videoType: 'local',
+          poster: 'demos/ropa/hero.jpg'
+        }
       ],
       type: 'demo'
     },
@@ -655,25 +675,29 @@
       title: '🎨 Template Artesanías & Handmade',
       description: 'Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación, envíos y opción de pedidos personalizados por WhatsApp.',
       images: [
-        { src: 'demos/artesanias/hero.jpg', alt: 'Vista principal del template artesanías' },
-        { src: 'demos/artesanias/proceso.jpg', alt: 'Sección del proceso de creación artesanal' },
-        { src: 'demos/artesanias/catalogo.jpg', alt: 'Catálogo de piezas handmade' },
-        { src: 'demos/artesanias/pedidos.jpg', alt: 'Formulario de pedidos personalizados' }
+        { 
+          src: 'demos/artesanias/hero.jpg', 
+          alt: 'Vista principal del template artesanías',
+          mediaType: 'video',
+          videoSrc: 'demos/artesanias/demo.mp4',
+          videoType: 'local',
+          poster: 'demos/artesanias/hero.jpg'
+        }
       ],
       type: 'demo'
     }
   ];
 
   // ==========================================
-  // 3. FUSIÓN DE ARRAYS (SOLUCIÓN DEL ERROR)
+  // 3. FUSIÓN DE ARRAYS
   // ==========================================
-  // Creamos un único array con todos los items
   const allGalleryItems = [...projectsData, ...templatesData];
 
   // Estado del modal
-  let currentItemIndex = 0; // ← Renombrado para claridad (ya no es solo "project")
+  let currentItemIndex = 0;
   let currentSlide = 0;
   let isAnimating = false;
+  let currentVideoElement = null; // Para controlar el video activo
 
   // Elementos del DOM
   const modal = document.getElementById('gallery-modal');
@@ -682,14 +706,14 @@
   const modalClose = document.getElementById('modal-close');
   const modalTitle = document.getElementById('modal-title');
   const modalCounter = document.getElementById('modal-counter');
-  const modalImage = document.getElementById('modal-image');
+  const modalMediaContainer = document.querySelector('.modal-image-container');
   const modalPrev = document.getElementById('modal-prev');
   const modalNext = document.getElementById('modal-next');
   const modalThumbnails = document.getElementById('modal-thumbnails');
   const modalDescription = document.getElementById('modal-description');
 
   // ==========================================
-  // 4. CARRUSELES DE CADA CARD (PROYECTOS Y TEMPLATES)
+  // 4. CARRUSELES DE CADA CARD
   // ==========================================
   
   document.querySelectorAll('.project-carousel').forEach((carousel, visualIndex) => {
@@ -701,16 +725,13 @@
     const expandBtn = carousel.querySelector('.carousel-expand');
     const card = carousel.closest('.project-card');
     
-    // 🔑 CLAVE: Obtener el índice REAL del array fusionado desde data-project
     const realIndex = parseInt(card?.dataset.project || visualIndex);
-    
     let currentIndex = 0;
 
     function goToSlide(index) {
       if (index < 0) index = slides.length - 1;
       if (index >= slides.length) index = 0;
       currentIndex = index;
-      
       slides.forEach((slide, i) => slide.classList.toggle('active', i === currentIndex));
       dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
     }
@@ -718,7 +739,6 @@
     function nextSlide() { goToSlide(currentIndex + 1); }
     function prevSlide() { goToSlide(currentIndex - 1); }
 
-    // Event listeners del carrusel
     prevBtn?.addEventListener('click', (e) => { e.stopPropagation(); prevSlide(); });
     nextBtn?.addEventListener('click', (e) => { e.stopPropagation(); nextSlide(); });
     dots.forEach((dot, i) => {
@@ -734,46 +754,72 @@
       if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
     }, { passive: true });
 
-    // 🔑 CLAVE: Abrir modal usando el índice real del array fusionado
+    // Abrir modal
     const openModalHandler = () => openModal(realIndex, currentIndex);
     
+    // Click en thumbnail de video
+    const videoThumb = carousel.querySelector('.video-thumbnail');
+    if (videoThumb) {
+      videoThumb.addEventListener('click', openModalHandler);
+      videoThumb.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModalHandler();
+        }
+      });
+    }
+    
+    // Click en imagen tradicional
     const firstImg = slides[0]?.querySelector('.carousel-img');
-    if (firstImg) {
+    if (firstImg && !videoThumb) {
       firstImg.style.cursor = 'pointer';
       firstImg.addEventListener('click', openModalHandler);
     }
+    
     expandBtn?.addEventListener('click', openModalHandler);
   });
 
   // ==========================================
-  // 5. FUNCIONES DEL MODAL (USAN allGalleryItems)
+  // 5. FUNCIONES DEL MODAL (IMAGEN + VIDEO)
   // ==========================================
 
   function openModal(itemIndex, slideIndex = 0) {
     if (!modal || !allGalleryItems[itemIndex]) return;
     
+    // Pausar video anterior si existe
+    if (currentVideoElement) {
+      currentVideoElement.pause();
+      currentVideoElement = null;
+    }
+    
     currentItemIndex = itemIndex;
     currentSlide = slideIndex;
-    const item = allGalleryItems[itemIndex]; // ← Usa el array fusionado
+    const item = allGalleryItems[itemIndex];
 
-    // Configurar contenido
     modalTitle.textContent = item.title;
     modalDescription.textContent = item.description;
     modalCounter.textContent = `${slideIndex + 1} / ${item.images.length}`;
     
     // Generar miniaturas
     modalThumbnails.innerHTML = '';
-    item.images.forEach((img, i) => {
+    item.images.forEach((media, i) => {
       const thumb = document.createElement('div');
       thumb.className = `modal-thumb${i === slideIndex ? ' active' : ''}`;
-      thumb.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy">`;
+      thumb.dataset.mediaType = media.mediaType || 'image';
+      
+      if (media.mediaType === 'video') {
+        // Thumbnail con poster del video
+        thumb.innerHTML = `<img src="${media.poster || media.src}" alt="${media.alt}" loading="lazy">`;
+      } else {
+        thumb.innerHTML = `<img src="${media.src}" alt="${media.alt}" loading="lazy">`;
+      }
+      
       thumb.addEventListener('click', () => goToModalSlide(i));
       modalThumbnails.appendChild(thumb);
     });
 
-    updateModalImage();
+    updateModalMedia();
 
-    // Mostrar modal
     modal.hidden = false;
     requestAnimationFrame(() => {
       modal.classList.add('active');
@@ -784,6 +830,13 @@
 
   function closeModal() {
     if (!modal) return;
+    
+    // Pausar video al cerrar
+    if (currentVideoElement) {
+      currentVideoElement.pause();
+      currentVideoElement = null;
+    }
+    
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
     setTimeout(() => { modal.hidden = true; }, 300);
@@ -792,9 +845,15 @@
   function goToModalSlide(index) {
     if (isAnimating || index === currentSlide) return;
     
+    // Pausar video actual antes de cambiar
+    if (currentVideoElement) {
+      currentVideoElement.pause();
+      currentVideoElement = null;
+    }
+    
     isAnimating = true;
     currentSlide = index;
-    const item = allGalleryItems[currentItemIndex]; // ← Array fusionado
+    const item = allGalleryItems[currentItemIndex];
 
     modalCounter.textContent = `${index + 1} / ${item.images.length}`;
 
@@ -805,20 +864,73 @@
       thumbs[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
 
-    modalImage.classList.add('changing');
+    // Transición suave
+    modalMediaContainer.style.opacity = '0.7';
     setTimeout(() => {
-      updateModalImage();
-      modalImage.classList.remove('changing');
+      updateModalMedia();
+      modalMediaContainer.style.opacity = '1';
       isAnimating = false;
-    }, 200);
+    }, 150);
   }
 
-  function updateModalImage() {
-    const item = allGalleryItems[currentItemIndex]; // ← Array fusionado
+  function updateModalMedia() {
+    const item = allGalleryItems[currentItemIndex];
     if (!item?.images[currentSlide]) return;
-    const img = item.images[currentSlide];
-    modalImage.src = img.src;
-    modalImage.alt = img.alt;
+    
+    const media = item.images[currentSlide];
+    
+    // Limpiar contenedor
+    modalMediaContainer.innerHTML = '';
+    
+    // Agregar botones de navegación (se reinsertan)
+    modalMediaContainer.appendChild(modalPrev);
+    modalMediaContainer.appendChild(modalNext);
+
+    if (media.mediaType === 'video') {
+      // === RENDERIZAR VIDEO ===
+      
+      if (media.videoType === 'youtube' || media.videoType === 'vimeo') {
+        // Iframe para YouTube/Vimeo
+        const iframe = document.createElement('iframe');
+        iframe.src = media.videoSrc;
+        iframe.alt = media.alt;
+        iframe.className = 'modal-video-embed';
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('title', media.alt);
+        modalMediaContainer.insertBefore(iframe, modalPrev);
+      } else {
+        // Video local (.mp4, .webm)
+        const video = document.createElement('video');
+        video.src = media.videoSrc;
+        video.alt = media.alt;
+        video.className = 'modal-video';
+        video.controls = true;
+        video.autoplay = true; // Autoplay al abrir
+        video.loop = false;
+        video.preload = 'auto';
+        video.playsInline = true; // Para iOS
+        if (media.poster) video.poster = media.poster;
+        
+        // Guardar referencia para pausar después
+        currentVideoElement = video;
+        
+        // Pausar al cambiar de slide
+        video.addEventListener('pause', () => { if (!video.ended) currentVideoElement = null; });
+        video.addEventListener('ended', () => { currentVideoElement = null; });
+        
+        modalMediaContainer.insertBefore(video, modalPrev);
+      }
+    } else {
+      // === RENDERIZAR IMAGEN ===
+      const img = document.createElement('img');
+      img.src = media.src;
+      img.alt = media.alt;
+      img.className = 'modal-image';
+      img.id = 'modal-image'; // Mantener ID para compatibilidad
+      modalMediaContainer.insertBefore(img, modalPrev);
+    }
   }
 
   function nextModalSlide() {
@@ -857,6 +969,13 @@
   }, { passive: true });
 
   modalContent?.addEventListener('click', (e) => e.stopPropagation());
+
+  // Pausar video si se hace clic fuera del video en el modal
+  modalMediaContainer?.addEventListener('click', (e) => {
+    if (currentVideoElement && !e.target.closest('video, iframe')) {
+      // No pausar, permitir que los controles del video funcionen
+    }
+  });
 
 })();
 

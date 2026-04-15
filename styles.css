@@ -1455,6 +1455,148 @@ body.modal-open {
   }
 }
 
+/* ========== VIDEO THUMBNAIL ========== */
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-thumbnail:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.video-thumbnail .carousel-img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover .carousel-img {
+  transform: scale(1.03);
+}
+
+/* Overlay de play */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 26, 26, 0.95);
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.video-thumbnail:hover .play-overlay {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(255, 26, 26, 1);
+}
+
+/* Accesibilidad: foco con teclado */
+.video-thumbnail:focus {
+  outline: 3px solid var(--color-primary, #ff1a1a);
+  outline-offset: 3px;
+}
+
+/* ========== MODAL VIDEO ========== */
+.modal-video {
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 12px;
+}
+
+.modal-video-embed {
+  width: 100%;
+  height: 70vh;
+  max-width: 90vw;
+  border: none;
+  border-radius: 12px;
+  background: #000;
+}
+
+/* Contenedor de medios en modal */
+.modal-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  min-height: 300px;
+  padding: 1rem;
+}
+
+/* Miniaturas con indicador de video */
+.modal-thumb {
+  position: relative;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.2s;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.modal-thumb.active {
+  opacity: 1;
+  border-color: var(--color-primary, #ff1a1a);
+  transform: scale(1.05);
+}
+
+.modal-thumb[data-media-type="video"]::after {
+  content: "▶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-thumbnail .carousel-img {
+    height: 160px;
+  }
+  
+  .play-overlay {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+  
+  .modal-video-embed {
+    height: 50vh;
+  }
+}
+
 /* Mobile pequeño */
 @media (max-width: 480px) {
   .price-old .price-amount {

@@ -950,33 +950,39 @@
       <div class="projects-grid">
 
         <!-- ======================================================================= -->
-        <!-- Template 1: Panadería (Índice 3 en allGalleryItems) -->
+        <!-- Template 1: Panadería (Índice 3) - VIDEO -->
         <!-- ======================================================================= -->
         <article class="project-card animate-on-scroll" 
                  data-project="3" 
                  data-type="demo"
                  data-title="🥐 Prototipo Panadería Artesanal"
                  data-desc="Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por WhatsApp y sección de 'productos del día'. Diseño cálido y apetitoso."
-                 data-images='[
-                   "demos/panaderia/hero.jpg",
-                   "demos/panaderia/catalogo.jpg",
-                   "demos/panaderia/pedidos-whatsapp.jpg",
-                   "demos/panaderia/horarios.jpg"
-                 ]'>
+                 data-media='[{
+                   "src": "demos/panaderia/hero.jpg",
+                   "alt": "Vista principal del template panadería",
+                   "mediaType": "video",
+                   "videoSrc": "demos/panaderia/demo.mp4",
+                   "videoType": "local",
+                   "poster": "demos/panaderia/hero.jpg"
+                 }]'>
           
-          <div class="project-carousel" role="region" aria-label="Galería del template Panadería">
+          <div class="project-carousel" role="region" aria-label="Video del template Panadería">
             <div class="carousel-track">
               <div class="carousel-slide active">
-                <img src="demos/panaderia/hero.jpg" alt="Template para panadería artesanal" class="carousel-img">
+                <!-- Thumbnail con overlay de play -->
+                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
+                  <img src="demos/panaderia/hero.jpg" alt="Template para panadería artesanal" class="carousel-img">
+                  <span class="play-overlay" aria-hidden="true">▶</span>
+                </div>
               </div>
             </div>
-            <div class="carousel-dots">
+            
+            <!-- Ocultar dots porque solo hay 1 ítem -->
+            <div class="carousel-dots" style="display:none;">
               <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-              <span class="carousel-dot" data-slide="3"></span>
             </div>
-            <button class="carousel-expand" aria-label="Ver demo completa" type="button">
+            
+            <button class="carousel-expand" aria-label="Ver video completo" type="button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
@@ -988,6 +994,7 @@
               <span class="tag tag-ecommerce">Ecommerce</span>
               <span class="tag tag-web">Web</span>
               <span class="tag tag-demo">Demo</span>
+              <span class="tag tag-video">🎬 Video</span>
             </div>
             <h3 class="project-title">🥐 Prototipo Panadería Artesanal</h3>
             <p class="project-desc">
@@ -1007,33 +1014,35 @@
         </article>
 
         <!-- ======================================================================= -->
-        <!-- Template 2: Forestal (Índice 4 en allGalleryItems) -->
+        <!-- Template 2: Forestal (Índice 4) - VIDEO -->
         <!-- ======================================================================= -->
         <article class="project-card animate-on-scroll" 
                  data-project="4" 
                  data-type="demo"
                  data-title="🌲 Template Empresa Forestal"
                  data-desc="Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad, proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados."
-                 data-images='[
-                   "demos/forestal/hero.jpg",
-                   "demos/forestal/servicios.jpg",
-                   "demos/forestal/sustentabilidad.jpg",
-                   "demos/forestal/proyectos.jpg"
-                 ]'>
+                 data-media='[{
+                   "src": "demos/forestal/hero.jpg",
+                   "alt": "Vista principal del template forestal",
+                   "mediaType": "video",
+                   "videoSrc": "demos/forestal/demo.mp4",
+                   "videoType": "local",
+                   "poster": "demos/forestal/hero.jpg"
+                 }]'>
           
-          <div class="project-carousel" role="region" aria-label="Galería del template Forestal">
+          <div class="project-carousel" role="region" aria-label="Video del template Forestal">
             <div class="carousel-track">
               <div class="carousel-slide active">
-                <img src="demos/forestal/hero.jpg" alt="Template para empresa forestal" class="carousel-img">
+                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
+                  <img src="demos/forestal/hero.jpg" alt="Template para empresa forestal" class="carousel-img">
+                  <span class="play-overlay" aria-hidden="true">▶</span>
+                </div>
               </div>
             </div>
-            <div class="carousel-dots">
+            <div class="carousel-dots" style="display:none;">
               <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-              <span class="carousel-dot" data-slide="3"></span>
             </div>
-            <button class="carousel-expand" aria-label="Ver demo completa" type="button">
+            <button class="carousel-expand" aria-label="Ver video completo" type="button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
@@ -1045,6 +1054,7 @@
               <span class="tag tag-corporate">Corporativo</span>
               <span class="tag tag-web">Web</span>
               <span class="tag tag-demo">Demo</span>
+              <span class="tag tag-video">🎬 Video</span>
             </div>
             <h3 class="project-title">🌲 Template Empresa Forestal</h3>
             <p class="project-desc">
@@ -1064,33 +1074,35 @@
         </article>
 
         <!-- ======================================================================= -->
-        <!-- Template 3: Tecnología (Índice 5 en allGalleryItems) -->
+        <!-- Template 3: Tecnología (Índice 5) - VIDEO -->
         <!-- ======================================================================= -->
         <article class="project-card animate-on-scroll" 
                  data-project="5" 
                  data-type="demo"
                  data-title="💻 Template Comercio de Tecnología"
                  data-desc="Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas técnicas, comparador de productos y integración con métodos de pago."
-                 data-images='[
-                   "demos/tecnologia/hero.jpg",
-                   "demos/tecnologia/catalogo.jpg",
-                   "demos/tecnologia/ficha-producto.jpg",
-                   "demos/tecnologia/carrito.jpg"
-                 ]'>
+                 data-media='[{
+                   "src": "demos/tecnologia/hero.jpg",
+                   "alt": "Vista principal del template tecnología",
+                   "mediaType": "video",
+                   "videoSrc": "demos/tecnologia/demo.mp4",
+                   "videoType": "local",
+                   "poster": "demos/tecnologia/hero.jpg"
+                 }]'>
           
-          <div class="project-carousel" role="region" aria-label="Galería del template Tecnología">
+          <div class="project-carousel" role="region" aria-label="Video del template Tecnología">
             <div class="carousel-track">
               <div class="carousel-slide active">
-                <img src="demos/tecnologia/hero.jpg" alt="Template para comercio de tecnología" class="carousel-img">
+                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
+                  <img src="demos/tecnologia/hero.jpg" alt="Template para comercio de tecnología" class="carousel-img">
+                  <span class="play-overlay" aria-hidden="true">▶</span>
+                </div>
               </div>
             </div>
-            <div class="carousel-dots">
+            <div class="carousel-dots" style="display:none;">
               <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-              <span class="carousel-dot" data-slide="3"></span>
             </div>
-            <button class="carousel-expand" aria-label="Ver demo completa" type="button">
+            <button class="carousel-expand" aria-label="Ver video completo" type="button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
@@ -1102,6 +1114,7 @@
               <span class="tag tag-ecommerce">Ecommerce</span>
               <span class="tag tag-tech">Tech</span>
               <span class="tag tag-demo">Demo</span>
+              <span class="tag tag-video">🎬 Video</span>
             </div>
             <h3 class="project-title">💻 Template Comercio de Tecnología</h3>
             <p class="project-desc">
@@ -1121,33 +1134,35 @@
         </article>
 
         <!-- ======================================================================= -->
-        <!-- Template 4: Peluquería (Índice 6 en allGalleryItems) -->
+        <!-- Template 4: Peluquería (Índice 6) - VIDEO -->
         <!-- ======================================================================= -->
         <article class="project-card animate-on-scroll" 
                  data-project="6" 
                  data-type="demo"
                  data-title="✂️ Template Peluquería & Estética"
                  data-desc="Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios, reserva de turnos por WhatsApp y sección de promociones."
-                 data-images='[
-                   "demos/peluqueria/hero.jpg",
-                   "demos/peluqueria/servicios.jpg",
-                   "demos/peluqueria/galeria.jpg",
-                   "demos/peluqueria/reservas.jpg"
-                 ]'>
+                 data-media='[{
+                   "src": "demos/peluqueria/hero.jpg",
+                   "alt": "Vista principal del template peluquería",
+                   "mediaType": "video",
+                   "videoSrc": "demos/peluqueria/demo.mp4",
+                   "videoType": "local",
+                   "poster": "demos/peluqueria/hero.jpg"
+                 }]'>
           
-          <div class="project-carousel" role="region" aria-label="Galería del template Peluquería">
+          <div class="project-carousel" role="region" aria-label="Video del template Peluquería">
             <div class="carousel-track">
               <div class="carousel-slide active">
-                <img src="demos/peluqueria/hero.jpg" alt="Template para peluquería y estética" class="carousel-img">
+                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
+                  <img src="demos/peluqueria/hero.jpg" alt="Template para peluquería y estética" class="carousel-img">
+                  <span class="play-overlay" aria-hidden="true">▶</span>
+                </div>
               </div>
             </div>
-            <div class="carousel-dots">
+            <div class="carousel-dots" style="display:none;">
               <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-              <span class="carousel-dot" data-slide="3"></span>
             </div>
-            <button class="carousel-expand" aria-label="Ver demo completa" type="button">
+            <button class="carousel-expand" aria-label="Ver video completo" type="button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
@@ -1159,6 +1174,7 @@
               <span class="tag tag-services">Servicios</span>
               <span class="tag tag-web">Web</span>
               <span class="tag tag-demo">Demo</span>
+              <span class="tag tag-video">🎬 Video</span>
             </div>
             <h3 class="project-title">✂️ Template Peluquería & Estética</h3>
             <p class="project-desc">
@@ -1178,33 +1194,35 @@
         </article>
 
         <!-- ======================================================================= -->
-        <!-- Template 5: Tienda de Ropa (Índice 7 en allGalleryItems) -->
+        <!-- Template 5: Tienda de Ropa (Índice 7) - VIDEO -->
         <!-- ======================================================================= -->
         <article class="project-card animate-on-scroll" 
                  data-project="7" 
                  data-type="demo"
                  data-title="👗 Template Tienda de Moda"
                  data-desc="Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de compras y enlaces directos a redes sociales para impulsar ventas."
-                 data-images='[
-                   "demos/ropa/hero.jpg",
-                   "demos/ropa/lookbook.jpg",
-                   "demos/ropa/ficha-producto.jpg",
-                   "demos/ropa/carrito.jpg"
-                 ]'>
+                 data-media='[{
+                   "src": "demos/ropa/hero.jpg",
+                   "alt": "Vista principal del template tienda de ropa",
+                   "mediaType": "video",
+                   "videoSrc": "demos/ropa/demo.mp4",
+                   "videoType": "local",
+                   "poster": "demos/ropa/hero.jpg"
+                 }]'>
           
-          <div class="project-carousel" role="region" aria-label="Galería del template Tienda de Ropa">
+          <div class="project-carousel" role="region" aria-label="Video del template Tienda de Ropa">
             <div class="carousel-track">
               <div class="carousel-slide active">
-                <img src="demos/ropa/hero.jpg" alt="Template para tienda de moda y ropa" class="carousel-img">
+                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
+                  <img src="demos/ropa/hero.jpg" alt="Template para tienda de moda y ropa" class="carousel-img">
+                  <span class="play-overlay" aria-hidden="true">▶</span>
+                </div>
               </div>
             </div>
-            <div class="carousel-dots">
+            <div class="carousel-dots" style="display:none;">
               <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-              <span class="carousel-dot" data-slide="3"></span>
             </div>
-            <button class="carousel-expand" aria-label="Ver demo completa" type="button">
+            <button class="carousel-expand" aria-label="Ver video completo" type="button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
@@ -1216,6 +1234,7 @@
               <span class="tag tag-ecommerce">Ecommerce</span>
               <span class="tag tag-fashion">Moda</span>
               <span class="tag tag-demo">Demo</span>
+              <span class="tag tag-video">🎬 Video</span>
             </div>
             <h3 class="project-title">👗 Template Tienda de Moda</h3>
             <p class="project-desc">
@@ -1235,33 +1254,35 @@
         </article>
 
         <!-- ======================================================================= -->
-        <!-- Template 6: Artesanías (Índice 8 en allGalleryItems) -->
+        <!-- Template 6: Artesanías (Índice 8) - VIDEO -->
         <!-- ======================================================================= -->
         <article class="project-card animate-on-scroll" 
                  data-project="8" 
                  data-type="demo"
                  data-title="🎨 Template Artesanías & Handmade"
                  data-desc="Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación, envíos y opción de pedidos personalizados por WhatsApp."
-                 data-images='[
-                   "demos/artesanias/hero.jpg",
-                   "demos/artesanias/proceso.jpg",
-                   "demos/artesanias/catalogo.jpg",
-                   "demos/artesanias/pedidos.jpg"
-                 ]'>
+                 data-media='[{
+                   "src": "demos/artesanias/hero.jpg",
+                   "alt": "Vista principal del template artesanías",
+                   "mediaType": "video",
+                   "videoSrc": "demos/artesanias/demo.mp4",
+                   "videoType": "local",
+                   "poster": "demos/artesanias/hero.jpg"
+                 }]'>
           
-          <div class="project-carousel" role="region" aria-label="Galería del template Artesanías">
+          <div class="project-carousel" role="region" aria-label="Video del template Artesanías">
             <div class="carousel-track">
               <div class="carousel-slide active">
-                <img src="demos/artesanias/hero.jpg" alt="Template para artesanos y productos handmade" class="carousel-img">
+                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
+                  <img src="demos/artesanias/hero.jpg" alt="Template para artesanos y productos handmade" class="carousel-img">
+                  <span class="play-overlay" aria-hidden="true">▶</span>
+                </div>
               </div>
             </div>
-            <div class="carousel-dots">
+            <div class="carousel-dots" style="display:none;">
               <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-              <span class="carousel-dot" data-slide="3"></span>
             </div>
-            <button class="carousel-expand" aria-label="Ver demo completa" type="button">
+            <button class="carousel-expand" aria-label="Ver video completo" type="button">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
               </svg>
@@ -1273,6 +1294,7 @@
               <span class="tag tag-ecommerce">Ecommerce</span>
               <span class="tag tag-handmade">Handmade</span>
               <span class="tag tag-demo">Demo</span>
+              <span class="tag tag-video">🎬 Video</span>
             </div>
             <h3 class="project-title">🎨 Template Artesanías & Handmade</h3>
             <p class="project-desc">
