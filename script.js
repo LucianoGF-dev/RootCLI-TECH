@@ -548,43 +548,130 @@
 // ==========================================
 // CARRUSEL DE PROYECTOS + MODAL
 // ==========================================
+// ==========================================
+// CARRUSEL DE PROYECTOS + MODAL (UNIFICADO)
+// ==========================================
 (function initProjectGallery() {
-  // Datos de los proyectos (agrega tus propias imágenes aquí)
- const projectsData = [
-  {
-    title: 'Sistema de administración y gestión para banco de sangre',
-    description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación, almacenamiento y distribución de sangre.',
-    images: [
-      { src: 'bancoSangre/bloodbank.png', alt: 'Sistema de gestión de banco de sangre' },
-      { src: 'bancoSangre/Captura de pantalla 2025-11-27 193448.png', alt: 'Sistema de gestión de banco de sangre' },
-      { src: 'bancoSangre/Captura de pantalla 2025-11-27 193512.png', alt: 'Sistema de gestión de banco de sangre' },
-      { src: 'bancoSangre/Captura de pantalla 2025-11-27 193712.png', alt: 'Sistema de gestión de banco de sangre' }
-    ]
-  },
-  {
-    title: 'Sistema de administración y gestión para empresa de transporte',
-    description: 'Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías o fletes.',
-    images: [
-      { src: 'siempreCargo/siempreCargo.png', alt: 'Sistema de gestión de transporte' },
-      { src: 'siempreCargo/Captura de pantalla 2025-11-28 145542.png', alt: 'Sistema de gestión de transporte' },
-      { src: 'siempreCargo/Captura de pantalla 2025-11-28 145454.png', alt: 'Sistema de gestión de transporte' },
-      { src: 'siempreCargo/Captura de pantalla 2025-11-28 145304.png', alt: 'Sistema de gestión de transporte' }
-    ]
-  },
-  {
-    title: 'Sistema de gestión de stock',
-    description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con el inventario, permitiendo una gestión eficiente de productos y recursos.',
-    images: [
-      { src: 'gestock/image.png', alt: 'Sistema de gestión de stock' },
-      { src: 'gestock/image-2.png', alt: 'Sistema de gestión de stock' },
-      { src: 'gestock/image-3.png', alt: 'Sistema de gestión de stock' },
-      { src: 'gestock/image-4.png', alt: 'Sistema de gestión de stock' }
-    ]
-  }
-];
+  
+  // ==========================================
+  // 1. DATOS DE PROYECTOS REALES
+  // ==========================================
+  const projectsData = [
+    {
+      title: 'Sistema de administración y gestión para banco de sangre',
+      description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación, almacenamiento y distribución de sangre.',
+      images: [
+        { src: 'bancoSangre/bloodbank.png', alt: 'Sistema de gestión de banco de sangre' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193448.png', alt: 'Sistema de gestión de banco de sangre' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193512.png', alt: 'Sistema de gestión de banco de sangre' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193712.png', alt: 'Sistema de gestión de banco de sangre' }
+      ],
+      type: 'project' // ← Identificador
+    },
+    {
+      title: 'Sistema de administración y gestión para empresa de transporte',
+      description: 'Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías o fletes.',
+      images: [
+        { src: 'siempreCargo/siempreCargo.png', alt: 'Sistema de gestión de transporte' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145542.png', alt: 'Sistema de gestión de transporte' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145454.png', alt: 'Sistema de gestión de transporte' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145304.png', alt: 'Sistema de gestión de transporte' }
+      ],
+      type: 'project'
+    },
+    {
+      title: 'Sistema de gestión de stock',
+      description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con el inventario, permitiendo una gestión eficiente de productos y recursos.',
+      images: [
+        { src: 'gestock/image.png', alt: 'Sistema de gestión de stock' },
+        { src: 'gestock/image-2.png', alt: 'Sistema de gestión de stock' },
+        { src: 'gestock/image-3.png', alt: 'Sistema de gestión de stock' },
+        { src: 'gestock/image-4.png', alt: 'Sistema de gestión de stock' }
+      ],
+      type: 'project'
+    }
+  ];
+
+  // ==========================================
+  // 2. DATOS DE TEMPLATES/DEMOS
+  // ==========================================
+  const templatesData = [
+    {
+      title: '🥐 Prototipo Panadería Artesanal',
+      description: 'Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.',
+      images: [
+        { src: 'demos/panaderia/hero.jpg', alt: 'Vista principal del template panadería' },
+        { src: 'demos/panaderia/catalogo.jpg', alt: 'Catálogo de productos con precios' },
+        { src: 'demos/panaderia/pedidos-whatsapp.jpg', alt: 'Botón de pedidos por WhatsApp integrado' },
+        { src: 'demos/panaderia/horarios.jpg', alt: 'Sección de horarios y ubicación' }
+      ],
+      type: 'demo' // ← Identificador
+    },
+    {
+      title: '🌲 Template Empresa Forestal',
+      description: 'Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad, proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.',
+      images: [
+        { src: 'demos/forestal/hero.jpg', alt: 'Vista principal del template forestal' },
+        { src: 'demos/forestal/servicios.jpg', alt: 'Sección de servicios corporativos' },
+        { src: 'demos/forestal/sustentabilidad.jpg', alt: 'Página de sustentabilidad y certificaciones' },
+        { src: 'demos/forestal/proyectos.jpg', alt: 'Galería de proyectos realizados' }
+      ],
+      type: 'demo'
+    },
+    {
+      title: '💻 Template Comercio de Tecnología',
+      description: 'Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas técnicas, comparador de productos y integración con métodos de pago.',
+      images: [
+        { src: 'demos/tecnologia/hero.jpg', alt: 'Vista principal del template tecnología' },
+        { src: 'demos/tecnologia/catalogo.jpg', alt: 'Catálogo con filtros y categorías' },
+        { src: 'demos/tecnologia/ficha-producto.jpg', alt: 'Ficha técnica de producto con especificaciones' },
+        { src: 'demos/tecnologia/carrito.jpg', alt: 'Carrito de compras y checkout' }
+      ],
+      type: 'demo'
+    },
+    {
+      title: '✂️ Template Peluquería & Estética',
+      description: 'Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios, reserva de turnos por WhatsApp y sección de promociones.',
+      images: [
+        { src: 'demos/peluqueria/hero.jpg', alt: 'Vista principal del template peluquería' },
+        { src: 'demos/peluqueria/servicios.jpg', alt: 'Lista de servicios con precios' },
+        { src: 'demos/peluqueria/galeria.jpg', alt: 'Galería de trabajos y estilos' },
+        { src: 'demos/peluqueria/reservas.jpg', alt: 'Sistema de reserva de turnos por WhatsApp' }
+      ],
+      type: 'demo'
+    },
+    {
+      title: '👗 Template Tienda de Moda',
+      description: 'Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de compras y enlaces directos a redes sociales para impulsar ventas.',
+      images: [
+        { src: 'demos/ropa/hero.jpg', alt: 'Vista principal del template tienda de ropa' },
+        { src: 'demos/ropa/lookbook.jpg', alt: 'Galería lookbook con modelos' },
+        { src: 'demos/ropa/ficha-producto.jpg', alt: 'Ficha de producto con tallas y colores' },
+        { src: 'demos/ropa/carrito.jpg', alt: 'Carrito de compras integrado' }
+      ],
+      type: 'demo'
+    },
+    {
+      title: '🎨 Template Artesanías & Handmade',
+      description: 'Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación, envíos y opción de pedidos personalizados por WhatsApp.',
+      images: [
+        { src: 'demos/artesanias/hero.jpg', alt: 'Vista principal del template artesanías' },
+        { src: 'demos/artesanias/proceso.jpg', alt: 'Sección del proceso de creación artesanal' },
+        { src: 'demos/artesanias/catalogo.jpg', alt: 'Catálogo de piezas handmade' },
+        { src: 'demos/artesanias/pedidos.jpg', alt: 'Formulario de pedidos personalizados' }
+      ],
+      type: 'demo'
+    }
+  ];
+
+  // ==========================================
+  // 3. FUSIÓN DE ARRAYS (SOLUCIÓN DEL ERROR)
+  // ==========================================
+  // Creamos un único array con todos los items
+  const allGalleryItems = [...projectsData, ...templatesData];
 
   // Estado del modal
-  let currentProject = 0;
+  let currentItemIndex = 0; // ← Renombrado para claridad (ya no es solo "project")
   let currentSlide = 0;
   let isAnimating = false;
 
@@ -602,108 +689,81 @@
   const modalDescription = document.getElementById('modal-description');
 
   // ==========================================
-  // CARRUSELES DE CADA PROYECTO (en las cards)
+  // 4. CARRUSELES DE CADA CARD (PROYECTOS Y TEMPLATES)
   // ==========================================
   
-  document.querySelectorAll('.project-carousel').forEach((carousel, carouselIndex) => {
+  document.querySelectorAll('.project-carousel').forEach((carousel, visualIndex) => {
     const track = carousel.querySelector('.carousel-track');
     const slides = carousel.querySelectorAll('.carousel-slide');
     const dots = carousel.querySelectorAll('.carousel-dot');
     const prevBtn = carousel.querySelector('.carousel-prev');
     const nextBtn = carousel.querySelector('.carousel-next');
     const expandBtn = carousel.querySelector('.carousel-expand');
+    const card = carousel.closest('.project-card');
+    
+    // 🔑 CLAVE: Obtener el índice REAL del array fusionado desde data-project
+    const realIndex = parseInt(card?.dataset.project || visualIndex);
+    
     let currentIndex = 0;
 
     function goToSlide(index) {
       if (index < 0) index = slides.length - 1;
       if (index >= slides.length) index = 0;
-      
       currentIndex = index;
       
-      // Actualizar slides
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === currentIndex);
-      });
-      
-      // Actualizar dots
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-      });
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === currentIndex));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
     }
 
-    function nextSlide() {
-      goToSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-      goToSlide(currentIndex - 1);
-    }
+    function nextSlide() { goToSlide(currentIndex + 1); }
+    function prevSlide() { goToSlide(currentIndex - 1); }
 
     // Event listeners del carrusel
-    prevBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      prevSlide();
-    });
-
-    nextBtn?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      nextSlide();
-    });
-
+    prevBtn?.addEventListener('click', (e) => { e.stopPropagation(); prevSlide(); });
+    nextBtn?.addEventListener('click', (e) => { e.stopPropagation(); nextSlide(); });
     dots.forEach((dot, i) => {
-      dot.addEventListener('click', (e) => {
-        e.stopPropagation();
-        goToSlide(i);
-      });
+      dot.addEventListener('click', (e) => { e.stopPropagation(); goToSlide(i); });
     });
 
-    // Touch/swipe en carruseles
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
+    // Touch/swipe
+    let touchStartX = 0, touchEndX = 0;
+    carousel.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
     carousel.addEventListener('touchend', (e) => {
       touchEndX = e.changedTouches[0].screenX;
       const diff = touchStartX - touchEndX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) nextSlide();
-        else prevSlide();
-      }
+      if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
     }, { passive: true });
 
-    // Abrir modal al hacer clic en la imagen
+    // 🔑 CLAVE: Abrir modal usando el índice real del array fusionado
+    const openModalHandler = () => openModal(realIndex, currentIndex);
+    
     const firstImg = slides[0]?.querySelector('.carousel-img');
     if (firstImg) {
       firstImg.style.cursor = 'pointer';
-      firstImg.addEventListener('click', () => openModal(carouselIndex, currentIndex));
+      firstImg.addEventListener('click', openModalHandler);
     }
-
-    // Abrir modal con botón expandir
-    expandBtn?.addEventListener('click', () => openModal(carouselIndex, currentIndex));
+    expandBtn?.addEventListener('click', openModalHandler);
   });
 
   // ==========================================
-  // MODAL DE GALERÍA
+  // 5. FUNCIONES DEL MODAL (USAN allGalleryItems)
   // ==========================================
 
-  function openModal(projectIndex, slideIndex = 0) {
-    if (!modal) return;
+  function openModal(itemIndex, slideIndex = 0) {
+    if (!modal || !allGalleryItems[itemIndex]) return;
     
-    currentProject = projectIndex;
+    currentItemIndex = itemIndex;
     currentSlide = slideIndex;
-    const project = projectsData[projectIndex];
+    const item = allGalleryItems[itemIndex]; // ← Usa el array fusionado
 
     // Configurar contenido
-    modalTitle.textContent = project.title;
-    modalDescription.textContent = project.description;
-    modalCounter.textContent = `${slideIndex + 1} / ${project.images.length}`;
+    modalTitle.textContent = item.title;
+    modalDescription.textContent = item.description;
+    modalCounter.textContent = `${slideIndex + 1} / ${item.images.length}`;
     
     // Generar miniaturas
     modalThumbnails.innerHTML = '';
-    project.images.forEach((img, i) => {
+    item.images.forEach((img, i) => {
       const thumb = document.createElement('div');
       thumb.className = `modal-thumb${i === slideIndex ? ' active' : ''}`;
       thumb.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy">`;
@@ -711,7 +771,6 @@
       modalThumbnails.appendChild(thumb);
     });
 
-    // Mostrar imagen principal
     updateModalImage();
 
     // Mostrar modal
@@ -720,20 +779,14 @@
       modal.classList.add('active');
       document.body.classList.add('modal-open');
     });
-
-    // Foco para accesibilidad
     setTimeout(() => modalClose?.focus(), 300);
   }
 
   function closeModal() {
     if (!modal) return;
-    
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
-    
-    setTimeout(() => {
-      modal.hidden = true;
-    }, 300);
+    setTimeout(() => { modal.hidden = true; }, 300);
   }
 
   function goToModalSlide(index) {
@@ -741,29 +794,18 @@
     
     isAnimating = true;
     currentSlide = index;
-    const project = projectsData[currentProject];
+    const item = allGalleryItems[currentItemIndex]; // ← Array fusionado
 
-    // Actualizar contador
-    modalCounter.textContent = `${index + 1} / ${project.images.length}`;
+    modalCounter.textContent = `${index + 1} / ${item.images.length}`;
 
-    // Actualizar miniaturas
     const thumbs = modalThumbnails.querySelectorAll('.modal-thumb');
-    thumbs.forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === index);
-    });
-
-    // Scroll la miniatura activa a la vista
+    thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
+    
     if (thumbs[index]) {
-      thumbs[index].scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'nearest', 
-        inline: 'center' 
-      });
+      thumbs[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
 
-    // Transición de imagen
     modalImage.classList.add('changing');
-    
     setTimeout(() => {
       updateModalImage();
       modalImage.classList.remove('changing');
@@ -772,23 +814,22 @@
   }
 
   function updateModalImage() {
-    const project = projectsData[currentProject];
-    if (!project?.images[currentSlide]) return;
-    
-    const img = project.images[currentSlide];
+    const item = allGalleryItems[currentItemIndex]; // ← Array fusionado
+    if (!item?.images[currentSlide]) return;
+    const img = item.images[currentSlide];
     modalImage.src = img.src;
     modalImage.alt = img.alt;
   }
 
   function nextModalSlide() {
-    const project = projectsData[currentProject];
-    const next = (currentSlide + 1) % project.images.length;
+    const item = allGalleryItems[currentItemIndex];
+    const next = (currentSlide + 1) % item.images.length;
     goToModalSlide(next);
   }
 
   function prevModalSlide() {
-    const project = projectsData[currentProject];
-    const prev = (currentSlide - 1 + project.images.length) % project.images.length;
+    const item = allGalleryItems[currentItemIndex];
+    const prev = (currentSlide - 1 + item.images.length) % item.images.length;
     goToModalSlide(prev);
   }
 
@@ -798,42 +839,24 @@
   modalNext?.addEventListener('click', nextModalSlide);
   modalPrev?.addEventListener('click', prevModalSlide);
 
-  // Teclado en modal
+  // Teclado
   document.addEventListener('keydown', (e) => {
     if (modal?.classList.contains('active')) {
-      switch(e.key) {
-        case 'Escape':
-          closeModal();
-          break;
-        case 'ArrowRight':
-          nextModalSlide();
-          break;
-        case 'ArrowLeft':
-          prevModalSlide();
-          break;
-      }
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowRight') nextModalSlide();
+      if (e.key === 'ArrowLeft') prevModalSlide();
     }
   });
 
-  // Swipe en modal (móvil)
+  // Swipe en modal
   let modalTouchStartX = 0;
-  
-  modal?.addEventListener('touchstart', (e) => {
-    modalTouchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
+  modal?.addEventListener('touchstart', (e) => { modalTouchStartX = e.changedTouches[0].screenX; }, { passive: true });
   modal?.addEventListener('touchend', (e) => {
     const diff = modalTouchStartX - e.changedTouches[0].screenX;
-    if (Math.abs(diff) > 60) {
-      if (diff > 0) nextModalSlide();
-      else prevModalSlide();
-    }
+    if (Math.abs(diff) > 60) { diff > 0 ? nextModalSlide() : prevModalSlide(); }
   }, { passive: true });
 
-  // Prevenir cierre al hacer clic dentro del contenido
-  modalContent?.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+  modalContent?.addEventListener('click', (e) => e.stopPropagation());
 
 })();
 
