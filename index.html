@@ -18,22 +18,6 @@
 
   <link rel="icon" href="img/logo.png">
 
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3802612696701770');
-    fbq('track', 'PageView');
-
-  </script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=3802612696701770&ev=PageView&noscript=1" /></noscript>
 
@@ -57,7 +41,7 @@
         <li class="nav-item"><a href="#planes" class="nav-link">Planes</a></li>
         <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
         <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
-        <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li class="nav-item"><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
         <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
 
@@ -119,88 +103,90 @@
 
   </section>
 
-<!-- ======================================================================= -->
-<!-- SECCIÓN VIDEO PROMOCIONAL (Después del Hero) -->
-<!-- ======================================================================= -->
-<section class="section video-promo" id="video-intro">
-  <div class="video-promo-bg">
-    <div class="video-grid-overlay"></div>
-    <div class="video-particles" id="video-particles"></div>
-  </div>
-  
-  <div class="container">
-    <div class="video-promo-wrapper animate-on-scroll">
-      
-      <!-- Contenido textual -->
-      <div class="video-promo-content">
-        <span class="section-tag video-tag">✨ Descubre tu potencial digital</span>
-        <h2 class="video-title">
-          Mira cómo transformamos <span class="text-gradient">ideas en realidad</span>
-        </h2>
-        <p class="video-description">
-          En menos de 1 minuto, conoce nuestra metodología y ve ejemplos reales 
-          de nuestros prototipos diseñados para impulsar tu negocio.
-        </p>
-        
-        <div class="video-highlights">
-          <div class="highlight-item">
-            <span class="highlight-icon">🎯</span>
-            <span>Enfoque estratégico</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-icon">⚡</span>
-            <span>Entrega rápida</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-icon">🔒</span>
-            <span>Soporte garantizado</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Reproductor de video -->
-      <div class="video-promo-player">
-        <div class="video-container">
-          
-          <!-- Placeholder del video (se oculta al reproducir) -->
-          <div class="video-placeholder" id="video-placeholder">
-            
-            <div class="video-play-overlay" id="video-play-btn" role="button" tabindex="0" aria-label="Reproducir video">
-              <div class="play-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-              
+  <!-- ======================================================================= -->
+  <!-- SECCIÓN VIDEO PROMOCIONAL (Después del Hero) -->
+  <!-- ======================================================================= -->
+  <section class="section video-promo" id="video-intro">
+    <div class="video-promo-bg">
+      <div class="video-grid-overlay"></div>
+      <div class="video-particles" id="video-particles"></div>
+    </div>
+
+    <div class="container">
+      <div class="video-promo-wrapper animate-on-scroll">
+
+        <!-- Contenido textual -->
+        <div class="video-promo-content">
+          <span class="section-tag video-tag">✨ Descubre tu potencial digital</span>
+          <h2 class="video-title">
+            Mira cómo transformamos <span class="text-gradient">ideas en realidad</span>
+          </h2>
+          <p class="video-description">
+            En menos de 1 minuto, conoce nuestra metodología y ve ejemplos reales
+            de nuestros prototipos diseñados para impulsar tu negocio.
+          </p>
+
+          <div class="video-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🎯</span>
+              <span>Enfoque estratégico</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span>Entrega rápida</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🔒</span>
+              <span>Soporte garantizado</span>
             </div>
           </div>
-          
-          <!-- Video real (se muestra al reproducir) -->
-          <video id="promo-video" class="video-element" controls preload="metadata" poster="img/video-thumbnail.jpg" muted playsinline style="display: none;">
-            <source src="desarrollo_web.mp4" type="video/mp4">
-            <source src="desarrollo_web.webm" type="video/webm">
-            Tu navegador no soporta la reproducción de video. 
-            <a href="desarrollo_web.mp4" download>Descargar video</a>
-          </video>
-          
-        
-          
         </div>
-        
-       
-      
-    </div>
-    
-  </div>
-  
-  <!-- Scroll indicator -->
-  <div class="video-scroll-indicator">
-    <span>Explora nuestros planes</span>
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M12 5v14M5 12l7 7 7-7"/>
-    </svg>
-  </div>
-</section>
+
+        <!-- Reproductor de video -->
+        <div class="video-promo-player">
+          <div class="video-container">
+
+            <!-- Placeholder del video (se oculta al reproducir) -->
+            <div class="video-placeholder" id="video-placeholder">
+
+              <div class="video-play-overlay" id="video-play-btn" role="button" tabindex="0"
+                aria-label="Reproducir video">
+                <div class="play-button">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Video real (se muestra al reproducir) -->
+            <video id="promo-video" class="video-element" controls preload="metadata" poster="img/logo.png"
+              muted playsinline style="display: none;">
+              <source src="desarrollo_web.mp4" type="video/mp4">
+              <source src="desarrollo_web.webm" type="video/webm">
+              Tu navegador no soporta la reproducción de video.
+              <a href="desarrollo_web.mp4" download>Descargar video</a>
+            </video>
+
+
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="video-scroll-indicator">
+        <span>Explora nuestros planes</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+  </section>
 
   <section class="section pricing" id="planes">
     <div class="container">
@@ -321,9 +307,8 @@
               <p><em>"No es una web, es una herramienta para conseguir clientes."</em></p>
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Inicio%20-%20Presencia%20Online%20R%C3%A1pida%20(USD%20200).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
-              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'inicio'});">
-              <span>Consultar Plan Inicio</span>
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer" <span>Consultar Plan
+              Inicio</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
@@ -422,9 +407,8 @@
               <p><em>"Es la imagen digital de tu empresa por años."</em></p>
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Negocio%20-%20Web%20Profesional%20Completa%20(USD%20400).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
-              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'negocio'});">
-              <span>Consultar Plan Negocio</span>
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer" <span>Consultar Plan
+              Negocio</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
@@ -523,9 +507,8 @@
               <p><em>"Una tienda puede recuperar la inversión con pocas ventas."</em></p>
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Ventas%20-%20Ecommerce%20%2F%20Tienda%20Online%20(USD%20600).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
-              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'ventas'});">
-              <span>Consultar Plan Ventas</span>
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer" <span>Consultar Plan
+              Ventas</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
@@ -617,9 +600,8 @@
               <p><em>"No comprás una web, comprás crecimiento."</em></p>
             </div>
             <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Premium%20-%20Web%20%2B%20Estrategia%20Digital%20(USD%201000).%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
-              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer"
-              onclick="fbq('track', 'Contact', {plan: 'premium'});">
-              <span>Consultar Plan Estrategia</span>
+              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer" <span>Consultar Plan
+              Estrategia</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
@@ -659,9 +641,8 @@
         <h3>¿No estás seguro qué plan elegir?</h3>
         <p>Agenda una consulta y te ayudamos a elegir la mejor opción para tu proyecto.</p>
         <a href="https://wa.me/59896854828?text=Hola!%20Necesito%20ayuda%20para%20elegir%20el%20plan%20ideal%20para%20mi%20proyecto.%20¿Podemos%20agendar%20una%20consulta?"
-          class="btn btn-outline btn-large" target="_blank" rel="noopener noreferrer"
-          onclick="fbq('track', 'Contact', {plan: 'consulta'});">
-          <span>📅 Agendar Consulta Gratuita</span>
+          class="btn btn-outline btn-large" target="_blank" rel="noopener noreferrer" <span>📅 Agendar Consulta
+          Gratuita</span>
         </a>
       </div>
 
@@ -864,517 +845,519 @@
   </section>
 
   <section class="section trajectory" id="trayectoria">
-  <div class="container">
-    
-    <!-- Header con mensaje motivacional -->
-    <div class="section-header animate-on-scroll text-center">
-      <span class="section-tag">Nuestro Camino</span>
-      <h2 class="section-title">Trayectoria <span class="text-gradient">y Aprendizaje</span></h2>
-      <p class="section-description max-width-700">
-        Cada proyecto es una historia de crecimiento. 
-        <strong>Empezamos con ideas, las transformamos en prototipos, y las convertimos en soluciones reales</strong> 
-        que impactan positivamente. Aquí compartimos lo que hemos construido y lo que seguimos imaginando.
-      </p>
-      <div class="motivation-badges">
-        <span class="badge">✨ Innovación constante</span>
-        <span class="badge">🎯 Enfoque en resultados</span>
-        <span class="badge">🤝 Aprendizaje colaborativo</span>
-      </div>
-    </div>
+    <div class="container">
 
-    <!-- SUBSECCIÓN 1: Prototipos por Industria (Primero) -->
-    <div class="trajectory-subsection" id="prototipos">
-      <div class="subsection-header animate-on-scroll">
-        <h3 class="subsection-title">🚀 Prototipos que Inspiran</h3>
-        <p class="subsection-description">
-          Ideas listas para cobrar vida. Explora nuestras demos preconstruidas: 
-          <em>porque creemos que el mejor momento para empezar es ahora</em>.
+      <!-- Header con mensaje motivacional -->
+      <div class="section-header animate-on-scroll text-center">
+        <span class="section-tag">Nuestro Camino</span>
+        <h2 class="section-title">Trayectoria <span class="text-gradient">y Aprendizaje</span></h2>
+        <p class="section-description max-width-700">
+          Cada proyecto es una historia de crecimiento.
+          <strong>Empezamos con ideas, las transformamos en prototipos, y las convertimos en soluciones reales</strong>
+          que impactan positivamente. Aquí compartimos lo que hemos construido y lo que seguimos imaginando.
         </p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- Template 1: Panadería (Índice 0) -->
-        <article class="project-card animate-on-scroll demo-card" 
-                 data-project="3" 
-                 data-type="demo"
-                 data-title="🥐 Prototipo Panadería Artesanal"
-                 data-desc="Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por WhatsApp y sección de 'productos del día'. Diseño cálido y apetitoso."
-                 data-media='[{"src":"demos/panaderia/hero.jpg","alt":"Vista principal del template panadería","mediaType":"video","videoSrc":"demos/panaderia/demo.mp4","videoType":"local","poster":"demos/panaderia/hero.jpg"}]'>
-          
-          <div class="project-carousel" role="region" aria-label="Video del template Panadería">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
-                  <img src="demos/panaderia/hero.jpg" alt="Template para panadería artesanal" class="carousel-img">
-                  <span class="play-overlay" aria-hidden="true">▶</span>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-dots" style="display:none;">
-              <span class="carousel-dot active" data-slide="0"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver video completo" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-ecommerce">Ecommerce</span>
-              <span class="tag tag-web">Web</span>
-              <span class="tag tag-demo">Demo</span>
-              <span class="tag tag-video">🎬 Video</span>
-            </div>
-            <h3 class="project-title">🥐 Prototipo Panadería Artesanal</h3>
-            <p class="project-desc">
-              Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Perfecto para mostrar productos visuales y generar pedidos rápidos desde el celular."
-              </blockquote>
-              <cite class="testimonial-author">— Ideal para negocios locales</cite>
-            </div>
-          </div>
-        </article>
-
-        <!-- Template 2: Forestal (Índice 1) -->
-        <article class="project-card animate-on-scroll demo-card" 
-                 data-project="4" 
-                 data-type="demo"
-                 data-title="🌲 Template Empresa Forestal"
-                 data-desc="Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad, proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados."
-                 data-media='[{"src":"demos/forestal/hero.jpg","alt":"Vista principal del template forestal","mediaType":"video","videoSrc":"demos/forestal/demo.mp4","videoType":"local","poster":"demos/forestal/hero.jpg"}]'>
-          
-          <div class="project-carousel" role="region" aria-label="Video del template Forestal">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
-                  <img src="demos/forestal/hero.jpg" alt="Template para empresa forestal" class="carousel-img">
-                  <span class="play-overlay" aria-hidden="true">▶</span>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-dots" style="display:none;">
-              <span class="carousel-dot active" data-slide="0"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver video completo" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-corporate">Corporativo</span>
-              <span class="tag tag-web">Web</span>
-              <span class="tag tag-demo">Demo</span>
-              <span class="tag tag-video">🎬 Video</span>
-            </div>
-            <h3 class="project-title">🌲 Template Empresa Forestal</h3>
-            <p class="project-desc">
-              Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad, proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Transmite profesionalismo y es ideal para presentar servicios a clientes corporativos."
-              </blockquote>
-              <cite class="testimonial-author">— Sector industrial y agro</cite>
-            </div>
-          </div>
-        </article>
-
-        <!-- Template 3: Tecnología (Índice 2) -->
-        <article class="project-card animate-on-scroll demo-card" 
-                 data-project="5" 
-                 data-type="demo"
-                 data-title="💻 Template Comercio de Tecnología"
-                 data-desc="Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas técnicas, comparador de productos y integración con métodos de pago."
-                 data-media='[{"src":"demos/tecnologia/hero.jpg","alt":"Vista principal del template tecnología","mediaType":"video","videoSrc":"demos/tecnologia/demo.mp4","videoType":"local","poster":"demos/tecnologia/hero.jpg"}]'>
-          
-          <div class="project-carousel" role="region" aria-label="Video del template Tecnología">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
-                  <img src="demos/tecnologia/hero.jpg" alt="Template para comercio de tecnología" class="carousel-img">
-                  <span class="play-overlay" aria-hidden="true">▶</span>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-dots" style="display:none;">
-              <span class="carousel-dot active" data-slide="0"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver video completo" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-ecommerce">Ecommerce</span>
-              <span class="tag tag-tech">Tech</span>
-              <span class="tag tag-demo">Demo</span>
-              <span class="tag tag-video">🎬 Video</span>
-            </div>
-            <h3 class="project-title">💻 Template Comercio de Tecnología</h3>
-            <p class="project-desc">
-              Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas técnicas, comparador de productos y integración con métodos de pago.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Diseño limpio y funcional, perfecto para destacar especificaciones técnicas y generar confianza."
-              </blockquote>
-              <cite class="testimonial-author">— Retail tecnológico</cite>
-            </div>
-          </div>
-        </article>
-
-        <!-- Template 4: Peluquería (Índice 3) -->
-        <article class="project-card animate-on-scroll demo-card" 
-                 data-project="6" 
-                 data-type="demo"
-                 data-title="✂️ Template Peluquería & Estética"
-                 data-desc="Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios, reserva de turnos por WhatsApp y sección de promociones."
-                 data-media='[{"src":"demos/peluqueria/hero.jpg","alt":"Vista principal del template peluquería","mediaType":"video","videoSrc":"demos/peluqueria/demo.mp4","videoType":"local","poster":"demos/peluqueria/hero.jpg"}]'>
-          
-          <div class="project-carousel" role="region" aria-label="Video del template Peluquería">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
-                  <img src="demos/peluqueria/hero.jpg" alt="Template para peluquería y estética" class="carousel-img">
-                  <span class="play-overlay" aria-hidden="true">▶</span>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-dots" style="display:none;">
-              <span class="carousel-dot active" data-slide="0"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver video completo" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-services">Servicios</span>
-              <span class="tag tag-web">Web</span>
-              <span class="tag tag-demo">Demo</span>
-              <span class="tag tag-video">🎬 Video</span>
-            </div>
-            <h3 class="project-title">✂️ Template Peluquería & Estética</h3>
-            <p class="project-desc">
-              Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios, reserva de turnos por WhatsApp y sección de promociones.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Visualmente atractivo y fácil de usar para que los clientes agenden sin complicaciones."
-              </blockquote>
-              <cite class="testimonial-author">— Sector belleza y bienestar</cite>
-            </div>
-          </div>
-        </article>
-
-        <!-- Template 5: Tienda de Ropa (Índice 4) -->
-        <article class="project-card animate-on-scroll demo-card" 
-                 data-project="7" 
-                 data-type="demo"
-                 data-title="👗 Template Tienda de Moda"
-                 data-desc="Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de compras y enlaces directos a redes sociales para impulsar ventas."
-                 data-media='[{"src":"demos/ropa/hero.jpg","alt":"Vista principal del template tienda de ropa","mediaType":"video","videoSrc":"demos/ropa/demo.mp4","videoType":"local","poster":"demos/ropa/hero.jpg"}]'>
-          
-          <div class="project-carousel" role="region" aria-label="Video del template Tienda de Ropa">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
-                  <img src="demos/ropa/hero.jpg" alt="Template para tienda de moda y ropa" class="carousel-img">
-                  <span class="play-overlay" aria-hidden="true">▶</span>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-dots" style="display:none;">
-              <span class="carousel-dot active" data-slide="0"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver video completo" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-ecommerce">Ecommerce</span>
-              <span class="tag tag-fashion">Moda</span>
-              <span class="tag tag-demo">Demo</span>
-              <span class="tag tag-video">🎬 Video</span>
-            </div>
-            <h3 class="project-title">👗 Template Tienda de Moda</h3>
-            <p class="project-desc">
-              Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de compras y enlaces directos a redes sociales para impulsar ventas.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Estilo premium que resalta las prendas y convierte visitantes en compradores."
-              </blockquote>
-              <cite class="testimonial-author">— Emprendedores de moda</cite>
-            </div>
-          </div>
-        </article>
-
-        <!-- Template 6: Artesanías (Índice 5) -->
-        <article class="project-card animate-on-scroll demo-card" 
-                 data-project="8" 
-                 data-type="demo"
-                 data-title="🎨 Template Artesanías & Handmade"
-                 data-desc="Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación, envíos y opción de pedidos personalizados por WhatsApp."
-                 data-media='[{"src":"demos/artesanias/hero.jpg","alt":"Vista principal del template artesanías","mediaType":"video","videoSrc":"demos/artesanias/demo.mp4","videoType":"local","poster":"demos/artesanias/hero.jpg"}]'>
-          
-          <div class="project-carousel" role="region" aria-label="Video del template Artesanías">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <div class="video-thumbnail" tabindex="0" role="button" aria-label="Reproducir video de demostración">
-                  <img src="demos/artesanias/hero.jpg" alt="Template para artesanos y productos handmade" class="carousel-img">
-                  <span class="play-overlay" aria-hidden="true">▶</span>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-dots" style="display:none;">
-              <span class="carousel-dot active" data-slide="0"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver video completo" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-ecommerce">Ecommerce</span>
-              <span class="tag tag-handmade">Handmade</span>
-              <span class="tag tag-demo">Demo</span>
-              <span class="tag tag-video">🎬 Video</span>
-            </div>
-            <h3 class="project-title">🎨 Template Artesanías & Handmade</h3>
-            <p class="project-desc">
-              Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación, envíos y opción de pedidos personalizados por WhatsApp.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Perfecto para contar la historia de tu marca y conectar emocionalmente con tus clientes."
-              </blockquote>
-              <cite class="testimonial-author">— Artesanos y creadores</cite>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-
-    <!-- Divider motivacional -->
-    <div class="trajectory-divider animate-on-scroll">
-      <div class="divider-content">
-        <span class="divider-icon">💡</span>
-        <p class="divider-text">
-          <strong>De la idea a la realidad:</strong> Cada prototipo es el primer paso. 
-          Cada proyecto entregado es una lección que nos impulsa a seguir creciendo.
-        </p>
-      </div>
-    </div>
-
-    <!-- SUBSECCIÓN 2: Proyectos Destacados (Después) -->
-    <div class="trajectory-subsection" id="proyectos-reales">
-      <div class="subsection-header animate-on-scroll">
-        <h3 class="subsection-title">🏆 Proyectos que Transformaron Ideas en Realidad</h3>
-       
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- Proyecto 1: Banco de Sangre -->
-        <article class="project-card animate-on-scroll project-real" data-project="0">
-          <div class="project-carousel" role="region" aria-label="Galería del proyecto Banco de Sangre">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <img src="bancoSangre/Captura de pantalla 2025-11-27 193448.png"
-                  alt="Dashboard de analíticas en tiempo real" class="carousel-img">
-              </div>
-            </div>
-            <div class="carousel-dots">
-              <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver galería completa">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-web">Web</span>
-              <span class="tag tag-api">API</span>
-              <span class="tag tag-backend">Backend</span>
-              <span class="tag tag-impact">Impacto Social</span>
-            </div>
-            <h3 class="project-title">Sistema de administración para banco de sangre</h3>
-            <p class="project-desc">
-              Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación,
-              almacenamiento y distribución de sangre.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Es una solución muy útil y necesaria para el sistema de gestión que se usa actualmente."
-              </blockquote>
-              <cite class="testimonial-author">— Estudiantes de Hemoterapia</cite>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 2: Transporte -->
-        <article class="project-card animate-on-scroll project-real" data-project="1">
-          <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Transporte">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <img src="siempreCargo/Captura de pantalla 2025-11-28 145454.png" alt="Arquitectura de servidor" class="carousel-img">
-              </div>
-            </div>
-            <div class="carousel-dots">
-              <span class="carousel-dot active" data-slide="0"></span>
-              <span class="carousel-dot" data-slide="1"></span>
-              <span class="carousel-dot" data-slide="2"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver galería completa">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-backend">Backend</span>
-              <span class="tag tag-api">API</span>
-              <span class="tag tag-web">Web</span>
-              <span class="tag tag-logistics">Logística</span>
-            </div>
-            <h3 class="project-title">Sistema de gestión para empresa de transporte</h3>
-            <p class="project-desc">
-              Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías
-              o fletes.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Es una solución completa que abarca todas las funcionalidades solicitadas."
-              </blockquote>
-              <cite class="testimonial-author">— Cliente Transportista</cite>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 3: Stock -->
-        <article class="project-card animate-on-scroll project-real" data-project="2">
-          <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Stock">
-            <div class="carousel-track">
-              <div class="carousel-slide active">
-                <img src="gestock/image.png" alt="Estación de trabajo gaming" class="carousel-img">
-              </div>
-            </div>
-            <div class="carousel-dots">
-              <span class="carousel-dot active" data-slide="0"></span>
-            </div>
-            <button class="carousel-expand" aria-label="Ver galería completa">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="project-info">
-            <div class="project-tags">
-              <span class="tag tag-backend">Backend</span>
-              <span class="tag tag-api">API</span>
-              <span class="tag tag-web">Web</span>
-              <span class="tag tag-innovation">Innovación</span>
-            </div>
-            <h3 class="project-title">Sistema integral de gestión de stock</h3>
-            <p class="project-desc">
-              Plataforma digital diseñada para controlar y optimizar todos los procesos de inventario con integración hardware.
-            </p>
-            <div class="project-testimonial">
-              <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <blockquote class="testimonial-quote">
-                "Es una muy buena solución que integra tecnologías de hardware para el correcto funcionamiento del servicio."
-              </blockquote>
-              <cite class="testimonial-author">— Cliente / Responsable de Operaciones</cite>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-
-    <!-- CTA Final con mensaje motivador -->
-    <div class="trajectory-cta animate-on-scroll">
-      <div class="cta-content">
-        <h3>¿Listo para escribir tu próxima historia de éxito?</h3>
-        <p>
-          Ya sea que quieras personalizar una de nuestras demos o desarrollar una solución única desde cero, 
-          estamos aquí para acompañarte en cada paso del camino.
-        </p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/59896854828?text=Hola!%20Me%20interesa%20personalizar%20una%20demo%20para%20mi%20negocio.%20%C2%BFCu%C3%A1ndo%20podemos%20conversar%3F"
-            class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
-            <span>🚀 Empezar mi Proyecto</span>
-          </a>
-          <a href="#contacto" class="btn btn-outline btn-large">
-            <span>💬 Hablemos de tu Idea</span>
-          </a>
+        <div class="motivation-badges">
+          <span class="badge">✨ Innovación constante</span>
+          <span class="badge">🎯 Enfoque en resultados</span>
+          <span class="badge">🤝 Aprendizaje colaborativo</span>
         </div>
-        <p class="cta-note">
-          <small>✨ Cada gran proyecto comienza con una conversación. ¡La tuya puede ser la próxima!</small>
-        </p>
       </div>
-    </div>
 
-  </div>
-</section>
+      <!-- SUBSECCIÓN 1: Prototipos por Industria (Primero) - CON IMÁGENES CLICKABLES -->
+      <div class="trajectory-subsection" id="prototipos">
+        <div class="subsection-header animate-on-scroll">
+          <h3 class="subsection-title">🚀 Prototipos que Inspiran</h3>
+          <p class="subsection-description">
+            Ideas listas para cobrar vida. Explora nuestras demos preconstruidas:
+            <em>porque creemos que el mejor momento para empezar es ahora</em>.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Template 1: Panadería (Índice 3) -->
+          <article class="project-card animate-on-scroll demo-card" data-project="3" data-type="demo">
+            <div class="project-carousel" role="region" aria-label="Galería del template Panadería">
+              <a href="https://panaderiaweb-azure.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img src="demos/panaderia/hero.jpg" alt="Vista principal - Template Panadería" class="carousel-img">
+                  </div>
+                 
+                </div>
+                <span class="carousel-click-overlay" aria-hidden="true">
+                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  <span class="link-text">Ver demo →</span>
+                </span>
+              </a>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-ecommerce">Ecommerce</span>
+                <span class="tag tag-web">Web</span>
+                <span class="tag tag-demo">Demo</span>
+              </div>
+              <h3 class="project-title">🥐 Prototipo Panadería Artesanal</h3>
+              <p class="project-desc">
+                Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por
+                WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Perfecto para mostrar productos visuales y generar pedidos rápidos desde el celular."
+                </blockquote>
+                <cite class="testimonial-author">— Ideal para negocios locales</cite>
+              </div>
+            </div>
+          </article>
+
+          <!-- Template 2: Forestal (Índice 4) -->
+          <article class="project-card animate-on-scroll demo-card" data-project="4" data-type="demo">
+            <div class="project-carousel" role="region" aria-label="Galería del template Forestal">
+              <a href="https://forestalweb.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img src="demos/forestal/hero.jpg" alt="Vista principal - Template Forestal" class="carousel-img">
+                  </div>
+                 
+                </div>
+                <span class="carousel-click-overlay" aria-hidden="true">
+                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  <span class="link-text">Ver demo →</span>
+                </span>
+              </a>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-corporate">Corporativo</span>
+                <span class="tag tag-web">Web</span>
+                <span class="tag tag-demo">Demo</span>
+              </div>
+              <h3 class="project-title">🌲 Template Empresa Forestal</h3>
+              <p class="project-desc">
+                Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad,
+                proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Transmite profesionalismo y es ideal para presentar servicios a clientes corporativos."
+                </blockquote>
+                <cite class="testimonial-author">— Sector industrial y agro</cite>
+              </div>
+            </div>
+          </article>
+
+          <!-- Template 3: Tecnología (Índice 5) -->
+          <article class="project-card animate-on-scroll demo-card" data-project="5" data-type="demo">
+            <div class="project-carousel" role="region" aria-label="Galería del template Tecnología">
+              <a href="demos/tecnologia/index.html" class="carousel-link" target="_blank" rel="noopener noreferrer">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img src="demos/tecnologia/hero.jpg" alt="Vista principal - Template Tecnología"
+                      class="carousel-img">
+                  </div>
+                  
+                </div>
+                <span class="carousel-click-overlay" aria-hidden="true">
+                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  <span class="link-text">Ver demo →</span>
+                </span>
+              </a>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-ecommerce">Ecommerce</span>
+                <span class="tag tag-tech">Tech</span>
+                <span class="tag tag-demo">Demo</span>
+              </div>
+              <h3 class="project-title">💻 Template Comercio de Tecnología</h3>
+              <p class="project-desc">
+                Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas
+                técnicas, comparador de productos y integración con métodos de pago.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Diseño limpio y funcional, perfecto para destacar especificaciones técnicas y generar confianza."
+                </blockquote>
+                <cite class="testimonial-author">— Retail tecnológico</cite>
+              </div>
+            </div>
+          </article>
+
+          <!-- Template 4: Peluquería (Índice 6) -->
+          <article class="project-card animate-on-scroll demo-card" data-project="6" data-type="demo">
+            <div class="project-carousel" role="region" aria-label="Galería del template Peluquería">
+              <a href="https://peluqueriaweb.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img src="demos/peluqueria/hero.jpg" alt="Vista principal - Template Peluquería"
+                      class="carousel-img">
+                  </div>
+                 
+                </div>
+                <span class="carousel-click-overlay" aria-hidden="true">
+                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  <span class="link-text">Ver demo →</span>
+                </span>
+              </a>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-services">Servicios</span>
+                <span class="tag tag-web">Web</span>
+                <span class="tag tag-demo">Demo</span>
+              </div>
+              <h3 class="project-title">✂️ Template Peluquería & Estética</h3>
+              <p class="project-desc">
+                Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios,
+                reserva de turnos por WhatsApp y sección de promociones.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Visualmente atractivo y fácil de usar para que los clientes agenden sin complicaciones."
+                </blockquote>
+                <cite class="testimonial-author">— Sector belleza y bienestar</cite>
+              </div>
+            </div>
+          </article>
+
+          <!-- Template 5: Tienda de Ropa (Índice 7) -->
+          <article class="project-card animate-on-scroll demo-card" data-project="7" data-type="demo">
+            <div class="project-carousel" role="region" aria-label="Galería del template Tienda de Ropa">
+              <a href="https://tiendaweb-ten.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img src="demos/ropa/hero.jpg" alt="Vista principal - Template Tienda de Moda" class="carousel-img">
+                  </div>
+                 
+                </div>
+                <span class="carousel-click-overlay" aria-hidden="true">
+                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  <span class="link-text">Ver demo →</span>
+                </span>
+              </a>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-ecommerce">Ecommerce</span>
+                <span class="tag tag-fashion">Moda</span>
+                <span class="tag tag-demo">Demo</span>
+              </div>
+              <h3 class="project-title">👗 Template Tienda de Moda</h3>
+              <p class="project-desc">
+                Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de
+                compras y enlaces directos a redes sociales para impulsar ventas.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Estilo premium que resalta las prendas y convierte visitantes en compradores."
+                </blockquote>
+                <cite class="testimonial-author">— Emprendedores de moda</cite>
+              </div>
+            </div>
+          </article>
+
+          <!-- Template 6: Artesanías (Índice 8) -->
+          <article class="project-card animate-on-scroll demo-card" data-project="8" data-type="demo">
+            <div class="project-carousel" role="region" aria-label="Galería del template Artesanías">
+              <a href="https://artesaniaweb.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img src="demos/artesanias/hero.jpg" alt="Vista principal - Template Artesanías"
+                      class="carousel-img">
+                  </div>
+                </div>
+                <span class="carousel-click-overlay" aria-hidden="true">
+                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  <span class="link-text">Ver demo →</span>
+                </span>
+              </a>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-ecommerce">Ecommerce</span>
+                <span class="tag tag-handmade">Handmade</span>
+                <span class="tag tag-demo">Demo</span>
+              </div>
+              <h3 class="project-title">🎨 Template Artesanías & Handmade</h3>
+              <p class="project-desc">
+                Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación,
+                envíos y opción de pedidos personalizados por WhatsApp.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Perfecto para contar la historia de tu marca y conectar emocionalmente con tus clientes."
+                </blockquote>
+                <cite class="testimonial-author">— Artesanos y creadores</cite>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Divider motivacional -->
+      <div class="trajectory-divider animate-on-scroll">
+        <div class="divider-content">
+          <span class="divider-icon">💡</span>
+          <p class="divider-text">
+            <strong>De la idea a la realidad:</strong> Cada prototipo es el primer paso.
+            Cada proyecto entregado es una lección que nos impulsa a seguir creciendo.
+          </p>
+        </div>
+      </div>
+
+      <!-- SUBSECCIÓN 2: Proyectos Destacados (Después) - SIN ENLACES, SOLO MODAL -->
+      <div class="trajectory-subsection" id="proyectos-reales">
+        <div class="subsection-header animate-on-scroll">
+          <h3 class="subsection-title">🏆 Proyectos que Transformaron Ideas en Realidad</h3>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto 1: Banco de Sangre -->
+          <article class="project-card animate-on-scroll project-real" data-project="0">
+            <div class="project-carousel" role="region" aria-label="Galería del proyecto Banco de Sangre">
+              <div class="carousel-track">
+                <div class="carousel-slide active">
+                  <img src="bancoSangre/Captura de pantalla 2025-11-27 193448.png"
+                    alt="Dashboard de analíticas en tiempo real" class="carousel-img">
+                </div>
+                <div class="carousel-slide">
+                  <img src="bancoSangre/bloodbank.png" alt="Panel administrativo - Banco de Sangre"
+                    class="carousel-img">
+                </div>
+                <div class="carousel-slide">
+                  <img src="bancoSangre/Captura de pantalla 2025-11-27 193512.png"
+                    alt="Gestión de donantes - Banco de Sangre" class="carousel-img">
+                </div>
+              </div>
+              <div class="carousel-dots">
+                <span class="carousel-dot active" data-slide="0"></span>
+                <span class="carousel-dot" data-slide="1"></span>
+                <span class="carousel-dot" data-slide="2"></span>
+              </div>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-web">Web</span>
+                <span class="tag tag-api">API</span>
+                <span class="tag tag-backend">Backend</span>
+                <span class="tag tag-impact">Impacto Social</span>
+              </div>
+              <h3 class="project-title">Sistema de administración para banco de sangre</h3>
+              <p class="project-desc">
+                Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación,
+                almacenamiento y distribución de sangre.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Es una solución muy útil y necesaria para el sistema de gestión que se usa actualmente."
+                </blockquote>
+                <cite class="testimonial-author">— Estudiantes de Hemoterapia</cite>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: Transporte -->
+          <article class="project-card animate-on-scroll project-real" data-project="1">
+            <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Transporte">
+              <div class="carousel-track">
+                <div class="carousel-slide active">
+                  <img src="siempreCargo/Captura de pantalla 2025-11-28 145454.png" alt="Arquitectura de servidor"
+                    class="carousel-img">
+                </div>
+                <div class="carousel-slide">
+                  <img src="siempreCargo/siempreCargo.png" alt="Dashboard principal - Transporte" class="carousel-img">
+                </div>
+                <div class="carousel-slide">
+                  <img src="siempreCargo/Captura de pantalla 2025-11-28 145542.png"
+                    alt="Seguimiento de flota - Transporte" class="carousel-img">
+                </div>
+              </div>
+              <div class="carousel-dots">
+                <span class="carousel-dot active" data-slide="0"></span>
+                <span class="carousel-dot" data-slide="1"></span>
+                <span class="carousel-dot" data-slide="2"></span>
+              </div>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-backend">Backend</span>
+                <span class="tag tag-api">API</span>
+                <span class="tag tag-web">Web</span>
+                <span class="tag tag-logistics">Logística</span>
+              </div>
+              <h3 class="project-title">Sistema de gestión para empresa de transporte</h3>
+              <p class="project-desc">
+                Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos,
+                mercancías o fletes.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Es una solución completa que abarca todas las funcionalidades solicitadas."
+                </blockquote>
+                <cite class="testimonial-author">— Cliente Transportista</cite>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Stock -->
+          <article class="project-card animate-on-scroll project-real" data-project="2">
+            <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Stock">
+              <div class="carousel-track">
+                <div class="carousel-slide active">
+                  <img src="gestock/image.png" alt="Dashboard principal - Gestión de Stock" class="carousel-img">
+                </div>
+                <div class="carousel-slide">
+                  <img src="gestock/image-2.png" alt="Control de inventario - Stock" class="carousel-img">
+                </div>
+                <div class="carousel-slide">
+                  <img src="gestock/image-3.png" alt="Integración hardware - Stock" class="carousel-img">
+                </div>
+              </div>
+              <div class="carousel-dots">
+                <span class="carousel-dot active" data-slide="0"></span>
+                <span class="carousel-dot" data-slide="1"></span>
+                <span class="carousel-dot" data-slide="2"></span>
+              </div>
+
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag tag-backend">Backend</span>
+                <span class="tag tag-api">API</span>
+                <span class="tag tag-web">Web</span>
+                <span class="tag tag-innovation">Innovación</span>
+              </div>
+              <h3 class="project-title">Sistema integral de gestión de stock</h3>
+              <p class="project-desc">
+                Plataforma digital diseñada para controlar y optimizar todos los procesos de inventario con integración
+                hardware.
+              </p>
+              <div class="project-testimonial">
+                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                  aria-hidden="true">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote class="testimonial-quote">
+                  "Es una muy buena solución que integra tecnologías de hardware para el correcto funcionamiento del
+                  servicio."
+                </blockquote>
+                <cite class="testimonial-author">— Cliente / Responsable de Operaciones</cite>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- CTA Final con mensaje motivador -->
+      <div class="trajectory-cta animate-on-scroll">
+        <div class="cta-content">
+          <h3>¿Listo para escribir tu próxima historia de éxito?</h3>
+          <p>
+            Ya sea que quieras personalizar una de nuestras demos o desarrollar una solución única desde cero,
+            estamos aquí para acompañarte en cada paso del camino.
+          </p>
+          <div class="cta-buttons">
+            <a href="https://wa.me/59896854828?text=Hola!%20Me%20interesa%20personalizar%20una%20demo%20para%20mi%20negocio.%20%C2%BFCu%C3%A1ndo%20podemos%20conversar%3F"
+              class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+              <span>🚀 Empezar mi Proyecto</span>
+            </a>
+            <a href="#contacto" class="btn btn-outline btn-large">
+              <span>💬 Hablemos de tu Idea</span>
+            </a>
+          </div>
+          <p class="cta-note">
+            <small>✨ Cada gran proyecto comienza con una conversación. ¡La tuya puede ser la próxima!</small>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
 
   <!-- ======================================================================= -->
   <!-- MODAL DE GALERÍA (Genérico: funciona para Proyectos y Templates) -->
@@ -1596,19 +1579,7 @@
     })();
   </script>
 
-  <script>
-    function trackWhatsApp(element, plan) {
-      // Dispara evento
-      fbq('track', 'Contact', {
-        plan: plan
-      });
 
-      // Delay para asegurar envío
-      setTimeout(function () {
-        window.open(element.href, '_blank');
-      }, 500); // ⬅️ subí a 500ms (más seguro)
-    }
-  </script>
 </body>
 
 </html>

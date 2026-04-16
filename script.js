@@ -546,160 +546,111 @@
 })();
 
 // ==========================================
-// CARRUSEL DE PROYECTOS + MODAL
-// ==========================================
-// ==========================================
-// CARRUSEL DE PROYECTOS + MODAL (UNIFICADO)
+// GALERÍA DE PROYECTOS REALES (IMÁGENES)
 // ==========================================
 (function initProjectGallery() {
-  
-  // ==========================================
-  // 1. DATOS DE PROYECTOS REALES (IMÁGENES)
-  // ==========================================
+
   const projectsData = [
+    // === PROYECTOS REALES (0-2) ===
     {
-      title: 'Sistema de administración y gestión para banco de sangre',
+      id: 0,
+      title: 'Sistema de administración para banco de sangre',
       description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación, almacenamiento y distribución de sangre.',
       images: [
-        { src: 'bancoSangre/bloodbank.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' },
-        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193448.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' },
-        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193512.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' },
-        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193712.png', alt: 'Sistema de gestión de banco de sangre', mediaType: 'image' }
-      ],
-      type: 'project'
+        { src: 'bancoSangre/bloodbank.png', alt: 'Dashboard principal - Banco de Sangre' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193448.png', alt: 'Módulo de analíticas en tiempo real' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193512.png', alt: 'Gestión de donantes y registros' },
+        { src: 'bancoSangre/Captura de pantalla 2025-11-27 193712.png', alt: 'Panel de control administrativo' }
+      ]
     },
     {
-      title: 'Sistema de administración y gestión para empresa de transporte',
+      id: 1,
+      title: 'Sistema de gestión para empresa de transporte',
       description: 'Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos, mercancías o fletes.',
       images: [
-        { src: 'siempreCargo/siempreCargo.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' },
-        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145542.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' },
-        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145454.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' },
-        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145304.png', alt: 'Sistema de gestión de transporte', mediaType: 'image' }
-      ],
-      type: 'project'
+        { src: 'siempreCargo/siempreCargo.png', alt: 'Dashboard principal - Gestión de Transporte' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145542.png', alt: 'Mapa de rutas y seguimiento en vivo' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145454.png', alt: 'Panel de administración de flota' },
+        { src: 'siempreCargo/Captura de pantalla 2025-11-28 145304.png', alt: 'Reportes y métricas operativas' }
+      ]
     },
     {
-      title: 'Sistema de gestión de stock',
-      description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con el inventario, permitiendo una gestión eficiente de productos y recursos.',
+      id: 2,
+      title: 'Sistema integral de gestión de stock',
+      description: 'Plataforma digital diseñada para controlar y optimizar todos los procesos de inventario con integración hardware.',
       images: [
-        { src: 'gestock/image.png', alt: 'Sistema de gestión de stock', mediaType: 'image' },
-        { src: 'gestock/image-2.png', alt: 'Sistema de gestión de stock', mediaType: 'image' },
-        { src: 'gestock/image-3.png', alt: 'Sistema de gestión de stock', mediaType: 'image' },
-        { src: 'gestock/image-4.png', alt: 'Sistema de gestión de stock', mediaType: 'image' }
-      ],
-      type: 'project'
-    }
-  ];
+        { src: 'gestock/image.png', alt: 'Dashboard principal - Gestión de Stock' },
+        { src: 'gestock/image-2.png', alt: 'Control de inventario en tiempo real' },
+        { src: 'gestock/image-3.png', alt: 'Integración con dispositivos hardware' },
+        { src: 'gestock/image-4.png', alt: 'Reportes de movimiento y alertas' }
+      ]
+    },
 
-  // ==========================================
-  // 2. DATOS DE TEMPLATES/DEMOS (VIDEOS)
-  // ==========================================
-  const templatesData = [
+    // === DEMOS / PROTOTIPOS (3-8) - AHORA CON IMÁGENES ===
     {
+      id: 3,
       title: '🥐 Prototipo Panadería Artesanal',
       description: 'Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.',
       images: [
-        { 
-          src: 'demos/panaderia/hero.jpg', 
-          alt: 'Vista principal del template panadería',
-          mediaType: 'video',
-          videoSrc: 'demos/panaderia/demo.mp4',
-          videoType: 'local',
-          poster: 'demos/panaderia/hero.jpg'
-        }
-      ],
-      type: 'demo'
+        { src: 'demos/panaderia/hero.jpg', alt: 'Vista principal - Template Panadería' },
+       
+      ]
     },
     {
+      id: 4,
       title: '🌲 Template Empresa Forestal',
       description: 'Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad, proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.',
       images: [
-        { 
-          src: 'demos/forestal/hero.jpg', 
-          alt: 'Vista principal del template forestal',
-          mediaType: 'video',
-          videoSrc: 'demos/forestal/demo.mp4',
-          videoType: 'local',
-          poster: 'demos/forestal/hero.jpg'
-        }
-      ],
-      type: 'demo'
+        { src: 'demos/forestal/hero.jpg', alt: 'Vista principal - Template Forestal' },
+      
+      ]
     },
     {
+      id: 5,
       title: '💻 Template Comercio de Tecnología',
       description: 'Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas técnicas, comparador de productos y integración con métodos de pago.',
       images: [
-        { 
-          src: 'demos/tecnologia/hero.jpg', 
-          alt: 'Vista principal del template tecnología',
-          mediaType: 'video',
-          videoSrc: 'demos/tecnologia/demo.mp4',
-          videoType: 'local',
-          poster: 'demos/tecnologia/hero.jpg'
-        }
-      ],
-      type: 'demo'
+        { src: 'demos/tecnologia/hero.jpg', alt: 'Vista principal - Template Tecnología' },
+        
+      ]
     },
     {
+      id: 6,
       title: '✂️ Template Peluquería & Estética',
       description: 'Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios, reserva de turnos por WhatsApp y sección de promociones.',
       images: [
-        { 
-          src: 'demos/peluqueria/hero.jpg', 
-          alt: 'Vista principal del template peluquería',
-          mediaType: 'video',
-          videoSrc: 'demos/peluqueria/demo.mp4',
-          videoType: 'local',
-          poster: 'demos/peluqueria/hero.jpg'
-        }
-      ],
-      type: 'demo'
+        { src: 'demos/peluqueria/hero.jpg', alt: 'Vista principal - Template Peluquería' },
+        
+      ]
     },
     {
+      id: 7,
       title: '👗 Template Tienda de Moda',
       description: 'Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de compras y enlaces directos a redes sociales para impulsar ventas.',
       images: [
-        { 
-          src: 'demos/ropa/hero.jpg', 
-          alt: 'Vista principal del template tienda de ropa',
-          mediaType: 'video',
-          videoSrc: 'demos/ropa/demo.mp4',
-          videoType: 'local',
-          poster: 'demos/ropa/hero.jpg'
-        }
-      ],
-      type: 'demo'
+        { src: 'demos/ropa/hero.jpg', alt: 'Vista principal - Template Tienda de Moda' },
+        
+      ]
     },
     {
+      id: 8,
       title: '🎨 Template Artesanías & Handmade',
       description: 'Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación, envíos y opción de pedidos personalizados por WhatsApp.',
       images: [
-        { 
-          src: 'demos/artesanias/hero.jpg', 
-          alt: 'Vista principal del template artesanías',
-          mediaType: 'video',
-          videoSrc: 'demos/artesanias/demo.mp4',
-          videoType: 'local',
-          poster: 'demos/artesanias/hero.jpg'
-        }
-      ],
-      type: 'demo'
+        { src: 'demos/artesanias/hero.jpg', alt: 'Vista principal - Template Artesanías' },
+      
+      ]
     }
   ];
 
-  // ==========================================
-  // 3. FUSIÓN DE ARRAYS
-  // ==========================================
-  const allGalleryItems = [...projectsData, ...templatesData];
+
 
   // Estado del modal
   let currentItemIndex = 0;
-  let currentSlide = 0;
+  let currentSlideIndex = 0;
   let isAnimating = false;
-  let currentVideoElement = null; // Para controlar el video activo
 
-  // Elementos del DOM
+  // Elementos del DOM (con validación segura)
   const modal = document.getElementById('gallery-modal');
   const modalContent = modal?.querySelector('.modal-content');
   const modalOverlay = document.getElementById('modal-overlay');
@@ -713,278 +664,323 @@
   const modalDescription = document.getElementById('modal-description');
 
   // ==========================================
-  // 4. CARRUSELES DE CADA CARD
-  // ==========================================
-  
-  document.querySelectorAll('.project-carousel').forEach((carousel, visualIndex) => {
-    const track = carousel.querySelector('.carousel-track');
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const dots = carousel.querySelectorAll('.carousel-dot');
-    const prevBtn = carousel.querySelector('.carousel-prev');
-    const nextBtn = carousel.querySelector('.carousel-next');
-    const expandBtn = carousel.querySelector('.carousel-expand');
-    const card = carousel.closest('.project-card');
-    
-    const realIndex = parseInt(card?.dataset.project || visualIndex);
-    let currentIndex = 0;
-
-    function goToSlide(index) {
-      if (index < 0) index = slides.length - 1;
-      if (index >= slides.length) index = 0;
-      currentIndex = index;
-      slides.forEach((slide, i) => slide.classList.toggle('active', i === currentIndex));
-      dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
-    }
-
-    function nextSlide() { goToSlide(currentIndex + 1); }
-    function prevSlide() { goToSlide(currentIndex - 1); }
-
-    prevBtn?.addEventListener('click', (e) => { e.stopPropagation(); prevSlide(); });
-    nextBtn?.addEventListener('click', (e) => { e.stopPropagation(); nextSlide(); });
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', (e) => { e.stopPropagation(); goToSlide(i); });
-    });
-
-    // Touch/swipe
-    let touchStartX = 0, touchEndX = 0;
-    carousel.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
-    carousel.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      const diff = touchStartX - touchEndX;
-      if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
-    }, { passive: true });
-
-    // Abrir modal
-    const openModalHandler = () => openModal(realIndex, currentIndex);
-    
-    // Click en thumbnail de video
-    const videoThumb = carousel.querySelector('.video-thumbnail');
-    if (videoThumb) {
-      videoThumb.addEventListener('click', openModalHandler);
-      videoThumb.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openModalHandler();
-        }
-      });
-    }
-    
-    // Click en imagen tradicional
-    const firstImg = slides[0]?.querySelector('.carousel-img');
-    if (firstImg && !videoThumb) {
-      firstImg.style.cursor = 'pointer';
-      firstImg.addEventListener('click', openModalHandler);
-    }
-    
-    expandBtn?.addEventListener('click', openModalHandler);
-  });
-
-  // ==========================================
-  // 5. FUNCIONES DEL MODAL (IMAGEN + VIDEO)
+  // 2. INICIALIZACIÓN DE CARRUSELES EN CARDS
   // ==========================================
 
-  function openModal(itemIndex, slideIndex = 0) {
-    if (!modal || !allGalleryItems[itemIndex]) return;
-    
-    // Pausar video anterior si existe
-    if (currentVideoElement) {
-      currentVideoElement.pause();
-      currentVideoElement = null;
-    }
-    
-    currentItemIndex = itemIndex;
-    currentSlide = slideIndex;
-    const item = allGalleryItems[itemIndex];
+  function initCardCarousels() {
+    document.querySelectorAll('.project-card[data-project]').forEach((card) => {
+      const projectIndex = parseInt(card.dataset.project);
+      const carousel = card.querySelector('.project-carousel');
+      if (!carousel) return;
 
-    modalTitle.textContent = item.title;
-    modalDescription.textContent = item.description;
-    modalCounter.textContent = `${slideIndex + 1} / ${item.images.length}`;
-    
-    // Generar miniaturas
-    modalThumbnails.innerHTML = '';
-    item.images.forEach((media, i) => {
-      const thumb = document.createElement('div');
-      thumb.className = `modal-thumb${i === slideIndex ? ' active' : ''}`;
-      thumb.dataset.mediaType = media.mediaType || 'image';
-      
-      if (media.mediaType === 'video') {
-        // Thumbnail con poster del video
-        thumb.innerHTML = `<img src="${media.poster || media.src}" alt="${media.alt}" loading="lazy">`;
-      } else {
-        thumb.innerHTML = `<img src="${media.src}" alt="${media.alt}" loading="lazy">`;
+      const track = carousel.querySelector('.carousel-track');
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      const expandBtn = carousel.querySelector('.carousel-expand');
+
+      let currentIndex = 0;
+
+      // Función para navegar entre slides
+      function goToSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        currentIndex = index;
+
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === currentIndex));
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
       }
-      
-      thumb.addEventListener('click', () => goToModalSlide(i));
-      modalThumbnails.appendChild(thumb);
+
+      // Event listeners para navegación
+      carousel.querySelector('.carousel-prev')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goToSlide(currentIndex - 1);
+      });
+
+      carousel.querySelector('.carousel-next')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goToSlide(currentIndex + 1);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goToSlide(i);
+        });
+      });
+
+      // Swipe táctil para móviles
+      let touchStartX = 0;
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          goToSlide(diff > 0 ? currentIndex + 1 : currentIndex - 1);
+        }
+      }, { passive: true });
+
+      // Abrir modal al hacer click en expandir o en la imagen
+      const openHandler = () => openModal(projectIndex, currentIndex);
+
+      expandBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        openHandler();
+      });
+
+      // Click en la imagen principal también abre el modal
+      const firstImg = slides[0]?.querySelector('.carousel-img');
+      if (firstImg) {
+        firstImg.style.cursor = 'pointer';
+        firstImg.addEventListener('click', openHandler);
+      }
     });
+  }
 
-    updateModalMedia();
+  // ==========================================
+  // 3. FUNCIONES DEL MODAL (SOLO IMÁGENES)
+  // ==========================================
 
+  function openModal(projectIndex, slideIndex = 0) {
+    if (!modal || !projectsData[projectIndex]) return;
+
+    currentItemIndex = projectIndex;
+    currentSlideIndex = slideIndex;
+    const project = projectsData[projectIndex];
+
+    // Actualizar contenido del modal
+    modalTitle.textContent = project.title;
+    modalDescription.textContent = project.description;
+    updateCounter();
+
+    // Generar miniaturas
+    renderThumbnails(project.images);
+
+    // Mostrar imagen actual
+    updateModalImage();
+
+    // Mostrar modal con animación
     modal.hidden = false;
     requestAnimationFrame(() => {
       modal.classList.add('active');
       document.body.classList.add('modal-open');
     });
+
+    // Enfocar botón de cerrar para accesibilidad
     setTimeout(() => modalClose?.focus(), 300);
   }
 
   function closeModal() {
     if (!modal) return;
-    
-    // Pausar video al cerrar
-    if (currentVideoElement) {
-      currentVideoElement.pause();
-      currentVideoElement = null;
-    }
-    
+
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
-    setTimeout(() => { modal.hidden = true; }, 300);
+
+    // Ocultar después de la animación
+    setTimeout(() => {
+      modal.hidden = true;
+      // Limpiar contenedor para liberar memoria
+      if (modalMediaContainer) {
+        const img = modalMediaContainer.querySelector('.modal-image');
+        if (img) img.src = '';
+      }
+    }, 300);
   }
 
-  function goToModalSlide(index) {
-    if (isAnimating || index === currentSlide) return;
-    
-    // Pausar video actual antes de cambiar
-    if (currentVideoElement) {
-      currentVideoElement.pause();
-      currentVideoElement = null;
+  function updateCounter() {
+    const project = projectsData[currentItemIndex];
+    if (modalCounter && project) {
+      modalCounter.textContent = `${currentSlideIndex + 1} / ${project.images.length}`;
     }
-    
+  }
+
+  function renderThumbnails(images) {
+    if (!modalThumbnails) return;
+
+    modalThumbnails.innerHTML = '';
+
+    images.forEach((image, index) => {
+      const thumb = document.createElement('button');
+      thumb.type = 'button';
+      thumb.className = `modal-thumb${index === currentSlideIndex ? ' active' : ''}`;
+      thumb.setAttribute('aria-label', `Ver: ${image.alt}`);
+      thumb.innerHTML = `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+
+      thumb.addEventListener('click', () => goToSlide(index));
+      modalThumbnails.appendChild(thumb);
+    });
+  }
+
+  function updateModalImage() {
+    const project = projectsData[currentItemIndex];
+    const image = project?.images[currentSlideIndex];
+
+    if (!modalMediaContainer || !image) return;
+
+    // Crear nueva imagen con transición suave
+    const newImg = document.createElement('img');
+    newImg.src = image.src;
+    newImg.alt = image.alt;
+    newImg.className = 'modal-image';
+    newImg.id = 'modal-image';
+
+    // Efecto de fade al cambiar
+    const currentImg = modalMediaContainer.querySelector('.modal-image');
+    if (currentImg) {
+      currentImg.classList.add('changing');
+      setTimeout(() => {
+        currentImg.remove();
+        modalMediaContainer.insertBefore(newImg, modalPrev);
+      }, 150);
+    } else {
+      modalMediaContainer.insertBefore(newImg, modalPrev);
+    }
+  }
+
+  function goToSlide(index) {
+    if (isAnimating || !projectsData[currentItemIndex]) return;
+
+    const project = projectsData[currentItemIndex];
+    if (index < 0) index = project.images.length - 1;
+    if (index >= project.images.length) index = 0;
+
     isAnimating = true;
-    currentSlide = index;
-    const item = allGalleryItems[currentItemIndex];
+    currentSlideIndex = index;
 
-    modalCounter.textContent = `${index + 1} / ${item.images.length}`;
+    // Actualizar contador y miniaturas
+    updateCounter();
 
-    const thumbs = modalThumbnails.querySelectorAll('.modal-thumb');
-    thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
-    
-    if (thumbs[index]) {
-      thumbs[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    const thumbs = modalThumbnails?.querySelectorAll('.modal-thumb');
+    if (thumbs) {
+      thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
+      // Scroll suave hacia la miniatura activa
+      thumbs[index]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center'
+      });
     }
 
-    // Transición suave
-    modalMediaContainer.style.opacity = '0.7';
+    // Actualizar imagen con pequeña demora para la animación
     setTimeout(() => {
-      updateModalMedia();
-      modalMediaContainer.style.opacity = '1';
+      updateModalImage();
       isAnimating = false;
     }, 150);
   }
 
-  function updateModalMedia() {
-    const item = allGalleryItems[currentItemIndex];
-    if (!item?.images[currentSlide]) return;
-    
-    const media = item.images[currentSlide];
-    
-    // Limpiar contenedor
-    modalMediaContainer.innerHTML = '';
-    
-    // Agregar botones de navegación (se reinsertan)
-    modalMediaContainer.appendChild(modalPrev);
-    modalMediaContainer.appendChild(modalNext);
+  function nextSlide() {
+    const project = projectsData[currentItemIndex];
+    if (project) goToSlide(currentSlideIndex + 1);
+  }
 
-    if (media.mediaType === 'video') {
-      // === RENDERIZAR VIDEO ===
-      
-      if (media.videoType === 'youtube' || media.videoType === 'vimeo') {
-        // Iframe para YouTube/Vimeo
-        const iframe = document.createElement('iframe');
-        iframe.src = media.videoSrc;
-        iframe.alt = media.alt;
-        iframe.className = 'modal-video-embed';
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
-        iframe.setAttribute('loading', 'lazy');
-        iframe.setAttribute('title', media.alt);
-        modalMediaContainer.insertBefore(iframe, modalPrev);
-      } else {
-        // Video local (.mp4, .webm)
-        const video = document.createElement('video');
-        video.src = media.videoSrc;
-        video.alt = media.alt;
-        video.className = 'modal-video';
-        video.controls = true;
-        video.autoplay = true; // Autoplay al abrir
-        video.loop = false;
-        video.preload = 'auto';
-        video.playsInline = true; // Para iOS
-        if (media.poster) video.poster = media.poster;
-        
-        // Guardar referencia para pausar después
-        currentVideoElement = video;
-        
-        // Pausar al cambiar de slide
-        video.addEventListener('pause', () => { if (!video.ended) currentVideoElement = null; });
-        video.addEventListener('ended', () => { currentVideoElement = null; });
-        
-        modalMediaContainer.insertBefore(video, modalPrev);
+  function prevSlide() {
+    const project = projectsData[currentItemIndex];
+    if (project) goToSlide(currentSlideIndex - 1);
+  }
+
+  // ==========================================
+  // 4. EVENT LISTENERS DEL MODAL
+  // ==========================================
+
+  function initModalEvents() {
+    // Cerrar modal
+    modalClose?.addEventListener('click', closeModal);
+    modalOverlay?.addEventListener('click', closeModal);
+
+    // Navegación
+    modalNext?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextSlide();
+    });
+
+    modalPrev?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevSlide();
+    });
+
+    // Prevenir cierre al hacer click dentro del contenido
+    modalContent?.addEventListener('click', (e) => e.stopPropagation());
+
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+      if (!modal?.classList.contains('active')) return;
+
+      switch (e.key) {
+        case 'Escape':
+          closeModal();
+          break;
+        case 'ArrowRight':
+          nextSlide();
+          break;
+        case 'ArrowLeft':
+          prevSlide();
+          break;
       }
-    } else {
-      // === RENDERIZAR IMAGEN ===
-      const img = document.createElement('img');
-      img.src = media.src;
-      img.alt = media.alt;
-      img.className = 'modal-image';
-      img.id = 'modal-image'; // Mantener ID para compatibilidad
-      modalMediaContainer.insertBefore(img, modalPrev);
+    });
+
+    // Swipe táctil en el modal
+    let touchStartX = 0;
+    modal?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    modal?.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 60) {
+        diff > 0 ? nextSlide() : prevSlide();
+      }
+    }, { passive: true });
+  }
+
+  // ==========================================
+  // 5. INICIALIZACIÓN
+  // ==========================================
+
+  function init() {
+    // Solo inicializar si el modal existe en el DOM
+    if (!modal) {
+      console.warn('⚠️ Modal de galería no encontrado en el DOM');
+      return;
+    }
+
+    initCardCarousels();
+    initModalEvents();
+
+    // Pre-cargar imágenes de miniaturas para mejor UX (opcional)
+    if ('connection' in navigator && navigator.connection.saveData !== true) {
+      projectsData.forEach(project => {
+        project.images.forEach(img => {
+          const preload = new Image();
+          preload.src = img.src;
+        });
+      });
     }
   }
 
-  function nextModalSlide() {
-    const item = allGalleryItems[currentItemIndex];
-    const next = (currentSlide + 1) % item.images.length;
-    goToModalSlide(next);
+  // Iniciar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 
-  function prevModalSlide() {
-    const item = allGalleryItems[currentItemIndex];
-    const prev = (currentSlide - 1 + item.images.length) % item.images.length;
-    goToModalSlide(prev);
-  }
-
-  // Event listeners del modal
-  modalClose?.addEventListener('click', closeModal);
-  modalOverlay?.addEventListener('click', closeModal);
-  modalNext?.addEventListener('click', nextModalSlide);
-  modalPrev?.addEventListener('click', prevModalSlide);
-
-  // Teclado
-  document.addEventListener('keydown', (e) => {
-    if (modal?.classList.contains('active')) {
-      if (e.key === 'Escape') closeModal();
-      if (e.key === 'ArrowRight') nextModalSlide();
-      if (e.key === 'ArrowLeft') prevModalSlide();
-    }
-  });
-
-  // Swipe en modal
-  let modalTouchStartX = 0;
-  modal?.addEventListener('touchstart', (e) => { modalTouchStartX = e.changedTouches[0].screenX; }, { passive: true });
-  modal?.addEventListener('touchend', (e) => {
-    const diff = modalTouchStartX - e.changedTouches[0].screenX;
-    if (Math.abs(diff) > 60) { diff > 0 ? nextModalSlide() : prevModalSlide(); }
-  }, { passive: true });
-
-  modalContent?.addEventListener('click', (e) => e.stopPropagation());
-
-  // Pausar video si se hace clic fuera del video en el modal
-  modalMediaContainer?.addEventListener('click', (e) => {
-    if (currentVideoElement && !e.target.closest('video, iframe')) {
-      // No pausar, permitir que los controles del video funcionen
-    }
-  });
+  // Exponer funciones para uso externo si es necesario (opcional)
+  window.ProjectGallery = {
+    open: openModal,
+    close: closeModal,
+    goTo: goToSlide
+  };
 
 })();
 
 // =======================================================================
 // VIDEO PROMO SECTION - Funcionalidad Completa y Corregida
 // =======================================================================
-(function() {
+(function () {
   'use strict';
-  
+
   // Esperar a que el DOM esté listo
   function initVideoPromo() {
     const videoPlaceholder = document.getElementById('video-placeholder');
@@ -992,26 +988,26 @@
     const videoElement = document.getElementById('promo-video');
     const videoMuteBtn = document.getElementById('video-mute-btn');
     const videoFullscreenBtn = document.getElementById('video-fullscreen-btn');
-    
+
     // Validar que los elementos existan
     if (!videoElement || !videoPlaceholder) {
       console.warn('⚠️ Elementos de video no encontrados');
       return;
     }
-    
+
     // Función principal para reproducir el video
     function playVideo() {
       // Ocultar placeholder con transición
       videoPlaceholder.classList.add('hidden');
-      
+
       // Mostrar video: múltiples métodos para máxima compatibilidad
       videoElement.style.display = 'block';
       videoElement.hidden = false;
       videoElement.removeAttribute('hidden');
-      
+
       // Forzar reflow para aplicar cambios de estilo
       void videoElement.offsetWidth;
-      
+
       // Intentar reproducir
       videoElement.play()
         .then(() => {
@@ -1030,7 +1026,7 @@
           }
         });
     }
-    
+
     // Event listeners para el botón de play
     if (videoPlayBtn) {
       videoPlayBtn.addEventListener('click', playVideo);
@@ -1041,13 +1037,13 @@
         }
       });
     }
-    
+
     // Toggle mute/unmute
     if (videoMuteBtn && videoElement) {
       videoMuteBtn.addEventListener('click', () => {
         videoElement.muted = !videoElement.muted;
         videoMuteBtn.classList.toggle('muted', videoElement.muted);
-        
+
         // Feedback visual sutil
         videoMuteBtn.style.transform = 'scale(0.9)';
         setTimeout(() => {
@@ -1055,7 +1051,7 @@
         }, 150);
       });
     }
-    
+
     // Pantalla completa
     if (videoFullscreenBtn && videoElement) {
       videoFullscreenBtn.addEventListener('click', () => {
@@ -1068,14 +1064,14 @@
         }
       });
     }
-    
+
     // Efecto hover en el placeholder
     if (videoPlaceholder) {
-      videoPlaceholder.addEventListener('mouseenter', function() {
+      videoPlaceholder.addEventListener('mouseenter', function () {
         this.style.cursor = 'pointer';
       });
     }
-    
+
     // Manejar fin del video: mostrar placeholder nuevamente (opcional)
     if (videoElement) {
       videoElement.addEventListener('ended', () => {
@@ -1084,7 +1080,7 @@
         // videoElement.style.display = 'none';
         console.log('🎬 Video finalizado');
       });
-      
+
       // Manejar errores de carga del video
       videoElement.addEventListener('error', (e) => {
         console.error('❌ Error cargando el video:', videoElement.error);
@@ -1097,7 +1093,7 @@
         }
       });
     }
-    
+
     // Precargar video en segundo plano (opcional, mejora experiencia)
     if (videoElement && 'IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
@@ -1108,18 +1104,18 @@
           }
         });
       }, { rootMargin: '100px' });
-      
+
       observer.observe(videoElement);
     }
-    
+
     console.log('🎥 Video promo inicializado correctamente');
   }
-  
+
   // Inicializar cuando el DOM esté listo
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initVideoPromo);
   } else {
     initVideoPromo();
   }
-  
+
 })();
