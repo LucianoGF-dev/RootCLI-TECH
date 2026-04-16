@@ -119,6 +119,89 @@
 
   </section>
 
+<!-- ======================================================================= -->
+<!-- SECCIÓN VIDEO PROMOCIONAL (Después del Hero) -->
+<!-- ======================================================================= -->
+<section class="section video-promo" id="video-intro">
+  <div class="video-promo-bg">
+    <div class="video-grid-overlay"></div>
+    <div class="video-particles" id="video-particles"></div>
+  </div>
+  
+  <div class="container">
+    <div class="video-promo-wrapper animate-on-scroll">
+      
+      <!-- Contenido textual -->
+      <div class="video-promo-content">
+        <span class="section-tag video-tag">✨ Descubre tu potencial digital</span>
+        <h2 class="video-title">
+          Mira cómo transformamos <span class="text-gradient">ideas en realidad</span>
+        </h2>
+        <p class="video-description">
+          En menos de 1 minuto, conoce nuestra metodología y ve ejemplos reales 
+          de nuestros prototipos diseñados para impulsar tu negocio.
+        </p>
+        
+        <div class="video-highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">🎯</span>
+            <span>Enfoque estratégico</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">⚡</span>
+            <span>Entrega rápida</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🔒</span>
+            <span>Soporte garantizado</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Reproductor de video -->
+      <div class="video-promo-player">
+        <div class="video-container">
+          
+          <!-- Placeholder del video (se oculta al reproducir) -->
+          <div class="video-placeholder" id="video-placeholder">
+            
+            <div class="video-play-overlay" id="video-play-btn" role="button" tabindex="0" aria-label="Reproducir video">
+              <div class="play-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              
+            </div>
+          </div>
+          
+          <!-- Video real (se muestra al reproducir) -->
+          <video id="promo-video" class="video-element" controls preload="metadata" poster="img/video-thumbnail.jpg" muted playsinline style="display: none;">
+            <source src="desarrollo_web.mp4" type="video/mp4">
+            <source src="desarrollo_web.webm" type="video/webm">
+            Tu navegador no soporta la reproducción de video. 
+            <a href="desarrollo_web.mp4" download>Descargar video</a>
+          </video>
+          
+        
+          
+        </div>
+        
+       
+      
+    </div>
+    
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="video-scroll-indicator">
+    <span>Explora nuestros planes</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
   <section class="section pricing" id="planes">
     <div class="container">
       <div class="section-header animate-on-scroll">
@@ -1129,10 +1212,7 @@
     <div class="trajectory-subsection" id="proyectos-reales">
       <div class="subsection-header animate-on-scroll">
         <h3 class="subsection-title">🏆 Proyectos que Transformaron Ideas en Realidad</h3>
-        <p class="subsection-description">
-          Soluciones completas que ya están marcando la diferencia. 
-          <em>Porque el aprendizaje más valioso viene de resolver desafíos reales</em>.
-        </p>
+       
       </div>
 
       <div class="projects-grid">

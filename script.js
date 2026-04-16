@@ -979,3 +979,147 @@
 
 })();
 
+// =======================================================================
+// VIDEO PROMO SECTION - Funcionalidad Completa y Corregida
+// =======================================================================
+(function() {
+  'use strict';
+  
+  // Esperar a que el DOM esté listo
+  function initVideoPromo() {
+    const videoPlaceholder = document.getElementById('video-placeholder');
+    const videoPlayBtn = document.getElementById('video-play-btn');
+    const videoElement = document.getElementById('promo-video');
+    const videoMuteBtn = document.getElementById('video-mute-btn');
+    const videoFullscreenBtn = document.getElementById('video-fullscreen-btn');
+    
+    // Validar que los elementos existan
+    if (!videoElement || !videoPlaceholder) {
+      console.warn('⚠️ Elementos de video no encontrados');
+      return;
+    }
+    
+    // Función principal para reproducir el video
+    function playVideo() {
+      // Ocultar placeholder con transición
+      videoPlaceholder.classList.add('hidden');
+      
+      // Mostrar video: múltiples métodos para máxima compatibilidad
+      videoElement.style.display = 'block';
+      videoElement.hidden = false;
+      videoElement.removeAttribute('hidden');
+      
+      // Forzar reflow para aplicar cambios de estilo
+      void videoElement.offsetWidth;
+      
+      // Intentar reproducir
+      videoElement.play()
+        .then(() => {
+          console.log('✅ Video reproduciéndose correctamente');
+          // Pausar animación del botón play
+          const playButton = videoPlayBtn?.querySelector('.play-button');
+          if (playButton) playButton.style.animation = 'none';
+        })
+        .catch(error => {
+          console.warn('⚠️ Autoplay bloqueado o error:', error);
+          // Mostrar controles nativos para que el usuario pueda hacer play manualmente
+          videoElement.controls = true;
+          // Mensaje amigable en consola (no alert para no molestar)
+          if (error.name === 'NotAllowedError') {
+            console.log('💡 El usuario debe interactuar para reproducir el video');
+          }
+        });
+    }
+    
+    // Event listeners para el botón de play
+    if (videoPlayBtn) {
+      videoPlayBtn.addEventListener('click', playVideo);
+      videoPlayBtn.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          playVideo();
+        }
+      });
+    }
+    
+    // Toggle mute/unmute
+    if (videoMuteBtn && videoElement) {
+      videoMuteBtn.addEventListener('click', () => {
+        videoElement.muted = !videoElement.muted;
+        videoMuteBtn.classList.toggle('muted', videoElement.muted);
+        
+        // Feedback visual sutil
+        videoMuteBtn.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+          videoMuteBtn.style.transform = '';
+        }, 150);
+      });
+    }
+    
+    // Pantalla completa
+    if (videoFullscreenBtn && videoElement) {
+      videoFullscreenBtn.addEventListener('click', () => {
+        if (videoElement.requestFullscreen) {
+          videoElement.requestFullscreen();
+        } else if (videoElement.webkitRequestFullscreen) {
+          videoElement.webkitRequestFullscreen(); // Safari
+        } else if (videoElement.msRequestFullscreen) {
+          videoElement.msRequestFullscreen(); // IE11
+        }
+      });
+    }
+    
+    // Efecto hover en el placeholder
+    if (videoPlaceholder) {
+      videoPlaceholder.addEventListener('mouseenter', function() {
+        this.style.cursor = 'pointer';
+      });
+    }
+    
+    // Manejar fin del video: mostrar placeholder nuevamente (opcional)
+    if (videoElement) {
+      videoElement.addEventListener('ended', () => {
+        // Opcional: volver a mostrar el placeholder cuando termine
+        // videoPlaceholder.classList.remove('hidden');
+        // videoElement.style.display = 'none';
+        console.log('🎬 Video finalizado');
+      });
+      
+      // Manejar errores de carga del video
+      videoElement.addEventListener('error', (e) => {
+        console.error('❌ Error cargando el video:', videoElement.error);
+        // Mostrar mensaje en la UI si es necesario
+        if (videoPlaceholder) {
+          const overlay = videoPlaceholder.querySelector('.video-play-overlay');
+          if (overlay) {
+            overlay.innerHTML = '<span style="color:#f87171;font-size:0.9rem">⚠️ Video no disponible</span>';
+          }
+        }
+      });
+    }
+    
+    // Precargar video en segundo plano (opcional, mejora experiencia)
+    if (videoElement && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && videoElement.readyState === 0) {
+            videoElement.load(); // Comenzar carga cuando está visible
+            observer.unobserve(videoElement);
+          }
+        });
+      }, { rootMargin: '100px' });
+      
+      observer.observe(videoElement);
+    }
+    
+    console.log('🎥 Video promo inicializado correctamente');
+  }
+  
+  // Inicializar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideoPromo);
+  } else {
+    initVideoPromo();
+  }
+  
+})();
