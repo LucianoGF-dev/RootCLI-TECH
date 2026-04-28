@@ -801,7 +801,7 @@ body.modal-open { overflow: hidden; }
   .info-grid { grid-template-columns: 1fr; }
   .featured-ribbon { padding: 0.35rem 2.5rem; font-size: 0.7rem; }
   .pricing-badge { padding: 0.3rem 0.7rem; font-size: 0.7rem; }
-  .pricing-ideal-for, .pricing-benefits, .pricing-note { padding: 0.8rem; }
+  .pricing-ideal-for, .pricing-benefits, .pricing-note { padding: 0.8rem; width:100%; }
   .upsells-grid { grid-template-columns: 1fr; }
   .recurring-tiers { flex-direction: column; align-items: center; }
   .recurring-tier { width: 100%; max-width: 200px; }
