@@ -4,1459 +4,1441 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Desarrollo de Soluciones Digitales y mantenimiento de hardware. Servicios tecnológicos profesionales.">
-  <title>RootCLI | Desarrollo Digital & Mantenimiento</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="RootCLI: Desarrollo de soluciones digitales, e-commerce y mantenimiento técnico en Uruguay. Tiendas online desde $2.999 UYU/mes.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://rootcli.tech/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rootcli.tech/">
+  <meta property="og:title" content="RootCLI | Desarrollo Digital & Mantenimiento">
+  <meta property="og:description" content="Soluciones tecnológicas profesionales: e-commerce, desarrollo web y reparación de hardware en Uruguay.">
+  <meta property="og:image" content="img/og-image.jpg">
+  <meta property="og:locale" content="es_UY">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://rootcli.tech/">
+  <meta property="twitter:title" content="RootCLI | Desarrollo Digital & Mantenimiento">
+  <meta property="twitter:description" content="Soluciones tecnológicas profesionales en Uruguay.">
+  <meta property="twitter:image" content="img/og-image.jpg">
+  
+  <!-- Preconnect para recursos externos críticos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://www.facebook.com" crossorigin>
+  
+  <!-- DNS Prefetch para recursos externos -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="//www.facebook.com">
+  
+  <!-- Preload de recursos críticos -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="img/logo.png" as="image" type="image/png">
+  <link rel="preload" href="styles.css" as="style">
+  
+  <!-- Fallback para fuentes sin JS -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+  </noscript>
+  
   <link rel="stylesheet" href="styles.css">
-
-  <link rel="icon" href="img/logo.png">
-
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=3802612696701770&ev=PageView&noscript=1" /></noscript>
-
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
+  
+  <!-- Favicon optimizado con múltiples formatos -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <title>RootCLI | Desarrollo Digital & Mantenimiento en Uruguay</title>
+  
+  
+  
+  <!-- SVG Symbols definidos para reutilización (optimización de peso) -->
+  <svg style="display:none" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 6L9 17l-5-5"/>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M15 18l-6-6 6-6"/>
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M9 18l6-6-6-6"/>
+      </symbol>
+      <symbol id="icon-chevron-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M18 15l-6-6-6 6"/>
+      </symbol>
+    </defs>
+  </svg>
 </head>
 
 <body>
 
-  <nav class="navbar" id="navbar">
+
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Menú principal">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-icon"><img src="img/logo.png" alt="" class="logo-img"></span>
+        <span class="logo-icon">
+          <img src="img/logo.png" alt="RootCLI Logo" class="logo-img" width="40" height="40" loading="eager" fetchpriority="high">
+        </span>
         <span class="logo-text">Root<span class="logo-highlight">CLI</span></span>
       </a>
 
-      <ul class="nav-menu" id="nav-menu">
-        <li class="nav-item"><a href="#hero" class="nav-link active">Inicio</a></li>
-        <li class="nav-item"><a href="#planes" class="nav-link">Planes</a></li>
-        <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-        <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
-        <li class="nav-item"><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
-        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li class="nav-item" role="none"><a href="#hero" class="nav-link active" role="menuitem">Inicio</a></li>
+        <li class="nav-item" role="none"><a href="#planes" class="nav-link" role="menuitem">Planes</a></li>
+        <li class="nav-item" role="none"><a href="#servicios" class="nav-link" role="menuitem">Servicios</a></li>
+        <li class="nav-item" role="none"><a href="#nosotros" class="nav-link" role="menuitem">Nosotros</a></li>
+        <li class="nav-item" role="none"><a href="#trayectoria" class="nav-link" role="menuitem">Trayectoria</a></li>
+        <li class="nav-item" role="none"><a href="#contacto" class="nav-link" role="menuitem">Contacto</a></li>
       </ul>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <span class="hamburger"></span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger" aria-hidden="true"></span>
       </button>
     </div>
   </nav>
 
-  <section class="hero" id="hero">
-    <div class="hero-particles" id="hero-particles"></div>
-    <div class="hero-grid-overlay"></div>
+  <main id="main-content">
+    
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
 
-    <div class="hero-content">
-      <div class="hero-badge animate-on-scroll">
-        <span class="badge-dot"></span>
-        Disponibles para proyectos
+      <div class="hero-content">
+        <div class="hero-badge animate-on-scroll">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Disponibles para proyectos
+        </div>
+
+        <h1 class="hero-title animate-on-scroll" id="hero-title">
+          Desarrollo de<br>
+          <span class="text-gradient">Soluciones Digitales</span>
+        </h1>
+
+        <p class="hero-subtitle animate-on-scroll" id="typing-container" aria-live="polite">
+        </p>
+
+        <div class="hero-cta animate-on-scroll">
+          <a href="#contacto" class="btn btn-primary btn-glow">
+            <span>Contáctanos</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+          </a>
+          <div class="btn-container">
+            <span class="pointing-hand" aria-hidden="true">👉</span>
+            <a href="#planes" class="btn btn-outline">
+              <span>Ver Planes y precios</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-stats animate-on-scroll" role="list" aria-label="Estadísticas de RootCLI">
+          <div class="stat-item" role="listitem">
+            <span class="stat-number" data-target="5" aria-label="5 proyectos completados">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+            <span class="stat-label">Proyectos</span>
+          </div>
+          <div class="stat-item" role="listitem">
+            <span class="stat-number" data-target="3" aria-label="3 clientes satisfechos">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+            <span class="stat-label">Clientes</span>
+          </div>
+          <div class="stat-item" role="listitem">
+            <span class="stat-number" data-target="+3" aria-label="Más de 3 años de experiencia">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+            <span class="stat-label">Años Exp.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECCIÓN VIDEO PROMOCIONAL (Después del Hero) -->
+    <!-- ======================================================================= -->
+    <section class="section video-promo" id="video-intro" aria-labelledby="video-intro-title">
+      <div class="video-promo-bg" aria-hidden="true">
+        <div class="video-grid-overlay"></div>
+        <div class="video-particles" id="video-particles"></div>
       </div>
 
-      <h1 class="hero-title animate-on-scroll">
-        Desarrollo de<br>
-        <span class="text-gradient">Soluciones Digitales</span>
-      </h1>
+      <div class="container">
+        <div class="video-promo-wrapper animate-on-scroll">
 
-      <p class="hero-subtitle animate-on-scroll" id="typing-container">
-      </p>
+          <!-- Contenido textual -->
+          <div class="video-promo-content">
+            <span class="section-tag video-tag">✨ Descubre tu potencial digital</span>
+            <h2 class="video-title" id="video-intro-title">
+              Mira cómo transformamos <span class="text-gradient">ideas en realidad</span>
+            </h2>
+            <p class="video-description">
+              En menos de 1 minuto, conoce nuestra metodología y ve ejemplos reales
+              de nuestros prototipos diseñados para impulsar tu negocio.
+            </p>
 
-      <div class="hero-cta animate-on-scroll">
-        <a href="#contacto" class="btn btn-primary btn-glow">
-          <span>Contáctanos</span>
+            <div class="video-highlights" role="list">
+              <div class="highlight-item" role="listitem">
+                <span class="highlight-icon" aria-hidden="true">🎯</span>
+                <span>Enfoque estratégico</span>
+              </div>
+              <div class="highlight-item" role="listitem">
+                <span class="highlight-icon" aria-hidden="true">⚡</span>
+                <span>Entrega rápida</span>
+              </div>
+              <div class="highlight-item" role="listitem">
+                <span class="highlight-icon" aria-hidden="true">🔒</span>
+                <span>Soporte garantizado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reproductor de video -->
+          <div class="video-promo-player">
+            <div class="video-container">
+
+              <!-- Placeholder del video (se oculta al reproducir) -->
+              <div class="video-placeholder" id="video-placeholder">
+
+                <div class="video-play-overlay" id="video-play-btn" role="button" tabindex="0"
+                  aria-label="Reproducir video de introducción">
+                  <div class="play-button" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><use href="#icon-play"/></svg>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Video real (se muestra al reproducir) -->
+              <video id="promo-video" class="video-element" controls preload="none" poster="img/logo.webp" muted
+                playsinline style="display: none;" aria-label="Video promocional de RootCLI">
+                <source src="desarrollo_web.mp4" type="video/mp4">
+                <source src="desarrollo_web.webm" type="video/webm">
+                Tu navegador no soporta la reproducción de video.
+                <a href="desarrollo_web.mp4" download>Descargar video</a>
+              </video>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="video-scroll-indicator" aria-hidden="true">
+          <span>Explora nuestros planes</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7" />
+            <use href="#icon-chevron-down"/>
           </svg>
-        </a>
-        <div class="btn-container">
-          <span class="pointing-hand" aria-hidden="true">👉</span>
-          <a href="#planes" class="btn btn-outline">
-            <span>Ver Planes y precios</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="planes" aria-labelledby="planes-title">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Suscripción Inteligente</span>
+          <h2 class="section-title" id="planes-title">Planes <span class="text-gradient">Flexibles</span></h2>
+          <p class="section-description">
+            Soluciones e-commerce diseñadas para crecer contigo.
+            <strong>Nos encargamos de todo lo técnico</strong> para que vos te enfoques en vender.
+          </p>
+        </div>
+
+        <div class="pricing-grid" role="list">
+
+          <!-- Plan Tienda -->
+          <article class="pricing-card animate-on-scroll" role="listitem" aria-labelledby="plan-tienda-title">
+            <div class="pricing-badge">
+              <span class="badge-icon" aria-hidden="true">🟢</span>
+              <span class="badge-text">Para Empezar</span>
+            </div>
+            <div class="pricing-header">
+              <h3 class="pricing-title" id="plan-tienda-title">Plan Tienda</h3>
+              <p class="pricing-subtitle">Lanzá tu tienda online sin complicaciones</p>
+
+              <div class="pricing-price">
+                <div class="price-new">
+                  <span class="price-currency">UYU</span>
+                  <span class="price-amount">2.999</span>
+                  <span class="price-period">/mes</span>
+                </div>
+              </div>
+              <p class="pricing-price-uyu">Suscripción mensual</p>
+              <p class="pricing-delivery">✅ Hosting + mantenimiento + seguridad incluidos</p>
+              <p class="pricing-delivery"><small>* Soporte en 24h hábiles. Sin setup. Cancelá cuando quieras.</small></p>
+            </div>
+
+            <div class="pricing-ideal-for">
+              <strong>🎯 Ideal si querés:</strong>
+
+              <div class="tag-list">
+                <span class="tag">Vender online por primera vez</span>
+                <span class="tag">Profesionalizar tu negocio</span>
+                <span class="tag">Tener tu tienda funcionando</span>
+              </div>
+            </div>
+
+            <div class="pricing-features" role="list">
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Tienda online pública y profesional</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Carrito + checkout optimizado para convertir</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Pagos integrados</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Gestión simple de pedidos y clientes</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Control de stock automático</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" aria-hidden="true">
+                  <path d="M18 6L6 18"/>
+                  <path d="M6 6L18 18"/>
+                </svg>
+                <span>Botón de WhatsApp integrado para cerrar ventas</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" aria-hidden="true">
+                  <path d="M18 6L6 18"/>
+                  <path d="M6 6L18 18"/>
+                </svg>
+                <span>Soporte por WhatsApp en horario comercial (respuesta en 24h)</span>
+              </div>
+            </div>
+
+            <div class="pricing-ideal-for">
+              <strong>📦 Todo lo necesario para empezar:</strong>
+              <div class="tag-list">
+                <p class="tag">Hasta 150 productos </p>
+                <p class="tag">Imágenes optimizadas</p>
+                <p class="tag">1 sucursal lista para operar</p>
+                <p class="tag tag-neutral">Sin automatizaciones avanzadas</p>
+              </div>
+            </div>
+
+            <div class="pricing-benefits">
+              <strong>✨ Tu tranquilidad:</strong>
+              <p>No necesitás saber de tecnología. Nosotros nos encargamos de que tu tienda siempre funcione.</p>
+            </div>
+
+            <div class="pricing-footer">
+              <div class="pricing-note">
+                <span class="note-icon" aria-hidden="true">💡</span>
+                <p><em>"Empezá a vender hoy. Sin inversión inicial."</em></p>
+              </div>
+              <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Tienda%20(%242.999%20UYU%2Fmes).%20Quiero%20empezar%20a%20vender%20online."
+                class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
+                <span>Elegir Plan Tienda</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan PRO (Destacado - CORE DEL NEGOCIO) -->
+          <article class="pricing-card pricing-card-featured animate-on-scroll" role="listitem" aria-labelledby="plan-pro-title">
+            <div class="featured-ribbon" aria-label="Plan más popular">🔥 Más Elegido</div>
+            <div class="pricing-header">
+              <h3 class="pricing-title" id="plan-pro-title">Plan PRO</h3>
+              <p class="pricing-subtitle">Escalá tus ventas con herramientas avanzadas</p>
+
+              <div class="pricing-price">
+                <div class="price-new">
+                  <span class="price-currency">UYU</span>
+                  <span class="price-amount">5.499</span>
+                  <span class="price-period">/mes</span>
+                </div>
+              </div>
+              <p class="pricing-price-uyu">Suscripción mensual</p>
+              <p class="pricing-delivery">🚀 Automatizaciones + soporte prioritario</p>
+              <p class="pricing-delivery"><small>* Respuesta en &lt;2h hábiles. Cancelá cuando quieras.</small></p>
+            </div>
+
+            <div class="pricing-ideal-for">
+              <strong>🎯 Ideal si querés:</strong>
+
+              <div class="tag-list">
+                <span class="tag">Vender más </span>
+                <span class="tag">Manejar catálogos grandes </span>
+                <span class="tag">Tener soporte rápido </span>
+              </div>
+            </div>
+
+            <div class="pricing-features" role="list">
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>✅ Todo lo del Plan Tienda +</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span><strong>Hasta 500 productos</strong> para crecer sin frenos</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Checkout optimizado para +30% más conversión</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span><strong>Soporte prioritario:</strong> respuesta en &lt;2 horas hábiles</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>📊 Reportes de ventas: sabé qué vende y cuándo</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Cupones, descuentos y promociones avanzadas</span>
+              </div>
+            </div>
+
+            <div class="pricing-ideal-for">
+              <strong>📦 Capacidad incluida:</strong>
+              <div class="tag-list">
+                <p class="tag">Hasta 500 productos</p>
+                <p class="tag">Hasta 1.500 imágenes con CDN</p>
+                <p class="tag">Hasta 3 sucursales con stock</p>
+                <p class="tag tag-success">✅ Automatizaciones incluidas</p>
+              </div>
+            </div>
+
+            <div class="pricing-benefits">
+              <strong>✨ Tu tranquilidad:</strong>
+              <p>Escalá sin cambiar de plataforma. Nosotros nos encargamos del rendimiento para que vos te enfoques en
+                crecer.</p>
+            </div>
+
+            <div class="pricing-footer">
+              <div class="pricing-note">
+                <span class="note-icon" aria-hidden="true">💡</span>
+                <p><em>"Invertí en crecimiento, no en infraestructura."</em></p>
+              </div>
+              <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20PRO%20(%245.499%20UYU%2Fmes).%20Quiero%20escalar%20mi%20negocio%20online."
+                class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
+                <span>Elegir Plan PRO</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan Premium (Ancla de Valor) -->
+          <article class="pricing-card animate-on-scroll" role="listitem" aria-labelledby="plan-premium-title">
+            <div class="pricing-badge">
+              <span class="badge-icon" aria-hidden="true">⭐</span>
+              <span class="badge-text">Para Escalar</span>
+            </div>
+            <div class="pricing-header">
+              <h3 class="pricing-title" id="plan-premium-title">Plan Premium</h3>
+              <p class="pricing-subtitle">Máximo rendimiento + acompañamiento estratégico</p>
+
+              <div class="pricing-price">
+                <div class="price-new">
+                  <span class="price-currency">UYU</span>
+                  <span class="price-amount">10.999</span>
+                  <span class="price-period">/mes</span>
+                </div>
+              </div>
+              <p class="pricing-price-uyu">Suscripción mensual</p>
+              <p class="pricing-delivery">🎯 Soporte dedicado + asesoría mensual incluida</p>
+              <p class="pricing-delivery"><small>* Canal directo. Prioridad total. Sin límites operativos.</small></p>
+            </div>
+
+            <div class="pricing-ideal-for">
+              <strong>🎯 Ideal si querés:</strong>
+
+              <div class="tag-list">
+                <span class="tag">Tener una tienda enterprise</span>
+                <span class="tag">Recibir asesoría estratégica </span>
+                <span class="tag">Delegar todo lo técnico </span>
+              </div>
+            </div>
+
+            <div class="pricing-features" role="list">
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>✅ Todo lo del Plan PRO +</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span><strong>Productos y tráfico sin límites operativos</strong></span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Infraestructura de alta performance (CDN + caché avanzado)</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span><strong>Soporte dedicado:</strong> canal directo + respuesta &lt;1 hora</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>🎯 <strong>Asesoría mensual:</strong> optimización de conversión y estrategias</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Integraciones personalizadas: ERP, logística, contabilidad</span>
+              </div>
+              <div class="feature-item" role="listitem">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-check"/></svg>
+                <span>Backup diario + recuperación ante desastres</span>
+              </div>
+            </div>
+
+            <div class="pricing-ideal-for">
+              <strong>📦 Capacidad incluida:</strong>
+              <div class="tag-list">
+                <p class="tag">Productos ilimitados</p>
+                <p class="tag">Imágenes ilimitadas</p>
+                <p class="tag">Sucursales ilimitadas</p>
+                <p class="tag tag-premium">✅ Acompañamiento estratégico </p>
+              </div>
+            </div>
+
+            <div class="pricing-benefits">
+              <strong>✨ Tu tranquilidad:</strong>
+              <p>Tenés un equipo técnico dedicado. Tu tienda siempre rápida, segura y escalando con vos.</p>
+            </div>
+
+            <div class="pricing-footer">
+              <div class="pricing-note">
+                <span class="note-icon" aria-hidden="true">💡</span>
+                <p><em>"La tranquilidad de crecer sin límites técnicos."</em></p>
+              </div>
+              <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Premium%20(%2410.999%20UYU%2Fmes).%20Quiero%20conocer%20más%20sobre%20escalabilidad%20y%20asesoría."
+                class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
+                <span>Elegir Plan Premium</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Info Section Mejorada -->
+        <div class="pricing-info animate-on-scroll">
+          <div class="info-grid">
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">💳</div>
+              <h4>Facturación Transparente</h4>
+              <p>Cobro mensual automático. Cancelá cuando quieras, sin penalidades ni letra chica.</p>
+            </div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">🔧</div>
+              <h4>Mantenimiento Incluido</h4>
+              <p>Actualizaciones, seguridad, backups y soporte técnico. Vos vendé, nosotros nos encargamos del resto.</p>
+            </div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">📝</div>
+              <h4>Setup Sin Costo</h4>
+              <p>Sin inversión inicial. Tu tienda lista y funcionando en pocos días hábiles.</p>
+            </div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">⚡</div>
+              <h4>¿Necesitás algo extra?</h4>
+              <p>Desarrollos personalizados, integraciones especiales o diseños únicos se cotizan aparte, sin compromiso.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="pricing-cta animate-on-scroll">
+          <h3>¿No estás seguro qué plan elegir?</h3>
+          <p>Agendá una consulta gratuita de 15 minutos y te ayudamos a elegir la mejor opción para tu negocio, sin
+            presión.</p>
+          <a href="https://wa.me/59896854828?text=Hola!%20Necesito%20ayuda%20para%20elegir%20el%20plan%20ideal%20para%20mi%20tienda%20online.%20¿Podemos%20agendar%20una%20consulta%20gratuita?"
+            class="btn btn-outline btn-large" target="_blank" rel="noopener noreferrer">
+            <span>📅 Agendar Consulta Gratuita</span>
           </a>
         </div>
+
+        <!-- Nueva sección: Comparativa rápida de soporte -->
+        <div class="pricing-support-comparison animate-on-scroll" style="margin-top: 3rem; text-align: center;">
+          <h4 style="margin-bottom: 1.5rem; font-weight: 600;">🎯 ¿Qué plan se adapta a tu momento?</h4>
+          <div class="support-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto;">
+            <div
+              style="padding: 1rem; border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; background: var(--card-bg, #fff);">
+              <strong style="color: var(--primary, #2563eb);">Plan Tienda</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--text-muted, #64748b);">Soporte limitado Ideal para validar tu idea sin compromiso.</p>
+            </div>
+            <div
+              style="padding: 1rem; border: 2px solid var(--primary, #2563eb); border-radius: 12px; background: var(--card-bg, #fff); position: relative;">
+              <span
+                style="position: absolute; top: -10px; right: 1rem; background: var(--primary, #2563eb); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Recomendado</span>
+              <strong style="color: var(--primary, #2563eb);">Plan PRO</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--text-muted, #64748b);">Soporte prioritario
+                &lt;2h. Para quien ya vende y quiere escalar.</p>
+            </div>
+            <div
+              style="padding: 1rem; border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; background: var(--card-bg, #fff);">
+              <strong style="color: var(--primary, #2563eb);">Plan Premium</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--text-muted, #64748b);">Soporte dedicado
+                &lt;1h + asesoría. Para negocios que priorizan tiempo y resultados.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="hero-stats animate-on-scroll">
-        <div class="stat-item">
-          <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Proyectos</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Clientes</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="+3">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Años Exp.</span>
-        </div>
-      </div>
-    </div>
-
-
-  </section>
-
-  <!-- ======================================================================= -->
-  <!-- SECCIÓN VIDEO PROMOCIONAL (Después del Hero) -->
-  <!-- ======================================================================= -->
-  <section class="section video-promo" id="video-intro">
-    <div class="video-promo-bg">
-      <div class="video-grid-overlay"></div>
-      <div class="video-particles" id="video-particles"></div>
-    </div>
-
-    <div class="container">
-      <div class="video-promo-wrapper animate-on-scroll">
-
-        <!-- Contenido textual -->
-        <div class="video-promo-content">
-          <span class="section-tag video-tag">✨ Descubre tu potencial digital</span>
-          <h2 class="video-title">
-            Mira cómo transformamos <span class="text-gradient">ideas en realidad</span>
-          </h2>
-          <p class="video-description">
-            En menos de 1 minuto, conoce nuestra metodología y ve ejemplos reales
-            de nuestros prototipos diseñados para impulsar tu negocio.
+    <section class="section services" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Servicio técnico profesional</span>
+          <h2 class="section-title" id="servicios-title">Mantenimiento y <span class="text-gradient">Reparación</span></h2>
+          <p class="section-description">
+            Reparamos y optimizamos tus dispositivos con atención profesional.
+            PCs, consolas, celulares y más — con garantía y servicio a domicilio.
           </p>
-
-          <div class="video-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🎯</span>
-              <span>Enfoque estratégico</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">⚡</span>
-              <span>Entrega rápida</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🔒</span>
-              <span>Soporte garantizado</span>
-            </div>
-          </div>
         </div>
 
-        <!-- Reproductor de video -->
-        <div class="video-promo-player">
-          <div class="video-container">
+        <div class="services-grid" role="list">
 
-            <!-- Placeholder del video (se oculta al reproducir) -->
-            <div class="video-placeholder" id="video-placeholder">
+          <article class="service-card animate-on-scroll" role="listitem" aria-labelledby="service-pc-title">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="12" rx="2" />
+                <path d="M8 21h8" />
+                <path d="M12 15v6" />
+                <path d="M7 8h2m-2 3h4" />
+                <circle cx="16" cy="9" r="2" />
+              </svg>
+            </div>
+            <div class="service-number" aria-hidden="true">01</div>
+            <h3 class="service-title" id="service-pc-title">PCs y Laptops</h3>
+            <p class="service-desc">
+              Diagnóstico completo, limpieza interna, cambio de pasta térmica,
+              formateo, optimización del sistema y reemplazo de componentes.
+            </p>
+            <ul class="service-features" role="list">
+              <li>Limpieza y mantenimiento preventivo</li>
+              <li>Cambio de pasta térmica y ventiladores</li>
+              <li>Formateo e instalación de SO</li>
+              <li>Upgrade de RAM, SSD y componentes</li>
+              <li>Eliminación de virus y malware</li>
+            </ul>
+            <a href="#contacto" class="service-link">
+              Solicitar servicio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+            </a>
+          </article>
 
-              <div class="video-play-overlay" id="video-play-btn" role="button" tabindex="0"
-                aria-label="Reproducir video">
-                <div class="play-button">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+          <article class="service-card animate-on-scroll" role="listitem" aria-labelledby="service-consolas-title">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 11h4v4H6z" />
+                <path d="M14 11h4" />
+                <path d="M16 9v4" />
+                <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <path d="M8 14h.01" />
+                <path d="M16 14h.01" />
+              </svg>
+            </div>
+            <div class="service-number" aria-hidden="true">02</div>
+            <h3 class="service-title" id="service-consolas-title">Consolas</h3>
+            <p class="service-desc">
+              Reparación de PlayStation, Xbox y Nintendo Switch. Mantenimiento
+              completo, cambio de lectora, reparación de joysticks y más.
+            </p>
+            <ul class="service-features" role="list">
+              <li>Limpieza interna y cambio de pasta térmica</li>
+              <li>Reparación de lectora de discos</li>
+              <li>Reemplazo de joysticks y gatillos</li>
+              <li>Solución de errores de encendido y HDMI</li>
+              <li>Actualización de firmware y software</li>
+            </ul>
+            <a href="#contacto" class="service-link">
+              Solicitar servicio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card animate-on-scroll" role="listitem" aria-labelledby="service-moviles-title">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="7" y="2" width="10" height="20" rx="2" />
+                <path d="M12 18h.01" />
+                <path d="M9 6h6" />
+                <path d="M10 10l4 4" />
+                <path d="M14 10l-4 4" />
+              </svg>
+            </div>
+            <div class="service-number" aria-hidden="true">03</div>
+            <h3 class="service-title" id="service-moviles-title">Celulares y Tablets</h3>
+            <p class="service-desc">
+              Cambio de pantalla, batería, puerto de carga y reparación de placa.
+              Trabajo con iPhone, Samsung, Xiaomi y otras marcas.
+            </p>
+            <ul class="service-features" role="list">
+              <li>Cambio de pantalla y vidrio</li>
+              <li>Reemplazo de batería</li>
+              <li>Reparación de puerto de carga</li>
+              <li>Arreglo de problemas de audio y altavoz</li>
+              <li>Recuperación de datos y reseteo</li>
+            </ul>
+            <a href="#contacto" class="service-link">
+              Solicitar servicio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual animate-on-scroll" aria-hidden="true">
+            <div class="about-image-wrapper">
+              <div class="about-image-placeholder">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div class="about-image-border"></div>
+            </div>
+
+            <div class="about-float-card float-card-1">
+              <span class="float-number">99%</span>
+              <span class="float-label">Satisfacción</span>
+            </div>
+            <div class="about-float-card float-card-2">
+              <span class="float-number">24/7</span>
+              <span class="float-label">Soporte</span>
+            </div>
+          </div>
+
+          <div class="about-content animate-on-scroll">
+            <span class="section-tag">Quiénes somos</span>
+            <h2 class="section-title" id="nosotros-title">Tecnología con <span class="text-gradient">Pasión</span></h2>
+            <p class="about-text">
+              Somos tecnólogos en informática con más de 3 años de experiencia en el desarrollo de software y soluciones
+              informáticas, enfocados en brindar servicios eficientes, confiables y adaptados a las necesidades de cada
+              cliente.
+            </p>
+            <p class="about-text">
+              Nuestro objetivo es brindar soluciones eficientes, innovadoras y de alta
+              calidad tanto para empresas como para usuarios individuales. Cada proyecto
+              es una oportunidad para superar expectativas.
+            </p>
+
+            <div class="about-values" role="list">
+              <div class="value-item" role="listitem">
+                <div class="value-icon" aria-hidden="true">🎯</div>
+                <div>
+                  <h4>Precisión</h4>
+                  <p>Atención al detalle en cada línea de código</p>
                 </div>
-
+              </div>
+              <div class="value-item" role="listitem">
+                <div class="value-icon" aria-hidden="true">🚀</div>
+                <div>
+                  <h4>Innovación</h4>
+                  <p>Tecnologías actuales y mejores prácticas</p>
+                </div>
+              </div>
+              <div class="value-item" role="listitem">
+                <div class="value-icon" aria-hidden="true">🤝</div>
+                <div>
+                  <h4>Compromiso</h4>
+                  <p>Soporte continuo post-entrega</p>
+                </div>
               </div>
             </div>
 
-            <!-- Video real (se muestra al reproducir) -->
-            <video id="promo-video" class="video-element" controls preload="metadata" poster="img/logo.png" muted
-              playsinline style="display: none;">
-              <source src="desarrollo_web.mp4" type="video/mp4">
-              <source src="desarrollo_web.webm" type="video/webm">
-              Tu navegador no soporta la reproducción de video.
-              <a href="desarrollo_web.mp4" download>Descargar video</a>
-            </video>
-
-
-
-          </div>
-
-
-
-        </div>
-
-      </div>
-
-      <!-- Scroll indicator -->
-      <div class="video-scroll-indicator">
-        <span>Explora nuestros planes</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 5v14M5 12l7 7 7-7" />
-        </svg>
-      </div>
-  </section>
-
-  <section class="section pricing" id="planes">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="section-tag">Suscripción Inteligente</span>
-        <h2 class="section-title">Planes <span class="text-gradient">Flexibles</span></h2>
-        <p class="section-description">
-          Soluciones e-commerce diseñadas para crecer contigo.
-          <strong>Nos encargamos de todo lo técnico</strong> para que vos te enfoques en vender.
-        </p>
-      </div>
-
-      <div class="pricing-grid">
-
-        <!-- Plan Tienda -->
-        <div class="pricing-card animate-on-scroll">
-          <div class="pricing-badge">
-            <span class="badge-icon">🟢</span>
-            <span class="badge-text">Para Empezar</span>
-          </div>
-          <div class="pricing-header">
-            <h3 class="pricing-title">Plan Tienda</h3>
-            <p class="pricing-subtitle">Lanzá tu tienda online sin complicaciones</p>
-
-            <div class="pricing-price">
-              <div class="price-new">
-                <span class="price-currency">UYU</span>
-                <span class="price-amount">2.999</span>
-                <span class="price-period">/mes</span>
-              </div>
-            </div>
-            <p class="pricing-price-uyu">Suscripción mensual</p>
-            <p class="pricing-delivery">✅ Hosting + mantenimiento + seguridad incluidos</p>
-            <p class="pricing-delivery"><small>* Soporte en 24h hábiles. Sin setup. Cancelá cuando quieras.</small></p>
-          </div>
-
-          <div class="pricing-ideal-for">
-            <strong>🎯 Ideal si querés:</strong>
-
-            <div class="tag-list">
-              <span class="tag">Vender online por primera vez</span>
-              <span class="tag">Profesionalizar tu negocio</span>
-              <span class="tag">Tener tu tienda funcionando</span>
-            </div>
-          </div>
-
-          <div class="pricing-features">
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Tienda online pública y profesional</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Carrito + checkout optimizado para convertir</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Pagos integrados</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Gestión simple de pedidos y clientes</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Control de stock automático</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2">
-                <path d="M18 6L6 18" />
-                <path d="M6 6L18 18" />
-              </svg>
-              <span>Botón de WhatsApp integrado para cerrar ventas</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2">
-                <path d="M18 6L6 18" />
-                <path d="M6 6L18 18" />
-              </svg>
-              <span>Soporte por WhatsApp en horario comercial (respuesta en 24h)</span>
-            </div>
-          </div>
-
-          <div class="pricing-ideal-for">
-            <strong>📦 Todo lo necesario para empezar:</strong>
-            <div class="tag-list">
-              <p class="tag">Hasta 150 productos </p>
-              <p class="tag">Imágenes optimizadas</p>
-              <p class="tag">1 sucursal lista para operar</p>
-              <p class="tag tag-neutral">Sin automatizaciones avanzadas</p>
-            </div>
-          </div>
-
-          <div class="pricing-benefits">
-            <strong>✨ Tu tranquilidad:</strong>
-            <p>No necesitás saber de tecnología. Nosotros nos encargamos de que tu tienda siempre funcione.</p>
-          </div>
-
-          <div class="pricing-footer">
-            <div class="pricing-note">
-              <span class="note-icon">💡</span>
-              <p><em>"Empezá a vender hoy. Sin inversión inicial."</em></p>
-            </div>
-            <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Tienda%20(%242.999%20UYU%2Fmes).%20Quiero%20empezar%20a%20vender%20online."
-              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
-              <span>Elegir Plan Tienda</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-              </svg>
+            <a href="#contacto" class="btn btn-primary btn-glow">
+              <span>Contáctanos.</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
             </a>
           </div>
         </div>
-
-        <!-- Plan PRO (Destacado - CORE DEL NEGOCIO) -->
-        <div class="pricing-card pricing-card-featured animate-on-scroll">
-          <div class="featured-ribbon">🔥 Más Elegido</div>
-          <div class="pricing-header">
-            <h3 class="pricing-title">Plan PRO</h3>
-            <p class="pricing-subtitle">Escalá tus ventas con herramientas avanzadas</p>
-
-            <div class="pricing-price">
-              <div class="price-new">
-                <span class="price-currency">UYU</span>
-                <span class="price-amount">5.499</span>
-                <span class="price-period">/mes</span>
-              </div>
-            </div>
-            <p class="pricing-price-uyu">Suscripción mensual</p>
-            <p class="pricing-delivery">🚀 Automatizaciones + soporte prioritario</p>
-            <p class="pricing-delivery"><small>* Respuesta en &lt;2h hábiles. Cancelá cuando quieras.</small></p>
-          </div>
-
-          <div class="pricing-ideal-for">
-            <strong>🎯 Ideal si querés:</strong>
-
-            <div class="tag-list">
-              <span class="tag">Vender más </span>
-              <span class="tag">Manejar catálogos grandes </span>
-              <span class="tag">Tener soporte rápido </span>
-            </div>
-          </div>
-
-          <div class="pricing-features">
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>✅ Todo lo del Plan Tienda +</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span><strong>Hasta 500 productos</strong> para crecer sin frenos</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Checkout optimizado para +30% más conversión</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span><strong>Soporte prioritario:</strong> respuesta en &lt;2 horas hábiles</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>📊 Reportes de ventas: sabé qué vende y cuándo</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Cupones, descuentos y promociones avanzadas</span>
-            </div>
-           
-          </div>
-
-          <div class="pricing-ideal-for">
-            <strong>📦 Capacidad incluida:</strong>
-            <div class="tag-list">
-              <p class="tag">Hasta 500 productos</p>
-              <p class="tag">Hasta 1.500 imágenes con CDN</p>
-              <p class="tag">Hasta 3 sucursales con stock</p>
-              <p class="tag tag-success">✅ Automatizaciones incluidas</p>
-            </div>
-          </div>
-
-          <div class="pricing-benefits">
-            <strong>✨ Tu tranquilidad:</strong>
-            <p>Escalá sin cambiar de plataforma. Nosotros nos encargamos del rendimiento para que vos te enfoques en
-              crecer.</p>
-          </div>
-
-          <div class="pricing-footer">
-            <div class="pricing-note">
-              <span class="note-icon">💡</span>
-              <p><em>"Invertí en crecimiento, no en infraestructura."</em></p>
-            </div>
-            <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20PRO%20(%245.499%20UYU%2Fmes).%20Quiero%20escalar%20mi%20negocio%20online."
-              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
-              <span>Elegir Plan PRO</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Plan Premium (Ancla de Valor) -->
-        <div class="pricing-card animate-on-scroll">
-          <div class="pricing-badge">
-            <span class="badge-icon">⭐</span>
-            <span class="badge-text">Para Escalar</span>
-          </div>
-          <div class="pricing-header">
-            <h3 class="pricing-title">Plan Premium</h3>
-            <p class="pricing-subtitle">Máximo rendimiento + acompañamiento estratégico</p>
-
-            <div class="pricing-price">
-              <div class="price-new">
-                <span class="price-currency">UYU</span>
-                <span class="price-amount">10.999</span>
-                <span class="price-period">/mes</span>
-              </div>
-            </div>
-            <p class="pricing-price-uyu">Suscripción mensual</p>
-            <p class="pricing-delivery">🎯 Soporte dedicado + asesoría mensual incluida</p>
-            <p class="pricing-delivery"><small>* Canal directo. Prioridad total. Sin límites operativos.</small></p>
-          </div>
-
-          <div class="pricing-ideal-for">
-            <strong>🎯 Ideal si querés:</strong>
-
-            <div class="tag-list">
-              <span class="tag">Tener una tienda enterprise</span>
-              <span class="tag">Recibir asesoría estratégica </span>
-              <span class="tag">Delegar todo lo técnico </span>
-            </div>
-          </div>
-
-          <div class="pricing-features">
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>✅ Todo lo del Plan PRO +</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span><strong>Productos y tráfico sin límites operativos</strong></span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Infraestructura de alta performance (CDN + caché avanzado)</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span><strong>Soporte dedicado:</strong> canal directo + respuesta &lt;1 hora</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>🎯 <strong>Asesoría mensual:</strong> optimización de conversión y estrategias</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Integraciones personalizadas: ERP, logística, contabilidad</span>
-            </div>
-            <div class="feature-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span>Backup diario + recuperación ante desastres</span>
-            </div>
-          </div>
-
-          <div class="pricing-ideal-for">
-            <strong>📦 Capacidad incluida:</strong>
-            <div class="tag-list">
-              <p class="tag">Productos ilimitados</p>
-              <p class="tag">Imágenes ilimitadas</p>
-              <p class="tag">Sucursales ilimitadas</p>
-              <p class="tag tag-premium">✅ Acompañamiento estratégico </p>
-            </div>
-          </div>
-
-          <div class="pricing-benefits">
-            <strong>✨ Tu tranquilidad:</strong>
-            <p>Tenés un equipo técnico dedicado. Tu tienda siempre rápida, segura y escalando con vos.</p>
-          </div>
-
-          <div class="pricing-footer">
-            <div class="pricing-note">
-              <span class="note-icon">💡</span>
-              <p><em>"La tranquilidad de crecer sin límites técnicos."</em></p>
-            </div>
-            <a href="https://wa.me/59896854828?text=Hola!%20Estoy%20interesado%20en%20el%20Plan%20Premium%20(%2410.999%20UYU%2Fmes).%20Quiero%20conocer%20más%20sobre%20escalabilidad%20y%20asesoría."
-              class="btn btn-primary btn-glow btn-full" target="_blank" rel="noopener noreferrer">
-              <span>Elegir Plan Premium</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
       </div>
+    </section>
 
-      <!-- Info Section Mejorada -->
-      <div class="pricing-info animate-on-scroll">
-        <div class="info-grid">
-          <div class="info-item">
-            <div class="info-icon">💳</div>
-            <h4>Facturación Transparente</h4>
-            <p>Cobro mensual automático. Cancelá cuando quieras, sin penalidades ni letra chica.</p>
+    <section class="section trajectory" id="trayectoria" aria-labelledby="trayectoria-title">
+      <div class="container">
+
+        <!-- Header con mensaje motivacional -->
+        <div class="section-header animate-on-scroll text-center">
+          <span class="section-tag">Nuestro Camino</span>
+          <h2 class="section-title" id="trayectoria-title">Trayectoria <span class="text-gradient">y Aprendizaje</span></h2>
+          <p class="section-description max-width-700">
+            Cada proyecto es una historia de crecimiento.
+            <strong>Empezamos con ideas, las transformamos en prototipos, y las convertimos en soluciones reales</strong>
+            que impactan positivamente. Aquí compartimos lo que hemos construido y lo que seguimos imaginando.
+          </p>
+          <div class="motivation-badges" role="list">
+            <span class="badge" role="listitem">✨ Innovación constante</span>
+            <span class="badge" role="listitem">🎯 Enfoque en resultados</span>
+            <span class="badge" role="listitem">🤝 Aprendizaje colaborativo</span>
           </div>
-          <div class="info-item">
-            <div class="info-icon">🔧</div>
-            <h4>Mantenimiento Incluido</h4>
-            <p>Actualizaciones, seguridad, backups y soporte técnico. Vos vendé, nosotros nos encargamos del resto.</p>
+        </div>
+
+        <!-- SUBSECCIÓN 1: Prototipos por Industria (Primero) - CON IMÁGENES CLICKABLES -->
+        <div class="trajectory-subsection" id="prototipos">
+          <div class="subsection-header animate-on-scroll">
+            <h3 class="subsection-title">🚀 Prototipos que Inspiran</h3>
+            <p class="subsection-description">
+              Ideas listas para cobrar vida. Explora nuestras demos preconstruidas:
+              <em>porque creemos que el mejor momento para empezar es ahora</em>.
+            </p>
           </div>
-          <div class="info-item">
-            <div class="info-icon">📝</div>
-            <h4>Setup Sin Costo</h4>
-            <p>Sin inversión inicial. Tu tienda lista y funcionando en pocos días hábiles.</p>
+
+          <div class="projects-grid" role="list">
+
+            <!-- Template 1: Panadería (Índice 3) -->
+            <article class="project-card animate-on-scroll demo-card" data-project="3" data-type="demo" role="listitem" aria-labelledby="demo-panaderia-title">
+              <div class="project-carousel" role="region" aria-label="Galería del template Panadería">
+                <a href="https://panaderiaweb-azure.vercel.app/" class="carousel-link" target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="demos/panaderia/hero.jpg" alt="Vista principal - Template Panadería" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                  </div>
+                  <span class="carousel-click-overlay" aria-hidden="true">
+                    <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span class="link-text">Ver demo →</span>
+                  </span>
+                </a>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-ecommerce">Ecommerce</span>
+                  <span class="tag tag-web">Web</span>
+                  <span class="tag tag-demo">Demo</span>
+                </div>
+                <h3 class="project-title" id="demo-panaderia-title">🥐 Prototipo Panadería Artesanal</h3>
+                <p class="project-desc">
+                  Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por
+                  WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <blockquote class="testimonial-quote">
+                    "Perfecto para mostrar productos visuales y generar pedidos rápidos desde el celular."
+                  </blockquote>
+                  <cite class="testimonial-author">— Ideal para negocios locales</cite>
+                </div>
+              </div>
+            </article>
+
+            <!-- Template 2: Forestal (Índice 4) -->
+            <article class="project-card animate-on-scroll demo-card" data-project="4" data-type="demo" role="listitem" aria-labelledby="demo-forestal-title">
+              <div class="project-carousel" role="region" aria-label="Galería del template Forestal">
+                <a href="https://forestalweb.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="demos/forestal/hero.jpg" alt="Vista principal - Template Forestal" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                  </div>
+                  <span class="carousel-click-overlay" aria-hidden="true">
+                    <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span class="link-text">Ver demo →</span>
+                  </span>
+                </a>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-corporate">Corporativo</span>
+                  <span class="tag tag-web">Web</span>
+                  <span class="tag tag-demo">Demo</span>
+                </div>
+                <h3 class="project-title" id="demo-forestal-title">🌲 Template Empresa Forestal</h3>
+                <p class="project-desc">
+                  Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad,
+                  proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <blockquote class="testimonial-quote">
+                    "Transmite profesionalismo y es ideal para presentar servicios a clientes corporativos."
+                  </blockquote>
+                  <cite class="testimonial-author">— Sector industrial y agro</cite>
+                </div>
+              </div>
+            </article>
+
+            <!-- Template 3: Tecnología (Índice 5) -->
+            <article class="project-card animate-on-scroll demo-card" data-project="5" data-type="demo" role="listitem" aria-labelledby="demo-tecnologia-title">
+              <div class="project-carousel" role="region" aria-label="Galería del template Tecnología">
+                <a href="https://catalogoweb-seven.vercel.app/" class="carousel-link" target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="demos/tecnologia/hero.jpg" alt="Vista principal - Template Tecnología"
+                        class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                  </div>
+                  <span class="carousel-click-overlay" aria-hidden="true">
+                    <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span class="link-text">Ver demo →</span>
+                  </span>
+                </a>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-ecommerce">Ecommerce</span>
+                  <span class="tag tag-tech">Tech</span>
+                  <span class="tag tag-demo">Demo</span>
+                </div>
+                <h3 class="project-title" id="demo-tecnologia-title">💻 Template Comercio de Tecnología</h3>
+                <p class="project-desc">
+                  Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas
+                  técnicas, comparador de productos y integración con métodos de pago.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <blockquote class="testimonial-quote">
+                    "Diseño limpio y funcional, perfecto para destacar especificaciones técnicas y generar confianza."
+                  </blockquote>
+                  <cite class="testimonial-author">— Retail tecnológico</cite>
+                </div>
+              </div>
+            </article>
+
+            <!-- Template 4: Peluquería (Índice 6) -->
+            <article class="project-card animate-on-scroll demo-card" data-project="6" data-type="demo" role="listitem" aria-labelledby="demo-peluqueria-title">
+              <div class="project-carousel" role="region" aria-label="Galería del template Peluquería">
+                <a href="https://peluqueriaweb.vercel.app/" class="carousel-link" target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="demos/peluqueria/hero.jpg" alt="Vista principal - Template Peluquería"
+                        class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                  </div>
+                  <span class="carousel-click-overlay" aria-hidden="true">
+                    <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span class="link-text">Ver demo →</span>
+                  </span>
+                </a>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-services">Servicios</span>
+                  <span class="tag tag-web">Web</span>
+                  <span class="tag tag-demo">Demo</span>
+                </div>
+                <h3 class="project-title" id="demo-peluqueria-title">✂️ Template Peluquería & Estética</h3>
+                <p class="project-desc">
+                  Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios,
+                  reserva de turnos por WhatsApp y sección de promociones.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <blockquote class="testimonial-quote">
+                    "Visualmente atractivo y fácil de usar para que los clientes agenden sin complicaciones."
+                  </blockquote>
+                  <cite class="testimonial-author">— Sector belleza y bienestar</cite>
+                </div>
+              </div>
+            </article>
+
+            <!-- Template 5: Tienda de Ropa (Índice 7) -->
+            <article class="project-card animate-on-scroll demo-card" data-project="7" data-type="demo" role="listitem" aria-labelledby="demo-ropa-title">
+              <div class="project-carousel" role="region" aria-label="Galería del template Tienda de Ropa">
+                <a href="https://tiendaweb-ten.vercel.app/" class="carousel-link" target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="demos/ropa/hero.jpg" alt="Vista principal - Template Tienda de Moda" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                  </div>
+                  <span class="carousel-click-overlay" aria-hidden="true">
+                    <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span class="link-text">Ver demo →</span>
+                  </span>
+                </a>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-ecommerce">Ecommerce</span>
+                  <span class="tag tag-fashion">Moda</span>
+                  <span class="tag tag-demo">Demo</span>
+                </div>
+                <h3 class="project-title" id="demo-ropa-title">👗 Template Tienda de Moda</h3>
+                <p class="project-desc">
+                  Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de
+                  compras y enlaces directos a redes sociales para impulsar ventas.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <blockquote class="testimonial-quote">
+                    "Estilo premium que resalta las prendas y convierte visitantes en compradores."
+                  </blockquote>
+                  <cite class="testimonial-author">— Emprendedores de moda</cite>
+                </div>
+              </div>
+            </article>
+
+            <!-- Template 6: Artesanías (Índice 8) -->
+            <article class="project-card animate-on-scroll demo-card" data-project="8" data-type="demo" role="listitem" aria-labelledby="demo-artesanias-title">
+              <div class="project-carousel" role="region" aria-label="Galería del template Artesanías">
+                <a href="https://artesaniaweb.vercel.app/" class="carousel-link" target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active">
+                      <img src="demos/artesanias/hero.jpg" alt="Vista principal - Template Artesanías"
+                        class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                    </div>
+                  </div>
+                  <span class="carousel-click-overlay" aria-hidden="true">
+                    <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span class="link-text">Ver demo →</span>
+                  </span>
+                </a>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-ecommerce">Ecommerce</span>
+                  <span class="tag tag-handmade">Handmade</span>
+                  <span class="tag tag-demo">Demo</span>
+                </div>
+                <h3 class="project-title" id="demo-artesanias-title">🎨 Template Artesanías & Handmade</h3>
+                <p class="project-desc">
+                  Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación,
+                  envíos y opción de pedidos personalizados por WhatsApp.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <blockquote class="testimonial-quote">
+                    "Perfecto para contar la historia de tu marca y conectar emocionalmente con tus clientes."
+                  </blockquote>
+                  <cite class="testimonial-author">— Artesanos y creadores</cite>
+                </div>
+              </div>
+            </article>
+
           </div>
-          <div class="info-item">
-            <div class="info-icon">⚡</div>
-            <h4>¿Necesitás algo extra?</h4>
-            <p>Desarrollos personalizados, integraciones especiales o diseños únicos se cotizan aparte, sin compromiso.
+        </div>
+
+        <!-- Divider motivacional -->
+        <div class="trajectory-divider animate-on-scroll" aria-hidden="true">
+          <div class="divider-content">
+            <span class="divider-icon">💡</span>
+            <p class="divider-text">
+              <strong>De la idea a la realidad:</strong> Cada prototipo es el primer paso.
+              Cada proyecto entregado es una lección que nos impulsa a seguir creciendo.
             </p>
           </div>
         </div>
-      </div>
 
-      <!-- CTA Section -->
-      <div class="pricing-cta animate-on-scroll">
-        <h3>¿No estás seguro qué plan elegir?</h3>
-        <p>Agendá una consulta gratuita de 15 minutos y te ayudamos a elegir la mejor opción para tu negocio, sin
-          presión.</p>
-        <a href="https://wa.me/59896854828?text=Hola!%20Necesito%20ayuda%20para%20elegir%20el%20plan%20ideal%20para%20mi%20tienda%20online.%20¿Podemos%20agendar%20una%20consulta%20gratuita?"
-          class="btn btn-outline btn-large" target="_blank" rel="noopener noreferrer">
-          <span>📅 Agendar Consulta Gratuita</span>
-        </a>
-      </div>
-
-      <!-- Nueva sección: Comparativa rápida de soporte -->
-      <div class="pricing-support-comparison animate-on-scroll" style="margin-top: 3rem; text-align: center;">
-        <h4 style="margin-bottom: 1.5rem; font-weight: 600;">🎯 ¿Qué plan se adapta a tu momento?</h4>
-        <div class="support-grid"
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; max-width: 900px; margin: 0 auto;">
-          <div
-            style="padding: 1rem; border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; background: var(--card-bg, #fff);">
-            <strong style="color: var(--primary, #2563eb);">Plan Tienda</strong>
-            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--text-muted, #64748b);">Soporte limitado Ideal para validar tu idea sin compromiso.</p>
-          </div>
-          <div
-            style="padding: 1rem; border: 2px solid var(--primary, #2563eb); border-radius: 12px; background: var(--card-bg, #fff); position: relative;">
-            <span
-              style="position: absolute; top: -10px; right: 1rem; background: var(--primary, #2563eb); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">Recomendado</span>
-            <strong style="color: var(--primary, #2563eb);">Plan PRO</strong>
-            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--text-muted, #64748b);">Soporte prioritario
-              &lt;2h. Para quien ya vende y quiere escalar.</p>
-          </div>
-          <div
-            style="padding: 1rem; border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; background: var(--card-bg, #fff);">
-            <strong style="color: var(--primary, #2563eb);">Plan Premium</strong>
-            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--text-muted, #64748b);">Soporte dedicado
-              &lt;1h + asesoría. Para negocios que priorizan tiempo y resultados.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section services" id="servicios">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <span class="section-tag">Servicio técnico profesional</span>
-        <h2 class="section-title">Mantenimiento y <span class="text-gradient">Reparación</span></h2>
-        <p class="section-description">
-          Reparamos y optimizamos tus dispositivos con atención profesional.
-          PCs, consolas, celulares y más — con garantía y servicio a domicilio.
-        </p>
-      </div>
-
-      <div class="services-grid">
-
-
-        <div class="service-card animate-on-scroll">
-          <div class="service-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="12" rx="2" />
-              <path d="M8 21h8" />
-              <path d="M12 15v6" />
-              <path d="M7 8h2m-2 3h4" />
-              <circle cx="16" cy="9" r="2" />
-            </svg>
-          </div>
-          <div class="service-number">01</div>
-          <h3 class="service-title">PCs y Laptops</h3>
-          <p class="service-desc">
-            Diagnóstico completo, limpieza interna, cambio de pasta térmica,
-            formateo, optimización del sistema y reemplazo de componentes.
-          </p>
-          <ul class="service-features">
-            <li>Limpieza y mantenimiento preventivo</li>
-            <li>Cambio de pasta térmica y ventiladores</li>
-            <li>Formateo e instalación de SO</li>
-            <li>Upgrade de RAM, SSD y componentes</li>
-            <li>Eliminación de virus y malware</li>
-          </ul>
-          <a href="#contacto" class="service-link">
-            Solicitar servicio
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-
-
-        <div class="service-card animate-on-scroll">
-          <div class="service-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 11h4v4H6z" />
-              <path d="M14 11h4" />
-              <path d="M16 9v4" />
-              <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-              <path d="M8 14h.01" />
-              <path d="M16 14h.01" />
-            </svg>
-          </div>
-          <div class="service-number">02</div>
-          <h3 class="service-title">Consolas</h3>
-          <p class="service-desc">
-            Reparación de PlayStation, Xbox y Nintendo Switch. Mantenimiento
-            completo, cambio de lectora, reparación de joysticks y más.
-          </p>
-          <ul class="service-features">
-            <li>Limpieza interna y cambio de pasta térmica</li>
-            <li>Reparación de lectora de discos</li>
-            <li>Reemplazo de joysticks y gatillos</li>
-            <li>Solución de errores de encendido y HDMI</li>
-            <li>Actualización de firmware y software</li>
-          </ul>
-          <a href="#contacto" class="service-link">
-            Solicitar servicio
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-
-
-        <div class="service-card animate-on-scroll">
-          <div class="service-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="7" y="2" width="10" height="20" rx="2" />
-              <path d="M12 18h.01" />
-              <path d="M9 6h6" />
-              <path d="M10 10l4 4" />
-              <path d="M14 10l-4 4" />
-            </svg>
-          </div>
-          <div class="service-number">03</div>
-          <h3 class="service-title">Celulares y Tablets</h3>
-          <p class="service-desc">
-            Cambio de pantalla, batería, puerto de carga y reparación de placa.
-            Trabajo con iPhone, Samsung, Xiaomi y otras marcas.
-          </p>
-          <ul class="service-features">
-            <li>Cambio de pantalla y vidrio</li>
-            <li>Reemplazo de batería</li>
-            <li>Reparación de puerto de carga</li>
-            <li>Arreglo de problemas de audio y altavoz</li>
-            <li>Recuperación de datos y reseteo</li>
-          </ul>
-          <a href="#contacto" class="service-link">
-            Solicitar servicio
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-
-
-
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section about" id="nosotros">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual animate-on-scroll">
-          <div class="about-image-wrapper">
-            <div class="about-image-placeholder">
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-            </div>
-            <div class="about-image-border"></div>
+        <!-- SUBSECCIÓN 2: Proyectos Destacados (Después) - SIN ENLACES, SOLO MODAL -->
+        <div class="trajectory-subsection" id="proyectos-reales">
+          <div class="subsection-header animate-on-scroll">
+            <h3 class="subsection-title">🏆 Proyectos que Transformaron Ideas en Realidad</h3>
           </div>
 
-          <div class="about-float-card float-card-1">
-            <span class="float-number">99%</span>
-            <span class="float-label">Satisfacción</span>
-          </div>
-          <div class="about-float-card float-card-2">
-            <span class="float-number">24/7</span>
-            <span class="float-label">Soporte</span>
-          </div>
-        </div>
+          <div class="projects-grid" role="list">
 
-        <div class="about-content animate-on-scroll">
-          <span class="section-tag">Quiénes somos</span>
-          <h2 class="section-title">Tecnología con <span class="text-gradient">Pasión</span></h2>
-          <p class="about-text">
-            Somos tecnólogos en informática con más de 3 años de experiencia en el desarrollo de software y soluciones
-            informáticas, enfocados en brindar servicios eficientes, confiables y adaptados a las necesidades de cada
-            cliente.
-          </p>
-          <p class="about-text">
-            Nuestro objetivo es brindar soluciones eficientes, innovadoras y de alta
-            calidad tanto para empresas como para usuarios individuales. Cada proyecto
-            es una oportunidad para superar expectativas.
-          </p>
-
-          <div class="about-values">
-            <div class="value-item">
-              <div class="value-icon">🎯</div>
-              <div>
-                <h4>Precisión</h4>
-                <p>Atención al detalle en cada línea de código</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🚀</div>
-              <div>
-                <h4>Innovación</h4>
-                <p>Tecnologías actuales y mejores prácticas</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🤝</div>
-              <div>
-                <h4>Compromiso</h4>
-                <p>Soporte continuo post-entrega</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="#contacto" class="btn btn-primary btn-glow">
-            <span>Contáctanos.</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section trajectory" id="trayectoria">
-    <div class="container">
-
-      <!-- Header con mensaje motivacional -->
-      <div class="section-header animate-on-scroll text-center">
-        <span class="section-tag">Nuestro Camino</span>
-        <h2 class="section-title">Trayectoria <span class="text-gradient">y Aprendizaje</span></h2>
-        <p class="section-description max-width-700">
-          Cada proyecto es una historia de crecimiento.
-          <strong>Empezamos con ideas, las transformamos en prototipos, y las convertimos en soluciones reales</strong>
-          que impactan positivamente. Aquí compartimos lo que hemos construido y lo que seguimos imaginando.
-        </p>
-        <div class="motivation-badges">
-          <span class="badge">✨ Innovación constante</span>
-          <span class="badge">🎯 Enfoque en resultados</span>
-          <span class="badge">🤝 Aprendizaje colaborativo</span>
-        </div>
-      </div>
-
-      <!-- SUBSECCIÓN 1: Prototipos por Industria (Primero) - CON IMÁGENES CLICKABLES -->
-      <div class="trajectory-subsection" id="prototipos">
-        <div class="subsection-header animate-on-scroll">
-          <h3 class="subsection-title">🚀 Prototipos que Inspiran</h3>
-          <p class="subsection-description">
-            Ideas listas para cobrar vida. Explora nuestras demos preconstruidas:
-            <em>porque creemos que el mejor momento para empezar es ahora</em>.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-
-          <!-- Template 1: Panadería (Índice 3) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="3" data-type="demo">
-            <div class="project-carousel" role="region" aria-label="Galería del template Panadería">
-              <a href="https://panaderiaweb-azure.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
+            <!-- Proyecto 1: Banco de Sangre -->
+            <article class="project-card animate-on-scroll project-real" data-project="0" role="listitem" aria-labelledby="proyecto-banco-title">
+              <div class="project-carousel" role="region" aria-label="Galería del proyecto Banco de Sangre">
                 <div class="carousel-track">
                   <div class="carousel-slide active">
-                    <img src="demos/panaderia/hero.jpg" alt="Vista principal - Template Panadería" class="carousel-img">
+                    <img src="bancoSangre/Captura de pantalla 2025-11-27 193448.png"
+                      alt="Dashboard de analíticas en tiempo real" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
                   </div>
-
+                  <div class="carousel-slide">
+                    <img src="bancoSangre/bloodbank.png" alt="Panel administrativo - Banco de Sangre"
+                      class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                  </div>
+                  <div class="carousel-slide">
+                    <img src="bancoSangre/Captura de pantalla 2025-11-27 193512.png"
+                      alt="Gestión de donantes - Banco de Sangre" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                  </div>
                 </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
+                <div class="carousel-dots" role="tablist" aria-label="Navegación de imágenes del proyecto">
+                  <span class="carousel-dot active" data-slide="0" role="tab" aria-selected="true" tabindex="0"></span>
+                  <span class="carousel-dot" data-slide="1" role="tab" aria-selected="false" tabindex="-1"></span>
+                  <span class="carousel-dot" data-slide="2" role="tab" aria-selected="false" tabindex="-1"></span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-web">Web</span>
+                  <span class="tag tag-api">API</span>
+                  <span class="tag tag-backend">Backend</span>
+                  <span class="tag tag-impact">Impacto Social</span>
+                </div>
+                <h3 class="project-title" id="proyecto-banco-title">Sistema de administración para banco de sangre</h3>
+                <p class="project-desc">
+                  Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación,
+                  almacenamiento y distribución de sangre.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-ecommerce">Ecommerce</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-demo">Demo</span>
+                  <blockquote class="testimonial-quote">
+                    "Es una solución muy útil y necesaria para el sistema de gestión que se usa actualmente."
+                  </blockquote>
+                  <cite class="testimonial-author">— Estudiantes de Hemoterapia</cite>
+                </div>
               </div>
-              <h3 class="project-title">🥐 Prototipo Panadería Artesanal</h3>
-              <p class="project-desc">
-                Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por
-                WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Perfecto para mostrar productos visuales y generar pedidos rápidos desde el celular."
-                </blockquote>
-                <cite class="testimonial-author">— Ideal para negocios locales</cite>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- Template 2: Forestal (Índice 4) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="4" data-type="demo">
-            <div class="project-carousel" role="region" aria-label="Galería del template Forestal">
-              <a href="https://forestalweb.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
+            <!-- Proyecto 2: Transporte -->
+            <article class="project-card animate-on-scroll project-real" data-project="1" role="listitem" aria-labelledby="proyecto-transporte-title">
+              <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Transporte">
                 <div class="carousel-track">
                   <div class="carousel-slide active">
-                    <img src="demos/forestal/hero.jpg" alt="Vista principal - Template Forestal" class="carousel-img">
+                    <img src="siempreCargo/Captura de pantalla 2025-11-28 145454.png" alt="Arquitectura de servidor"
+                      class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
                   </div>
-
+                  <div class="carousel-slide">
+                    <img src="siempreCargo/siempreCargo.png" alt="Dashboard principal - Transporte" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                  </div>
+                  <div class="carousel-slide">
+                    <img src="siempreCargo/Captura de pantalla 2025-11-28 145542.png"
+                      alt="Seguimiento de flota - Transporte" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
+                  </div>
                 </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
+                <div class="carousel-dots" role="tablist" aria-label="Navegación de imágenes del proyecto">
+                  <span class="carousel-dot active" data-slide="0" role="tab" aria-selected="true" tabindex="0"></span>
+                  <span class="carousel-dot" data-slide="1" role="tab" aria-selected="false" tabindex="-1"></span>
+                  <span class="carousel-dot" data-slide="2" role="tab" aria-selected="false" tabindex="-1"></span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-backend">Backend</span>
+                  <span class="tag tag-api">API</span>
+                  <span class="tag tag-web">Web</span>
+                  <span class="tag tag-logistics">Logística</span>
+                </div>
+                <h3 class="project-title" id="proyecto-transporte-title">Sistema de gestión para empresa de transporte</h3>
+                <p class="project-desc">
+                  Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos,
+                  mercancías o fletes.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-corporate">Corporativo</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-demo">Demo</span>
+                  <blockquote class="testimonial-quote">
+                    "Es una solución completa que abarca todas las funcionalidades solicitadas."
+                  </blockquote>
+                  <cite class="testimonial-author">— Cliente Transportista</cite>
+                </div>
               </div>
-              <h3 class="project-title">🌲 Template Empresa Forestal</h3>
-              <p class="project-desc">
-                Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad,
-                proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Transmite profesionalismo y es ideal para presentar servicios a clientes corporativos."
-                </blockquote>
-                <cite class="testimonial-author">— Sector industrial y agro</cite>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- Template 3: Tecnología (Índice 5) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="5" data-type="demo">
-            <div class="project-carousel" role="region" aria-label="Galería del template Tecnología">
-              <a href="https://catalogoweb-seven.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
+            <!-- Proyecto 3: Stock -->
+            <article class="project-card animate-on-scroll project-real" data-project="2" role="listitem" aria-labelledby="proyecto-stock-title">
+              <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Stock">
                 <div class="carousel-track">
                   <div class="carousel-slide active">
-                    <img src="demos/tecnologia/hero.jpg" alt="Vista principal - Template Tecnología"
-                      class="carousel-img">
+                    <img src="gestock/image.png" alt="Dashboard principal - Gestión de Stock" class="carousel-img" loading="eager" decoding="async" width="800" height="450">
                   </div>
-
-                </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-ecommerce">Ecommerce</span>
-                <span class="tag tag-tech">Tech</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title">💻 Template Comercio de Tecnología</h3>
-              <p class="project-desc">
-                Template moderno para tiendas de electrónica, computación y accesorios. Filtros por categoría, fichas
-                técnicas, comparador de productos y integración con métodos de pago.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Diseño limpio y funcional, perfecto para destacar especificaciones técnicas y generar confianza."
-                </blockquote>
-                <cite class="testimonial-author">— Retail tecnológico</cite>
-              </div>
-            </div>
-          </article>
-
-          <!-- Template 4: Peluquería (Índice 6) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="6" data-type="demo">
-            <div class="project-carousel" role="region" aria-label="Galería del template Peluquería">
-              <a href="https://peluqueriaweb.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="demos/peluqueria/hero.jpg" alt="Vista principal - Template Peluquería"
-                      class="carousel-img">
+                  <div class="carousel-slide">
+                    <img src="gestock/image-2.png" alt="Control de inventario - Stock" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
                   </div>
-
-                </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-services">Servicios</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title">✂️ Template Peluquería & Estética</h3>
-              <p class="project-desc">
-                Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios,
-                reserva de turnos por WhatsApp y sección de promociones.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Visualmente atractivo y fácil de usar para que los clientes agenden sin complicaciones."
-                </blockquote>
-                <cite class="testimonial-author">— Sector belleza y bienestar</cite>
-              </div>
-            </div>
-          </article>
-
-          <!-- Template 5: Tienda de Ropa (Índice 7) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="7" data-type="demo">
-            <div class="project-carousel" role="region" aria-label="Galería del template Tienda de Ropa">
-              <a href="https://tiendaweb-ten.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="demos/ropa/hero.jpg" alt="Vista principal - Template Tienda de Moda" class="carousel-img">
-                  </div>
-
-                </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-ecommerce">Ecommerce</span>
-                <span class="tag tag-fashion">Moda</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title">👗 Template Tienda de Moda</h3>
-              <p class="project-desc">
-                Template minimalista y visual para marcas de ropa. Galería tipo lookbook, tallas y colores, carrito de
-                compras y enlaces directos a redes sociales para impulsar ventas.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Estilo premium que resalta las prendas y convierte visitantes en compradores."
-                </blockquote>
-                <cite class="testimonial-author">— Emprendedores de moda</cite>
-              </div>
-            </div>
-          </article>
-
-          <!-- Template 6: Artesanías (Índice 8) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="8" data-type="demo">
-            <div class="project-carousel" role="region" aria-label="Galería del template Artesanías">
-              <a href="https://artesaniaweb.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="demos/artesanias/hero.jpg" alt="Vista principal - Template Artesanías"
-                      class="carousel-img">
+                  <div class="carousel-slide">
+                    <img src="gestock/image-3.png" alt="Integración hardware - Stock" class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
                   </div>
                 </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
+                <div class="carousel-dots" role="tablist" aria-label="Navegación de imágenes del proyecto">
+                  <span class="carousel-dot active" data-slide="0" role="tab" aria-selected="true" tabindex="0"></span>
+                  <span class="carousel-dot" data-slide="1" role="tab" aria-selected="false" tabindex="-1"></span>
+                  <span class="carousel-dot" data-slide="2" role="tab" aria-selected="false" tabindex="-1"></span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-backend">Backend</span>
+                  <span class="tag tag-api">API</span>
+                  <span class="tag tag-web">Web</span>
+                  <span class="tag tag-innovation">Innovación</span>
+                </div>
+                <h3 class="project-title" id="proyecto-stock-title">Sistema integral de gestión de stock</h3>
+                <p class="project-desc">
+                  Plataforma digital diseñada para controlar y optimizar todos los procesos de inventario con integración
+                  hardware.
+                </p>
+                <div class="project-testimonial">
+                  <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-ecommerce">Ecommerce</span>
-                <span class="tag tag-handmade">Handmade</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title">🎨 Template Artesanías & Handmade</h3>
-              <p class="project-desc">
-                Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación,
-                envíos y opción de pedidos personalizados por WhatsApp.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Perfecto para contar la historia de tu marca y conectar emocionalmente con tus clientes."
-                </blockquote>
-                <cite class="testimonial-author">— Artesanos y creadores</cite>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-
-      <!-- Divider motivacional -->
-      <div class="trajectory-divider animate-on-scroll">
-        <div class="divider-content">
-          <span class="divider-icon">💡</span>
-          <p class="divider-text">
-            <strong>De la idea a la realidad:</strong> Cada prototipo es el primer paso.
-            Cada proyecto entregado es una lección que nos impulsa a seguir creciendo.
-          </p>
-        </div>
-      </div>
-
-      <!-- SUBSECCIÓN 2: Proyectos Destacados (Después) - SIN ENLACES, SOLO MODAL -->
-      <div class="trajectory-subsection" id="proyectos-reales">
-        <div class="subsection-header animate-on-scroll">
-          <h3 class="subsection-title">🏆 Proyectos que Transformaron Ideas en Realidad</h3>
-        </div>
-
-        <div class="projects-grid">
-
-          <!-- Proyecto 1: Banco de Sangre -->
-          <article class="project-card animate-on-scroll project-real" data-project="0">
-            <div class="project-carousel" role="region" aria-label="Galería del proyecto Banco de Sangre">
-              <div class="carousel-track">
-                <div class="carousel-slide active">
-                  <img src="bancoSangre/Captura de pantalla 2025-11-27 193448.png"
-                    alt="Dashboard de analíticas en tiempo real" class="carousel-img">
-                </div>
-                <div class="carousel-slide">
-                  <img src="bancoSangre/bloodbank.png" alt="Panel administrativo - Banco de Sangre"
-                    class="carousel-img">
-                </div>
-                <div class="carousel-slide">
-                  <img src="bancoSangre/Captura de pantalla 2025-11-27 193512.png"
-                    alt="Gestión de donantes - Banco de Sangre" class="carousel-img">
+                  <blockquote class="testimonial-quote">
+                    "Es una muy buena solución que integra tecnologías de hardware para el correcto funcionamiento del
+                    servicio."
+                  </blockquote>
+                  <cite class="testimonial-author">— Cliente / Responsable de Operaciones</cite>
                 </div>
               </div>
-              <div class="carousel-dots">
-                <span class="carousel-dot active" data-slide="0"></span>
-                <span class="carousel-dot" data-slide="1"></span>
-                <span class="carousel-dot" data-slide="2"></span>
-              </div>
+            </article>
 
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-api">API</span>
-                <span class="tag tag-backend">Backend</span>
-                <span class="tag tag-impact">Impacto Social</span>
-              </div>
-              <h3 class="project-title">Sistema de administración para banco de sangre</h3>
-              <p class="project-desc">
-                Plataforma digital diseñada para controlar y optimizar todos los procesos relacionados con la donación,
-                almacenamiento y distribución de sangre.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Es una solución muy útil y necesaria para el sistema de gestión que se usa actualmente."
-                </blockquote>
-                <cite class="testimonial-author">— Estudiantes de Hemoterapia</cite>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 2: Transporte -->
-          <article class="project-card animate-on-scroll project-real" data-project="1">
-            <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Transporte">
-              <div class="carousel-track">
-                <div class="carousel-slide active">
-                  <img src="siempreCargo/Captura de pantalla 2025-11-28 145454.png" alt="Arquitectura de servidor"
-                    class="carousel-img">
-                </div>
-                <div class="carousel-slide">
-                  <img src="siempreCargo/siempreCargo.png" alt="Dashboard principal - Transporte" class="carousel-img">
-                </div>
-                <div class="carousel-slide">
-                  <img src="siempreCargo/Captura de pantalla 2025-11-28 145542.png"
-                    alt="Seguimiento de flota - Transporte" class="carousel-img">
-                </div>
-              </div>
-              <div class="carousel-dots">
-                <span class="carousel-dot active" data-slide="0"></span>
-                <span class="carousel-dot" data-slide="1"></span>
-                <span class="carousel-dot" data-slide="2"></span>
-              </div>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-backend">Backend</span>
-                <span class="tag tag-api">API</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-logistics">Logística</span>
-              </div>
-              <h3 class="project-title">Sistema de gestión para empresa de transporte</h3>
-              <p class="project-desc">
-                Plataforma digital diseñada para planificar, controlar y optimizar el movimiento de vehículos,
-                mercancías o fletes.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Es una solución completa que abarca todas las funcionalidades solicitadas."
-                </blockquote>
-                <cite class="testimonial-author">— Cliente Transportista</cite>
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyecto 3: Stock -->
-          <article class="project-card animate-on-scroll project-real" data-project="2">
-            <div class="project-carousel" role="region" aria-label="Galería del proyecto Gestión de Stock">
-              <div class="carousel-track">
-                <div class="carousel-slide active">
-                  <img src="gestock/image.png" alt="Dashboard principal - Gestión de Stock" class="carousel-img">
-                </div>
-                <div class="carousel-slide">
-                  <img src="gestock/image-2.png" alt="Control de inventario - Stock" class="carousel-img">
-                </div>
-                <div class="carousel-slide">
-                  <img src="gestock/image-3.png" alt="Integración hardware - Stock" class="carousel-img">
-                </div>
-              </div>
-              <div class="carousel-dots">
-                <span class="carousel-dot active" data-slide="0"></span>
-                <span class="carousel-dot" data-slide="1"></span>
-                <span class="carousel-dot" data-slide="2"></span>
-              </div>
-
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-backend">Backend</span>
-                <span class="tag tag-api">API</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-innovation">Innovación</span>
-              </div>
-              <h3 class="project-title">Sistema integral de gestión de stock</h3>
-              <p class="project-desc">
-                Plataforma digital diseñada para controlar y optimizar todos los procesos de inventario con integración
-                hardware.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Es una muy buena solución que integra tecnologías de hardware para el correcto funcionamiento del
-                  servicio."
-                </blockquote>
-                <cite class="testimonial-author">— Cliente / Responsable de Operaciones</cite>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-
-      <!-- CTA Final con mensaje motivador -->
-      <div class="trajectory-cta animate-on-scroll">
-        <div class="cta-content">
-          <h3>¿Listo para escribir tu próxima historia de éxito?</h3>
-          <p>
-            Ya sea que quieras personalizar una de nuestras demos o desarrollar una solución única desde cero,
-            estamos aquí para acompañarte en cada paso del camino.
-          </p>
-          <div class="cta-buttons">
-            <a href="https://wa.me/59896854828?text=Hola!%20Me%20interesa%20personalizar%20una%20demo%20para%20mi%20negocio.%20%C2%BFCu%C3%A1ndo%20podemos%20conversar%3F"
-              class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
-              <span>🚀 Empezar mi Proyecto</span>
-            </a>
-            <a href="#contacto" class="btn btn-outline btn-large">
-              <span>💬 Hablemos de tu Idea</span>
-            </a>
           </div>
-          <p class="cta-note">
-            <small>✨ Cada gran proyecto comienza con una conversación. ¡La tuya puede ser la próxima!</small>
-          </p>
         </div>
-      </div>
 
-    </div>
-  </section>
-
-
-
-  <!-- ======================================================================= -->
-  <!-- MODAL DE GALERÍA (Genérico: funciona para Proyectos y Templates) -->
-  <!-- ======================================================================= -->
-  <div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true"
-    aria-label="Galería de imágenes del proyecto" hidden>
-
-    <div class="modal-overlay" id="modal-overlay"></div>
-
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h3 class="modal-title" id="modal-title">Proyecto</h3>
-        <span class="modal-counter" id="modal-counter">1 / 3</span>
-        <button class="modal-close" id="modal-close" aria-label="Cerrar galería">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="modal-image-container">
-        <img src="" alt="" class="modal-image" id="modal-image">
-
-        <button class="modal-nav modal-prev" id="modal-prev" aria-label="Imagen anterior">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </button>
-        <button class="modal-nav modal-next" id="modal-next" aria-label="Imagen siguiente">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M9 18l6-6-6-6" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="modal-thumbnails" id="modal-thumbnails"></div>
-
-      <p class="modal-description" id="modal-description"></p>
-    </div>
-  </div>
-
-  <section class="section contact" id="contacto">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info animate-on-scroll">
-          <span class="section-tag">Hablemos</span>
-          <h2 class="section-title">Contáctanos <span class="text-gradient">Hoy</span></h2>
-          <p class="contact-description">
-            ¿Tienes un proyecto en mente? Cuéntanos tu idea y te ayudaremos
-            a hacerla realidad. Respuesta garantizada en menos de 24 horas.
-          </p>
-
-          <div class="contact-details">
-            <div class="contact-item">
-              <div class="contact-icon">📧</div>
-              <div>
-                <h4>Email</h4>
-                <a href="mailto:contacto@techsolutions.com">rootclitech@gmail.com</a>
-              </div>
+        <!-- CTA Final con mensaje motivador -->
+        <div class="trajectory-cta animate-on-scroll">
+          <div class="cta-content">
+            <h3>¿Listo para escribir tu próxima historia de éxito?</h3>
+            <p>
+              Ya sea que quieras personalizar una de nuestras demos o desarrollar una solución única desde cero,
+              estamos aquí para acompañarte en cada paso del camino.
+            </p>
+            <div class="cta-buttons">
+              <a href="https://wa.me/59896854828?text=Hola!%20Me%20interesa%20personalizar%20una%20demo%20para%20mi%20negocio.%20%C2%BFCu%C3%A1ndo%20podemos%20conversar%3F"
+                class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                <span>🚀 Empezar mi Proyecto</span>
+              </a>
+              <a href="#contacto" class="btn btn-outline btn-large">
+                <span>💬 Hablemos de tu Idea</span>
+              </a>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">📱</div>
-              <div>
-                <h4>Teléfono</h4>
-                <a href="tel:+598096854828">+598 96 854 828</a>
+            <p class="cta-note">
+              <small>✨ Cada gran proyecto comienza con una conversación. ¡La tuya puede ser la próxima!</small>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- MODAL DE GALERÍA (Genérico: funciona para Proyectos y Templates) -->
+    <!-- ======================================================================= -->
+    <div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true"
+      aria-label="Galería de imágenes del proyecto" hidden>
+
+      <div class="modal-overlay" id="modal-overlay" aria-hidden="true"></div>
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 class="modal-title" id="modal-title">Proyecto</h3>
+          <span class="modal-counter" id="modal-counter" aria-live="polite">1 / 3</span>
+          <button class="modal-close" id="modal-close" aria-label="Cerrar galería">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#icon-close"/></svg>
+          </button>
+        </div>
+
+        <div class="modal-image-container">
+          <img src="" alt="" class="modal-image" id="modal-image">
+
+          <button class="modal-nav modal-prev" id="modal-prev" aria-label="Imagen anterior">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><use href="#icon-chevron-left"/></svg>
+          </button>
+          <button class="modal-nav modal-next" id="modal-next" aria-label="Imagen siguiente">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
+          </button>
+        </div>
+
+        <div class="modal-thumbnails" id="modal-thumbnails" role="tablist" aria-label="Miniaturas de imágenes"></div>
+
+        <p class="modal-description" id="modal-description"></p>
+      </div>
+    </div>
+
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info animate-on-scroll">
+            <span class="section-tag">Hablemos</span>
+            <h2 class="section-title" id="contacto-title">Contáctanos <span class="text-gradient">Hoy</span></h2>
+            <p class="contact-description">
+              ¿Tienes un proyecto en mente? Cuéntanos tu idea y te ayudaremos
+              a hacerla realidad. Respuesta garantizada en menos de 24 horas.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">📧</div>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:contacto@techsolutions.com">rootclitech@gmail.com</a>
+                </div>
               </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <h4>Ubicación</h4>
-                <span>Paysandú, Uruguay</span>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">📱</div>
+                <div>
+                  <h4>Teléfono</h4>
+                  <a href="tel:+598096854828">+598 96 854 828</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">📍</div>
+                <div>
+                  <h4>Ubicación</h4>
+                  <span>Paysandú, Uruguay</span>
+                </div>
               </div>
             </div>
           </div>
 
+          <div class="contact-form-wrapper animate-on-scroll">
+            <form class="contact-form" id="contact-form" novalidate aria-label="Formulario de contacto">
+              <div class="form-group">
+                <label for="name" class="form-label">Nombre completo</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required
+                  autocomplete="name">
+                <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+              </div>
 
-        </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required
+                  autocomplete="email">
+                <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
 
-        <div class="contact-form-wrapper animate-on-scroll">
-          <form class="contact-form" id="contact-form" novalidate>
-            <div class="form-group">
-              <label for="name" class="form-label">Nombre completo</label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required
-                autocomplete="name">
-              <span class="form-error" id="name-error"></span>
-            </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" name="message" class="form-input form-textarea"
+                  placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+                <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+              </div>
 
-            <div class="form-group">
-              <label for="email" class="form-label">Correo electrónico</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required
-                autocomplete="email">
-              <span class="form-error" id="email-error"></span>
-            </div>
+              <button type="submit" class="btn btn-primary btn-glow btn-full" id="submit-btn">
+                <span class="btn-text">Enviar Mensaje</span>
+                <span class="btn-loader" hidden aria-hidden="true">
+                  <span class="spinner"></span>
+                </span>
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" aria-hidden="true"><use href="#icon-send"/></svg>
+              </button>
 
-            <div class="form-group">
-              <label for="message" class="form-label">Mensaje</label>
-              <textarea id="message" name="message" class="form-input form-textarea"
-                placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
-              <span class="form-error" id="message-error"></span>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-glow btn-full" id="submit-btn">
-              <span class="btn-text">Enviar Mensaje</span>
-              <span class="btn-loader" hidden>
-                <span class="spinner"></span>
-              </span>
-              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-              </svg>
-            </button>
-
-            <div class="form-success" id="form-success" hidden>
-              <div class="success-icon">✓</div>
-              <h4>¡Mensaje Enviado!</h4>
-              <p>Te responderemos en menos de 24 horas.</p>
-            </div>
-          </form>
+              <div class="form-success" id="form-success" hidden role="status" aria-live="polite">
+                <div class="success-icon" aria-hidden="true">✓</div>
+                <h4>¡Mensaje Enviado!</h4>
+                <p>Te responderemos en menos de 24 horas.</p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="footer" id="footer">
+  <footer class="footer" id="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-brand">
           <a href="#hero" class="footer-logo">
-            <span class="logo-icon">⚡</span>
+            <span class="logo-icon" aria-hidden="true">⚡</span>
             <span class="logo-text">Root<span class="logo-highlight">CLI</span></span>
           </a>
           <p class="footer-desc">
             Soluciones tecnológicas integrales para impulsar tu presencia digital
             y mantener tu hardware funcionando al máximo.
           </p>
-          <div class="social-links">
+          <div class="social-links" role="list" aria-label="Redes sociales">
             <a href="https://www.facebook.com/people/Rootcli-TECH/61574289395704/" class="social-link"
-              aria-label="Facebook" target="_blank">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="fill: #ffffff;">
+              aria-label="Facebook" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="fill: #ffffff;" aria-hidden="true">
                 <path
                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.315 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
-            <a href="https://x.com/RootCLI" class="social-link" aria-label="Twitter/X" target="_blank">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://x.com/RootCLI" class="social-link" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/rootclitech/" class="social-link" aria-label="Instagram" target="_blank">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://www.instagram.com/rootclitech/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
               </svg>
@@ -1496,36 +1478,61 @@
         </div>
       </div>
 
-      <div class="footer-divider"></div>
+      <div class="footer-divider" aria-hidden="true"></div>
 
       <div class="footer-bottom">
         <p>&copy; <span id="current-year"></span> TechSolutions. Todos los derechos reservados.</p>
-        <p class="footer-credit">Hecho con <span class="heart">❤️</span> y mucho ☕</p>
+        <p class="footer-credit">Hecho con <span class="heart" aria-hidden="true">❤️</span> y mucho ☕</p>
       </div>
     </div>
   </footer>
 
   <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <path d="M18 15l-6-6-6 6" />
-    </svg>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><use href="#icon-chevron-up"/></svg>
   </button>
 
-  <script src="script.js"></script>
-  <script src="config.js"></script>
+  <!-- Scripts optimizados con defer para no bloquear renderizado -->
+  <script src="script.js" defer></script>
+  <script src="config.js" defer></script>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- EmailJS con defer y carga asíncrona -->
+  <script type="text/javascript" 
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" 
+          defer 
+          crossorigin="anonymous"></script>
+  
+  <!-- Inicialización de EmailJS después de que el DOM esté listo -->
   <script>
-    (function () {
-      emailjs.init({
-        publicKey: 'iue1o-aumZvmMhLaV',
-        blockHeadless: false,
-        limitRate: { throttle: 5000 }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof emailjs !== 'undefined') {
+        emailjs.init({
+          publicKey: 'iue1o-aumZvmMhLaV',
+          blockHeadless: false,
+          limitRate: { throttle: 5000 }
+        });
+      }
+    });
+  </script>
+  
+  <!-- Vercel Insights optimizado -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  
+  <!-- Facebook Pixel optimizado (carga diferida) -->
+  <script>
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() {
+        var img = new Image();
+        img.height = 1;
+        img.width = 1;
+        img.style.display = 'none';
+        img.src = 'https://www.facebook.com/tr?id=3802612696701770&ev=PageView&noscript=1';
+        document.body.appendChild(img);
       });
-    })();
+    }
   </script>
 
-
 </body>
-
 </html>
