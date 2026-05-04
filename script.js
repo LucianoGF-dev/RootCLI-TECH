@@ -1108,7 +1108,7 @@
       observer.observe(videoElement);
     }
 
-    console.log('🎥 Video promo inicializado correctamente');
+    
   }
 
   // Inicializar cuando el DOM esté listo
