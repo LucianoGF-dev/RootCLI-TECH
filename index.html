@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -33,6 +33,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://www.facebook.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.vercel-insights.com" crossorigin>
 
   <!-- DNS Prefetch para recursos externos -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -64,7 +65,11 @@
 
   <title>RootCLI | Desarrollo Digital & Mantenimiento en Uruguay</title>
 
-
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
   <!-- SVG Symbols definidos para reutilización (optimización de peso) -->
   <svg style="display:none" aria-hidden="true" focusable="false">
@@ -996,12 +1001,6 @@
       }
     });
   </script>
-
-  <!-- Vercel Insights optimizado -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 
   <!-- Facebook Pixel optimizado (carga diferida) -->
   <script>
