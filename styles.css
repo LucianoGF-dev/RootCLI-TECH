@@ -895,3 +895,519 @@ body.modal-open { overflow: hidden; }
 }
 
 #video-play-btn:focus-visible, .control-btn:focus-visible, .motivation-badges .badge:focus-visible, .video-thumbnail:focus-visible, .carousel-expand:focus-visible { outline: 2px solid #667eea; outline-offset: 3px; }
+
+/* ============================================
+   CTA DIAGNÓSTICO GRATUITO - ESTILOS
+   ============================================ */
+
+/* Animación del banner flotante */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ============================================
+   SECCIÓN PRINCIPAL
+   ============================================ */
+
+#diagnostico {
+    position: relative;
+    padding: 80px 0;
+    background: radial-gradient(ellipse at top, rgba(0, 255, 136, 0.03) 0%, transparent 50%);
+}
+
+#diagnostico::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#diagnostico > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   HEADER DE SECCIÓN
+   ============================================ */
+
+#diagnostico .section-header {
+    margin-bottom: 48px;
+}
+
+#diagnostico .section-tag {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 50px;
+    color: #00ff88;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#diagnostico .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#diagnostico .section-description {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+#diagnostico .section-description strong {
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL DEL CTA
+   ============================================ */
+
+#diagnostico > .container > div[style*="max-width: 900px"] {
+    position: relative;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#diagnostico > .container > div[style*="max-width: 900px"]:hover {
+    border-color: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 255, 136, 0.1);
+}
+
+/* ============================================
+   LISTA DE BENEFICIOS
+   ============================================ */
+
+#diagnostico ul[style*="list-style: none"] li {
+    transition: all 0.3s ease;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px !important;
+}
+
+#diagnostico ul[style*="list-style: none"] li:hover {
+    background: rgba(0, 255, 136, 0.05);
+    transform: translateX(8px);
+}
+
+#diagnostico ul[style*="list-style: none"] li svg {
+    transition: all 0.3s ease;
+}
+
+#diagnostico ul[style*="list-style: none"] li:hover svg {
+    transform: scale(1.2);
+}
+
+#diagnostico ul[style*="list-style: none"] li strong {
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+#diagnostico ul[style*="list-style: none"] li:hover strong {
+    color: #00ff88 !important;
+}
+
+/* ============================================
+   SECCIÓN "CÓMO FUNCIONA"
+   ============================================ */
+
+#diagnostico div[style*="background: rgba(0,255,136,0.05)"] {
+    position: relative;
+    overflow: hidden;
+}
+
+#diagnostico div[style*="background: rgba(0,255,136,0.05)"]::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.03) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+#diagnostico div[style*="background: rgba(0,255,136,0.05)"] > div[style*="grid"] {
+    position: relative;
+    z-index: 1;
+}
+
+#diagnostico div[style*="background: rgba(0,255,136,0.05)"] > div[style*="grid"] > div {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#diagnostico div[style*="background: rgba(0,255,136,0.05)"] > div[style*="grid"] > div:hover {
+    background: rgba(0, 255, 136, 0.1);
+    transform: translateY(-4px);
+}
+
+#diagnostico div[style*="background: rgba(0,255,136,0.05)"] div[style*="width:50px"] {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);
+}
+
+#diagnostico div[style*="background: rgba(0,255,136,0.05)"] > div[style*="grid"] > div:hover div[style*="width:50px"] {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+}
+
+/* ============================================
+   CTA PRINCIPAL
+   ============================================ */
+
+#diagnostico #diagnostico-form {
+    position: relative;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, rgba(16, 185, 129, 0.02) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+#diagnostico #diagnostico-form::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.5), transparent, rgba(0, 255, 136, 0.5));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#diagnostico #diagnostico-form:hover::before {
+    opacity: 1;
+}
+
+#diagnostico #diagnostico-form h3 {
+    position: relative;
+    z-index: 1;
+}
+
+#diagnostico #diagnostico-form p {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+#diagnostico .btn-primary {
+    position: relative;
+    background: linear-gradient(135deg, #00ff88 0%, #10b981 100%);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#diagnostico .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+#diagnostico .btn-primary:hover::before {
+    left: 100%;
+}
+
+#diagnostico .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
+    color: #000;
+}
+
+#diagnostico .btn-primary:active {
+    transform: translateY(-1px);
+}
+
+#diagnostico .btn-outline {
+    background: transparent;
+    color: #00ff88;
+    border: 2px solid rgba(0, 255, 136, 0.5);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#diagnostico .btn-outline:hover {
+    background: rgba(0, 255, 136, 0.1);
+    border-color: #00ff88;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+}
+
+#diagnostico .btn-large {
+    padding: 20px 48px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   MENSAJE DE AGRADECIMIENTO
+   ============================================ */
+
+#diagnostico-gracias {
+    text-align: center;
+    padding: 48px 32px;
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#diagnostico-gracias h3 {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+}
+
+#diagnostico-gracias p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+#diagnostico-gracias strong {
+    color: #00ff88;
+}
+
+/* ============================================
+   PREGUNTAS FRECUENTES
+   ============================================ */
+
+#diagnostico .upsells-section {
+    margin-top: 80px;
+}
+
+#diagnostico .upsells-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#diagnostico .upsell-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+#diagnostico .upsell-card:hover {
+    background: rgba(0, 255, 136, 0.03);
+    border-color: rgba(0, 255, 136, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+}
+
+#diagnostico .upsell-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 12px;
+}
+
+#diagnostico .upsell-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    #diagnostico {
+        padding: 60px 0;
+    }
+
+    #diagnostico .section-title {
+        font-size: 2rem;
+    }
+
+    #diagnostico .section-description {
+        font-size: 1rem;
+    }
+
+    #diagnostico > .container > div[style*="max-width: 900px"] {
+        padding: 32px 20px !important;
+    }
+
+    #diagnostico div[style*="background: rgba(0,255,136,0.05)"] {
+        padding: 24px 16px !important;
+    }
+
+    #diagnostico div[style*="background: rgba(0,255,136,0.05)"] > div[style*="grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    #diagnostico #diagnostico-form {
+        padding: 32px 16px;
+    }
+
+    #diagnostico .btn-large {
+        padding: 16px 32px;
+        font-size: 1rem;
+    }
+
+    #diagnostico-gracias {
+        padding: 32px 20px;
+    }
+
+    #diagnostico-gracias h3 {
+        font-size: 1.5rem;
+    }
+
+    #diagnostico .upsells-title {
+        font-size: 1.5rem;
+    }
+
+    #diagnostico .upsell-card {
+        padding: 20px;
+    }
+
+    #diagnostico .upsell-card h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #diagnostico .section-title {
+        font-size: 1.75rem;
+    }
+
+    #diagnostico .section-tag {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+    }
+
+    #diagnostico ul[style*="list-style: none"] li {
+        padding: 12px;
+    }
+
+    #diagnostico ul[style*="list-style: none"] li strong {
+        font-size: 0.95rem;
+    }
+
+    #diagnostico ul[style*="list-style: none"] li span {
+        font-size: 0.85rem;
+    }
+
+    #diagnostico .btn-large {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+}
+
+/* ============================================
+   ANIMACIONES DE ENTRADA
+   ============================================ */
+
+#diagnostico .section-header,
+#diagnostico > .container > div[style*="max-width: 900px"],
+#diagnostico .upsells-section {
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   SCROLLBAR PERSONALIZADO (OPCIONAL)
+   ============================================ */
+
+#diagnostico ::-webkit-scrollbar {
+    width: 8px;
+}
+
+#diagnostico ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+#diagnostico ::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 136, 0.3);
+    border-radius: 10px;
+}
+
+#diagnostico ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 136, 0.5);
+}

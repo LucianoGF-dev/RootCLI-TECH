@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RootCLI | Desarrollo Digital & Mantenimiento en Uruguay</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="logo.png" alt="RootCLI" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">Root<span class="logo-highlight">CLI</span></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#planes" class="nav-link">Planes</a></li>
+                <li><a href="#trayectoria" class="nav-link">Probar demos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Disponibles para proyectos
+            </div>
+            <h1 class="hero-title">
+                Desarrollo de<br><span class="text-gradient">Soluciones Digitales</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span id="typed-text"></span><span class="typing-cursor"></span>
+            </p>
+            <div class="hero-cta">
+                <a href="#contacto" class="btn btn-primary btn-glow">Contáctanos <span class="pointing-hand">👉</span></a>
+                <a href="#planes" class="btn btn-outline">Ver Planes y precios</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Proyectos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Clientes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Años Exp.</span>
+                </div>
+            </div>
+        </div>
+        <a href="#video-promo" class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- VIDEO PROMO -->
+    <section class="video-promo" id="video-promo">
+        <div class="video-promo-bg">
+            <div class="video-grid-overlay"></div>
+            <div class="video-particles"></div>
+        </div>
+        <div class="container">
+            <div class="video-promo-wrapper">
+                <div class="video-promo-content">
+                    <div class="video-tag">✨ Descubre tu potencial digital</div>
+                    <h2 class="video-title">Mira cómo transformamos ideas en realidad</h2>
+                    <p class="video-description">
+                        En menos de 1 minuto, conoce nuestra metodología y ve ejemplos reales
+                        de nuestros prototipos diseñados para impulsar tu negocio.
+                    </p>
+                    <div class="video-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎯</span> Enfoque estratégico
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚡</span> Entrega rápida
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🔒</span> Soporte garantizado
+                        </div>
+                    </div>
+                </div>
+                <div class="video-promo-player">
+                    <div class="video-container">
+                        <div class="video-placeholder" id="videoPlaceholder">
+                            <div class="video-thumbnail">
+                                <img src="video-thumb.jpg" alt="Video promocional" class="carousel-img" onerror="this.parentElement.style.background='linear-gradient(135deg, #1e1e2e, #2a2a4a)'">
+                                <div class="video-play-overlay">
+                                    <div class="play-button" id="video-play-btn" tabindex="0" role="button" aria-label="Reproducir video">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                    </div>
+                                    <span class="play-text">Ver video</span>
+                                    <span class="play-duration">0:58</span>
+                                </div>
+                            </div>
+                        </div>
+                        <video id="promoVideo" class="video-element" preload="none" playsinline>
+                            <source src="desarrollo_web.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                        <div class="video-controls" id="videoControls" style="display:none;">
+                            <button class="control-btn" id="muteBtn" aria-label="Silenciar">
+                                <svg class="icon-volume" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                                <svg class="icon-mute" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                            </button>
+                            <button class="control-btn" id="fullscreenBtn" aria-label="Pantalla completa">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                            </button>
+                        </div>
+                        <div class="video-badge">
+                            <span class="badge-icon">▶</span> EN VIVO
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-scroll-indicator">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            <span>Seguí bajando</span>
+        </div>
+    </section>
+
+    <!-- PRICING / PLANES -->
+    <section class="pricing section" id="planes">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Explora nuestros planes</span>
+                <h2 class="section-title">Planes simples</h2>
+                <p class="section-description">
+                    <strong>Nos encargamos de todo para que tu negocio consiga más clientes.</strong><br>
+                    Creamos anuncios profesionales con IA. Administramos tus campañas en Meta.
+                    Llegamos a personas interesadas en tus productos o servicios. Optimizamos constantemente
+                    para obtener mejores resultados. Te entregamos reportes claros y fáciles de entender.
+                </p>
+                <p class="section-description" style="margin-top: 12px; font-weight: 600; color: var(--color-primary-light);">
+                    Sin contratos largos. Sin complicaciones. Resultados medibles.
+                </p>
+            </div>
+
+            <!-- Launch discount banner -->
+            <div style="text-align:center; margin-bottom: 48px;">
+                <div style="display:inline-flex; align-items:center; gap:10px; padding:14px 28px; background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(16,185,129,0.05)); border:1px solid rgba(0,255,136,0.3); border-radius:50px; animation: float 3s ease-in-out infinite;">
+                    <span style="font-size:1.3rem;">🚀</span>
+                    <span style="color:#00ff88; font-weight:700; font-size:0.95rem;">DESCUENTO DE LANZAMIENTO: 20% OFF para los primeros 5 clientes</span>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+
+                <!-- PLAN EMPRENDEDOR -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Plan Emprendedor</h3>
+                        <p class="pricing-subtitle">Ideal para pequeños negocios que quieren empezar a conseguir clientes.</p>
+                    </div>
+
+                    <div class="pricing-price-wrapper">
+                        <div class="pricing-price-glow"></div>
+                        <div class="pricing-price">
+                            <div style="display:flex; align-items:flex-start; gap:4px;">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">4.900</span>
+                            </div>
+                            <span class="price-period">UYU / mes</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-conversion">
+                        <span class="conversion-label">Publicidad (pagada por el cliente)</span>
+                        <span class="conversion-amount">a partir de $7.000 UYU/mes</span>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Gestión de campañas en Instagram y Facebook
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Diseño de anuncios con IA
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Segmentación de público objetivo
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Optimización semanal
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Reporte mensual de resultados
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Soporte por WhatsApp
+                        </li>
+                    </ul>
+
+                    <div class="pricing-footer">
+                        <a href="https://wa.me/59896854828?text=Hola!%20Me%20interesa%20el%20Plan%20Emprendedor" class="btn btn-outline btn-full" target="_blank">Quiero este plan</a>
+                    </div>
+                </div>
+
+                <!-- PLAN CRECIMIENTO (FEATURED) -->
+                <div class="pricing-card pricing-card-featured">
+                    <div class="featured-ribbon">🔥 Más elegido</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Plan Crecimiento</h3>
+                        <p class="pricing-subtitle">Ideal para negocios que buscan aumentar ventas y generar más consultas.</p>
+                    </div>
+
+                    <div class="pricing-price-wrapper">
+                        <div class="pricing-price-glow"></div>
+                        <div class="pricing-price">
+                            <div style="display:flex; align-items:flex-start; gap:4px;">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">8.900</span>
+                            </div>
+                            <span class="price-period">UYU / mes</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-conversion">
+                        <span class="conversion-label">Publicidad (pagada por el cliente)</span>
+                        <span class="conversion-amount">a partir de $10.000 UYU/mes</span>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <strong>Todo lo del Plan Emprendedor</strong>
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Campañas de mensajes a WhatsApp
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Creación de múltiples anuncios mensuales
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Pruebas A/B para mejorar resultados
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Optimización dos veces por semana
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Informe detallado de rendimiento
+                        </li>
+                    </ul>
+
+                    <div class="pricing-footer">
+                        <a href="https://wa.me/59896854828?text=Hola!%20Me%20interesa%20el%20Plan%20Crecimiento" class="btn btn-primary btn-full" target="_blank">Empezar ahora</a>
+                    </div>
+                </div>
+
+                <!-- PLAN PREMIUM -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Plan Premium</h3>
+                        <p class="pricing-subtitle">Ideal para empresas que desean escalar su presencia digital y maximizar resultados.</p>
+                    </div>
+
+                    <div class="pricing-price-wrapper">
+                        <div class="pricing-price-glow"></div>
+                        <div class="pricing-price">
+                            <div style="display:flex; align-items:flex-start; gap:4px;">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">14.900</span>
+                            </div>
+                            <span class="price-period">UYU / mes</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-conversion">
+                        <span class="conversion-label">Publicidad (pagada por el cliente)</span>
+                        <span class="conversion-amount">a partir de $15.000 UYU/mes</span>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <strong>Todo lo del Plan Crecimiento</strong>
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Estrategia de marketing personalizada
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Automatización básica de WhatsApp
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Seguimiento avanzado de conversiones
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Reunión mensual de estrategia
+                        </li>
+                        <li class="feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Prioridad en soporte
+                        </li>
+                    </ul>
+
+                    <div class="pricing-footer">
+                        <a href="https://wa.me/59896854828?text=Hola!%20Me%20interesa%20el%20Plan%20Premium" class="btn btn-outline btn-full" target="_blank">Quiero este plan</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SERVICIOS ADICIONALES -->
+            <div class="upsells-section">
+                <h3 class="upsells-title">Servicios adicionales</h3>
+                <p class="upsells-subtitle">Complementá tu plan con servicios puntuales para potenciar tu negocio.</p>
+                <div class="upsells-grid">
+                    <div class="upsell-card">
+                        <h4>🎨 Diseño de logo</h4>
+                        <ul>
+                            <li><strong>Precio único</strong> <span>$2.500 UYU</span></li>
+                        </ul>
+                    </div>
+                    <div class="upsell-card">
+                        <h4>🌐 Landing page</h4>
+                        <ul>
+                            <li><strong>Precio único</strong> <span>$6.000 UYU</span></li>
+                        </ul>
+                    </div>
+                    <div class="upsell-card">
+                        <h4>💬 Configuración WhatsApp Business</h4>
+                        <ul>
+                            <li><strong>Precio único</strong> <span>$1.500 UYU</span></li>
+                        </ul>
+                    </div>
+                    <div class="upsell-card">
+                        <h4>🖌️ Diseño de identidad visual</h4>
+                        <ul>
+                            <li><strong>Precio único</strong> <span>$4.000 UYU</span></li>
+                        </ul>
+                    </div>
+                    <div class="upsell-card">
+                        <h4>🎬 Video / Reel adicional</h4>
+                        <ul>
+                            <li><strong>Por unidad</strong> <span>$500 UYU</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA FINAL -->
+            <div class="pricing-cta">
+                <h3>¿No sabés cuál elegir?</h3>
+                <p>Escribinos por WhatsApp y te ayudamos a encontrar el plan perfecto para tu negocio.</p>
+                <a href="https://wa.me/59896854828?text=Hola!%20No%20sé%20qué%20plan%20elegir%2C%20¿me%20ayudan?" class="btn btn-primary btn-large" target="_blank">💬 Te ayudamos por WhatsApp</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TRAYECTORIA / PROYECTOS -->
+    <section class="trajectory section" id="trayectoria">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Nuestro Camino</span>
+                <h2 class="section-title">Proyectos y Demos</h2>
+                <p class="section-description max-width-700">
+                    Cada prototipo es el primer paso. Cada proyecto entregado es una lección que nos impulsa a seguir creciendo.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Demo 1 -->
+                <div class="project-card demo-card">
+                    <a href="#" class="carousel-link" target="_blank">
+                        <div class="project-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <div class="project-placeholder">🥐 Panadería</div>
+                                </div>
+                            </div>
+                            <div class="carousel-click-overlay">
+                                <div class="link-icon-wrapper">
+                                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                </div>
+                                <span class="link-text">Ver demo en vivo</span>
+                            </div>
+                        </div>
+                        <span class="link-badge">Web Demo</span>
+                    </a>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-ecommerce">Ecommerce</span>
+                            <span class="tag tag-web">Web</span>
+                            <span class="tag tag-demo">Demo</span>
+                        </div>
+                        <h3 class="project-title">Prototipo Panadería Artesanal</h3>
+                        <p class="project-desc">Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos por WhatsApp y sección de "productos del día".</p>
+                        <div class="project-testimonial">
+                            <p class="testimonial-quote">"Perfecto para mostrar productos visuales y generar pedidos rápidos desde el celular."</p>
+                            <span class="testimonial-author">— Ideal para negocios locales</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo 2 -->
+                <div class="project-card demo-card">
+                    <a href="#" class="carousel-link" target="_blank">
+                        <div class="project-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <div class="project-placeholder">🌲 Forestal</div>
+                                </div>
+                            </div>
+                            <div class="carousel-click-overlay">
+                                <div class="link-icon-wrapper">
+                                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                </div>
+                                <span class="link-text">Ver demo en vivo</span>
+                            </div>
+                        </div>
+                        <span class="link-badge">Web Demo</span>
+                    </a>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-corporate">Corporativo</span>
+                            <span class="tag tag-web">Web</span>
+                            <span class="tag tag-demo">Demo</span>
+                        </div>
+                        <h3 class="project-title">Template Empresa Forestal</h3>
+                        <p class="project-desc">Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad, proyectos y contacto B2B.</p>
+                        <div class="project-testimonial">
+                            <p class="testimonial-quote">"Transmite profesionalismo y es ideal para presentar servicios a clientes corporativos."</p>
+                            <span class="testimonial-author">— Sector industrial y agro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo 3 -->
+                <div class="project-card demo-card">
+                    <a href="#" class="carousel-link" target="_blank">
+                        <div class="project-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <div class="project-placeholder">✂️ Peluquería</div>
+                                </div>
+                            </div>
+                            <div class="carousel-click-overlay">
+                                <div class="link-icon-wrapper">
+                                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                </div>
+                                <span class="link-text">Ver demo en vivo</span>
+                            </div>
+                        </div>
+                        <span class="link-badge">Web Demo</span>
+                    </a>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-services">Servicios</span>
+                            <span class="tag tag-web">Web</span>
+                            <span class="tag tag-demo">Demo</span>
+                        </div>
+                        <h3 class="project-title">Template Peluquería & Estética</h3>
+                        <p class="project-desc">Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios, reserva de turnos por WhatsApp.</p>
+                        <div class="project-testimonial">
+                            <p class="testimonial-quote">"Visualmente atractivo y fácil de usar para que los clientes agenden sin complicaciones."</p>
+                            <span class="testimonial-author">— Sector belleza y bienestar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo 4 -->
+                <div class="project-card demo-card">
+                    <a href="#" class="carousel-link" target="_blank">
+                        <div class="project-carousel">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <div class="project-placeholder">🎨 Artesanías</div>
+                                </div>
+                            </div>
+                            <div class="carousel-click-overlay">
+                                <div class="link-icon-wrapper">
+                                    <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                                </div>
+                                <span class="link-text">Ver demo en vivo</span>
+                            </div>
+                        </div>
+                        <span class="link-badge">Web Demo</span>
+                    </a>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag tag-handmade">Handmade</span>
+                            <span class="tag tag-ecommerce">Ecommerce</span>
+                            <span class="tag tag-demo">Demo</span>
+                        </div>
+                        <h3 class="project-title">Template Artesanías & Handmade</h3>
+                        <p class="project-desc">Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de creación, envíos y pedidos personalizados.</p>
+                        <div class="project-testimonial">
+                            <p class="testimonial-quote">"Perfecto para contar la historia de tu marca y conectar emocionalmente con tus clientes."</p>
+                            <span class="testimonial-author">— Artesanos y creadores</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider motivacional -->
+            <div class="trajectory-divider">
+                <div class="divider-content">
+                    <span class="divider-icon">💡</span>
+                    <p class="divider-text">
+                        <strong>De la idea a la realidad:</strong> Cada prototipo es el primer paso.
+                        Cada proyecto entregado es una lección que nos impulsa a seguir creciendo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Trayectoria -->
+            <div class="trajectory-cta">
+                <div class="cta-content">
+                    <h3>Hablemos de tu proyecto</h3>
+                    <p>¿Tenés una idea en mente? Nosotros la hacemos realidad. Escribinos y te respondemos en menos de 24 horas.</p>
+                    <div class="cta-buttons">
+                        <a href="#contacto" class="btn btn-primary btn-large">Contáctanos</a>
+                        <a href="https://wa.me/59896854828?text=Hola!%20Tengo%20un%20proyecto%20en%20mente" class="btn btn-outline btn-large" target="_blank">💬 WhatsApp directo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Contáctanos Hoy</span>
+                <h2 class="section-title">Hablemos</h2>
+                <p class="section-description">
+                    ¿Tienes un proyecto en mente? Cuéntanos tu idea y te ayudaremos
+                    a hacerla realidad. Respuesta garantizada en menos de 24 horas.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p class="contact-description">
+                        Estamos listos para ayudarte. Elegí el canal que prefieras y te respondemos a la brevedad.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:rootclitech@gmail.com">rootclitech@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <a href="tel:+59896854828">+598 96 854 828</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <span>Paysandú, Uruguay</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nombre completo</label>
+                            <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Correo electrónico</label>
+                            <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Mensaje</label>
+                            <textarea id="message" class="form-input form-textarea" placeholder="Contanos sobre tu proyecto..." required></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-text">Enviar Mensaje</span>
+                            <span class="btn-loader" style="display:none;"><span class="spinner"></span></span>
+                        </button>
+                    </form>
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <div class="success-icon">✓</div>
+                        <h4>¡Mensaje Enviado!</h4>
+                        <p>Te responderemos en menos de 24 horas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#hero" class="nav-logo">
+                        <span class="logo-text">Root<span class="logo-highlight">CLI</span></span>
+                    </a>
+                    <p class="footer-desc">
+                        Soluciones tecnológicas integrales para impulsar tu presencia digital
+                        y mantener tu hardware funcionando al máximo.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#planes">Planes</a></li>
+                        <li><a href="#trayectoria">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#planes">Marketing Digital</a></li>
+                        <li><a href="#planes">Campañas Meta Ads</a></li>
+                        <li><a href="#trayectoria">Desarrollo Web</a></li>
+                        <li><a href="#contacto">Consultoría</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:rootclitech@gmail.com">rootclitech@gmail.com</a></li>
+                        <li><a href="tel:+59896854828">+598 96 854 828</a></li>
+                        <li><span>Paysandú, Uruguay</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>© 2025 RootCLI. Todos los derechos reservados.</p>
+                <p>Hecho con <span class="heart">❤️</span> y mucho ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navOverlay = document.getElementById('navOverlay');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('open');
+            navOverlay.classList.toggle('active');
+            document.body.classList.toggle('modal-open');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('open');
+            navOverlay.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('open');
+                navOverlay.classList.remove('active');
+                document.body.classList.remove('modal-open');
+            });
+        });
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Typing effect
+        const phrases = [
+            'Creamos tu presencia digital.',
+            'Diseñamos experiencias únicas.',
+            'Impulsamos tu negocio online.',
+            'Gestionamos tus campañas en Meta.'
+        ];
+        let phraseIndex = 0, charIndex = 0, isDeleting = false;
+        const typedText = document.getElementById('typed-text');
+
+        function typeEffect() {
+            const current = phrases[phraseIndex];
+            typedText.textContent = isDeleting
+                ? current.substring(0, charIndex--)
+                : current.substring(0, charIndex++);
+
+            let speed = isDeleting ? 30 : 60;
+
+            if (!isDeleting && charIndex > current.length) {
+                speed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex < 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                speed = 500;
+            }
+            setTimeout(typeEffect, speed);
+        }
+        typeEffect();
+
+        // Counter animation
+        const counters = document.querySelectorAll('.stat-number');
+        const observerOptions = { threshold: 0.5 };
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = +el.dataset.target;
+                    let current = 0;
+                    const increment = target / 40;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) { el.textContent = target; clearInterval(timer); }
+                        else { el.textContent = Math.ceil(current); }
+                    }, 50);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, observerOptions);
+        counters.forEach(c => counterObserver.observe(c));
+
+        // Contact form
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button[type="submit"]');
+            btn.querySelector('.btn-text').style.display = 'none';
+            btn.querySelector('.btn-loader').style.display = 'inline-flex';
+            setTimeout(() => {
+                contactForm.style.display = 'none';
+                formSuccess.style.display = 'block';
+            }, 1500);
+        });
+
+        // Video player
+        const placeholder = document.getElementById('videoPlaceholder');
+        const video = document.getElementById('promoVideo');
+        const controls = document.getElementById('videoControls');
+        const playBtn = document.getElementById('video-play-btn');
+        const muteBtn = document.getElementById('muteBtn');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        function playVideo() {
+            placeholder.classList.add('hidden');
+            video.play();
+            controls.style.display = 'flex';
+        }
+
+        playBtn.addEventListener('click', playVideo);
+        playBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter') playVideo(); });
+
+        muteBtn.addEventListener('click', () => {
+            video.muted = !video.muted;
+            muteBtn.classList.toggle('muted', video.muted);
+        });
+
+        fullscreenBtn.addEventListener('click', () => {
+            if (video.requestFullscreen) video.requestFullscreen();
+            else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 100;
+                if (window.scrollY >= top) current = section.getAttribute('id');
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
