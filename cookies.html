@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Cookies</title>
+  <meta name="description" content="Política de cookies - Conoce cómo usamos las cookies para mejorar tu experiencia.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .legal-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(255,43,43,.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(229,9,20,.08) 0%, transparent 40%),
+        var(--color-bg);
+    }
+    .legal-content { position: relative; z-index: 2; }
+    .legal-block {
+      padding: 32px 28px;
+      border-radius: var(--radius);
+      background: var(--gradient-card);
+      border: 1px solid var(--color-border);
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    .legal-block:hover {
+      border-color: var(--color-border-red);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(255,43,43,.08);
+    }
+    .legal-block h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      color: var(--color-primary-light);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .legal-block h3 i {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,43,43,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .legal-block p, .legal-block li {
+      color: var(--color-text-secondary);
+      font-size: .95rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .legal-block ul { list-style: none; padding: 0; }
+    .legal-block ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+    }
+    .legal-block ul li i {
+      color: var(--color-primary-light);
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: .9rem;
+    }
+    .cookie-table th, .cookie-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .cookie-table th {
+      background: rgba(255,43,43,.06);
+      color: var(--color-primary-light);
+      font-family: var(--font-heading);
+      font-size: .85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .cookie-table td {
+      color: var(--color-text-secondary);
+    }
+    .cookie-table tr:hover td {
+      background: rgba(255,255,255,.02);
+    }
+    .cookie-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+    }
+    .legal-update {
+      text-align: center;
+      padding: 24px;
+      background: rgba(255,43,43,.04);
+      border: 1px solid var(--color-border-red);
+      border-radius: var(--radius);
+      margin-top: 40px;
+    }
+    .legal-update p { color: var(--color-text-muted); font-size: .9rem; }
+    .legal-update strong { color: var(--color-primary-light); }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-text-secondary);
+      font-size: .9rem;
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    .back-btn:hover { color: var(--color-primary-light); transform: translateX(-4px); }
+    .cookie-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .cookie-type {
+      padding: 20px;
+      background: rgba(255,255,255,.02);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .cookie-type:hover {
+      border-color: var(--color-border-red);
+      transform: translateY(-2px);
+    }
+    .cookie-type h4 {
+      color: var(--color-primary-light);
+      font-family: var(--font-heading);
+      font-size: .95rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cookie-type p {
+      font-size: .85rem;
+      color: var(--color-text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- HERO LEGAL -->
+  <section class="legal-hero">
+    <div class="legal-hero-bg"></div>
+    <div class="container legal-content">
+      <a href="index.html" class="back-btn" style="text-decoration:none; padding-right:400px;">
+        <i class="fas fa-arrow-left"></i>
+        Volver al inicio
+      </a>
+      <div class="section-tag">
+        <i class="fas fa-cookie-bite"></i>
+        Cookies
+      </div>
+      <h1 class="section-title" style="text-align:left; margin-bottom:16px;">
+        Política de <span class="gradient-text">Cookies</span>
+      </h1>
+      <p class="section-subtitle" style="text-align:left; margin:0;">
+        Usamos cookies para mejorar tu experiencia en nuestro sitio. Aquí te explicamos de forma sencilla qué son y cómo las utilizamos.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="section" style="padding-top:40px;">
+    <div class="container">
+
+      <div class="legal-block">
+        <h3><i class="fas fa-question-circle"></i> ¿Qué son las cookies?</h3>
+        <p>Las cookies son pequeños archivos de texto que se guardan en tu dispositivo (computadora, tablet o móvil) cuando visitas un sitio web. Nos ayudan a recordar información sobre tu visita para que la próxima vez tu experiencia sea más fácil y personalizada.</p>
+      </div>
+
+      <div class="legal-block">
+        <h3><i class="fas fa-bullseye"></i> ¿Para qué usamos las cookies?</h3>
+        <p>Las usamos con propósitos simples y útiles:</p>
+        <div class="cookie-types">
+          <div class="cookie-type">
+            <h4><i class="fas fa-cog"></i> Esenciales</h4>
+            <p>Necesarias para que el sitio funcione correctamente. Sin ellas, algunas partes no podrían cargar.</p>
+          </div>
+          <div class="cookie-type">
+            <h4><i class="fas fa-chart-line"></i> Análisis</h4>
+            <p>Nos ayudan a entender cómo usas el sitio para mejorarlo continuamente.</p>
+          </div>
+          <div class="cookie-type">
+            <h4><i class="fas fa-heart"></i> Preferencias</h4>
+            <p>Recuerdan tus preferencias (idioma, región) para una experiencia más cómoda.</p>
+          </div>
+          <div class="cookie-type">
+            <h4><i class="fas fa-bullhorn"></i> Marketing</h4>
+            <p>Solo si lo autorizas, nos permiten mostrarte contenido relevante.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-block">
+        <h3><i class="fas fa-list"></i> Cookies que utilizamos</h3>
+        <p>A continuación, las principales cookies que usamos en nuestro sitio:</p>
+        <div class="cookie-table-wrap">
+          <table class="cookie-table">
+            <thead>
+              <tr>
+                <th>Cookie</th>
+                <th>Tipo</th>
+                <th>Duración</th>
+                <th>Finalidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>session_id</td>
+                <td>Esencial</td>
+                <td>Sesión</td>
+                <td>Mantiene tu sesión activa</td>
+              </tr>
+              <tr>
+                <td>_ga / _gid</td>
+                <td>Análisis</td>
+                <td>1 - 2 años</td>
+                <td>Google Analytics</td>
+              </tr>
+              <tr>
+                <td>cookie_consent</td>
+                <td>Esencial</td>
+                <td>1 año</td>
+                <td>Guarda tu preferencia de cookies</td>
+              </tr>
+              <tr>
+                <td>lang</td>
+                <td>Preferencias</td>
+                <td>1 año</td>
+                <td>Recuerda tu idioma</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="legal-block">
+        <h3><i class="fas fa-toggle-on"></i> ¿Cómo gestionar las cookies?</h3>
+        <p>Puedes controlar y/o eliminar las cookies cuando quieras. Aquí te explicamos cómo:</p>
+        <ul>
+          <li><i class="fas fa-check"></i> <strong>Desde tu navegador:</strong> En la configuración de Chrome, Firefox, Safari o Edge puedes bloquear o eliminar cookies.</li>
+          <li><i class="fas fa-check"></i> <strong>Desde nuestro sitio:</strong> Puedes cambiar tus preferencias en cualquier momento.</li>
+          <li><i class="fas fa-check"></i> <strong>De terceros:</strong> Servicios como Google Analytics tienen sus propias opciones de desactivación.</li>
+        </ul>
+        <p style="margin-top:12px;">Ten en cuenta que si desactivas algunas cookies, ciertas funciones del sitio podrían no trabajar correctamente.</p>
+      </div>
+
+      <div class="legal-block">
+        <h3><i class="fas fa-sync-alt"></i> Cambios en esta política</h3>
+        <p>Podemos actualizar esta política de cookies. Te recomendamos revisarla periódicamente. La fecha de la última actualización aparece al final de esta página.</p>
+      </div>
+
+      <div class="legal-block">
+        <h3><i class="fas fa-headset"></i> ¿Tienes dudas?</h3>
+        <p>Si tienes alguna pregunta sobre el uso de cookies, puedes contactarnos en cualquier momento. Estamos para ayudarte.</p>
+        <ul>
+          <li><i class="fas fa-envelope"></i> rootclitech@gmail.com</li>
+          <li><i class="fab fa-whatsapp"></i> WhatsApp: +598 96 854 828</li>
+        </ul>
+      </div>
+
+      <div class="legal-update">
+        <p><i class="fas fa-calendar"></i> Última actualización: <strong>Enero 2025</strong></p>
+        <p style="margin-top:8px;">Gracias por confiar en nosotros y visitar nuestro sitio.</p>
+      </div>
+
+    </div>
+  </section>
+
+ 
+
+  <a href="https://wa.me/59896854828" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+  </script>
+</body>
+</html>

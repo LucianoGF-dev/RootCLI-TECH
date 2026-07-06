@@ -1,1105 +1,761 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Meta Tags -->
+  <!-- ================= SEO ================= -->
+  <title>ROOTCLI | Agencia de Marketing Digital & Meta Ads | Resultados Reales</title>
   <meta name="description"
-    content="RootCLI: Desarrollo de soluciones digitales, e-commerce y mantenimiento técnico en Uruguay. Tiendas online desde $2.999 UYU/mes.">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0f172a">
-  <link rel="canonical" href="https://rootcli.tech/">
+    content="ROOTCLI es una agencia especializada en Meta Ads (Facebook e Instagram), chatbots y desarrollo web. Optimizamos campañas, generamos leads y escalamos tu negocio con resultados medibles. Auditoría gratuita." />
+  <meta name="keywords"
+    content="Meta Ads, Facebook Ads, Instagram Ads, marketing digital, agencia de marketing, generación de leads, remarketing, embudos de conversión, ROAS, chatbots, desarrollo web, landing pages, ROOTCLI" />
+  <meta name="author" content="ROOTCLI" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rootcli.com/" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rootcli.tech/">
-  <meta property="og:title" content="RootCLI | Desarrollo Digital & Mantenimiento">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ROOTCLI | Agencia de Marketing Digital & Meta Ads" />
   <meta property="og:description"
-    content="Soluciones tecnológicas profesionales: e-commerce, desarrollo web y reparación de hardware en Uruguay.">
-  <meta property="og:image" content="img/og-image.jpg">
-  <meta property="og:locale" content="es_UY">
+    content="Escalamos tu negocio con campañas de alto rendimiento." />
+  <meta property="og:url" content="https://rootcli.com/" />
+ 
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="ROOTCLI" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://rootcli.tech/">
-  <meta property="twitter:title" content="RootCLI | Desarrollo Digital & Mantenimiento">
-  <meta property="twitter:description" content="Soluciones tecnológicas profesionales en Uruguay.">
-  <meta property="twitter:image" content="img/og-image.jpg">
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ROOTCLI | Agencia de Marketing Digital & Meta Ads" />
+  <meta name="twitter:description"
+    content="Especialistas en Meta Ads, chatbots y desarrollo web. Escalamos tu negocio con campañas de alto rendimiento." />
+  <meta name="twitter:image"
+    content="https://image.qwenlm.ai/public_source/22dbcd98-2f9e-4833-be14-54632d32d526/1b6001c6e-0c3f-4ced-8eee-2bb959a84d29.png" />
 
-  <!-- Preconnect para recursos externos críticos -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://www.facebook.com" crossorigin>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="logo.png" />
 
-  <!-- DNS Prefetch para recursos externos -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="dns-prefetch" href="//www.facebook.com">
+  <!-- ================= PRECONNECT & FONTS ================= -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/orbitron" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/poppins" />
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- Preload de recursos críticos -->
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="img/logo.png" as="image" type="image/png">
-  <link rel="preload" href="styles.css" as="style">
-
-  <!-- Fallback para fuentes sin JS -->
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
-  </noscript>
-
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Favicon optimizado con múltiples formatos -->
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <!-- ================= LIBRARIES CDN ================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
-  <title>RootCLI | Desarrollo Digital & Mantenimiento en Uruguay</title>
-
-
-
-  <!-- SVG Symbols definidos para reutilización (optimización de peso) -->
-  <svg style="display:none" aria-hidden="true" focusable="false">
-    <defs>
-      <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M5 12h14M12 5l7 7-7 7" />
-      </symbol>
-      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M20 6L9 17l-5-5" />
-      </symbol>
-      <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 6L6 18M6 6l12 12" />
-      </symbol>
-      <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-      </symbol>
-      <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M8 5v14l11-7z" />
-      </symbol>
-      <symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-      </symbol>
-      <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7" />
-      </symbol>
-      <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M15 18l-6-6 6-6" />
-      </symbol>
-      <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M9 18l6-6-6-6" />
-      </symbol>
-      <symbol id="icon-chevron-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M18 15l-6-6-6 6" />
-      </symbol>
-    </defs>
-  </svg>
 </head>
 
 <body>
 
-
-
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Menú principal">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-icon">
-          <img src="img/logo.png" alt="RootCLI Logo" class="logo-img" width="40" height="40" loading="eager"
-            fetchpriority="high">
-        </span>
-        <span class="logo-text">Root<span class="logo-highlight">CLI</span></span>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar" id="navbar" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo" aria-label="ROOTCLI Inicio">
+        <img src="logo.png" alt="ROOTCLI" style="width:30px; height:30px; border-radius:100%;"/> ROOTCLI
       </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#proceso" class="nav-link">Proceso</a></li>
+        <li><a href="#resultados" class="nav-link">Resultados</a></li>
+        <li><a href="#servicios-detallados" class="nav-link">Servicios Detallados</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
 
-      <ul class="nav-menu" id="nav-menu" role="menubar">
-        <li class="nav-item" role="none"><a href="#hero" class="nav-link active" role="menuitem">Inicio</a></li>
-        <li class="nav-item" role="none"><a href="#diagnostico" class="nav-link" role="menuitem">Diagnóstico</a></li>
-
-        <li class="nav-item" role="none"><a href="#trayectoria" class="nav-link" role="menuitem">Probar demos</a></li>
-        <li class="nav-item" role="none"><a href="#contacto" class="nav-link" role="menuitem">Contacto</a></li>
       </ul>
-
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
+      <div class="nav-cta">
+        <a href="#servicios-detallados" class="btn btn-primary btn-nav-cta">
+          <i class="fas fa-file-alt"></i> <span>Solicitar Propuesta</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <main id="main-content">
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-    <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
-      <div class="hero-grid-overlay" aria-hidden="true"></div>
-
+    <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-badge animate-on-scroll">
-          <span class="badge-dot" aria-hidden="true"></span>
-          Disponibles para proyectos
+        <div class="hero-badge" data-aos="fade-down">
+          <span class="live"></span>
+          Agencia enfocada en Meta Ads
         </div>
 
-        <h1 class="hero-title animate-on-scroll" id="hero-title">
-          Desarrollo de<br>
-          <span class="text-gradient">Soluciones Digitales</span>
+        <h1 class="hero-title">
+          <span class="line"><span>Escalamos tu</span></span>
+          <span class="line"><span class="gradient-text">negocio con</span></span>
+          <span class="line"><span>Meta Ads.</span></span>
         </h1>
 
-        <p class="hero-subtitle animate-on-scroll" id="typing-container" aria-live="polite">
+        <p class="hero-subtitle">
+          Campañas de rendimiento en Facebook e Instagram, chatbots inteligentes y desarrollo web profesional. Más
+          leads, más ventas. Resultados reales, medibles y sostenibles.
         </p>
 
-        <div class="hero-cta animate-on-scroll">
-          <a href="#contacto" class="btn btn-primary btn-glow">
-            <span>Contáctanos</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-              <use href="#icon-arrow-right" />
-            </svg>
+        <div class="hero-ctas">
+          <a target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd13zmQagsZ75jEY6uYfecInKcm5h3rYuAnq94kQp-wmVMwzA/viewform?usp=dialog"
+            class="btn btn-primary">
+            <i class="fas fa-rocket"></i> <span>Solicitar Auditoría Gratuita</span>
           </a>
-          <!--<div class="btn-container">
-            <span class="pointing-hand" aria-hidden="true">👉</span>
-            <a href="#planes" class="btn btn-outline">
-              <span>Ver Planes y precios</span>
-            </a>
-          </div>
-        </div>-->
+          <a href="#servicios-detallados" class="btn btn-secondary">
+            <i class="fas fa-file-alt"></i> <span>Ver Formulario</span>
+          </a>
+        </div>
 
-        <div class="hero-stats animate-on-scroll" role="list" aria-label="Estadísticas de RootCLI">
-          <div class="stat-item" role="listitem">
-            <span class="stat-number" data-target="5" aria-label="5 proyectos completados">0</span><span
-              class="stat-suffix" aria-hidden="true">+</span>
-            <span class="stat-label">Proyectos</span>
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+          <div class="hero-stat">
+            <div class="num" data-count="5+">0</div>
+            <div class="lbl">Campañas lanzadas</div>
           </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-number" data-target="3" aria-label="3 clientes satisfechos">0</span><span
-              class="stat-suffix" aria-hidden="true">+</span>
-            <span class="stat-label">Clientes</span>
+          <div class="hero-stat">
+            <div class="num"><span data-count="30">0</span>+</div>
+            <div class="lbl">Personas alcanzadas</div>
           </div>
-          <div class="stat-item" role="listitem">
-            <span class="stat-number" data-target="+3" aria-label="Más de 3 años de experiencia">0</span><span
-              class="stat-suffix" aria-hidden="true">+</span>
-            <span class="stat-label">Años Exp.</span>
+          <div class="hero-stat">
+            <div class="num"><span data-count="90">0</span>%</div>
+            <div class="lbl">Conversión</div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ======================================================================= -->
-    <!-- SECCIÓN VIDEO PROMOCIONAL (Después del Hero) -->
-    <!-- ======================================================================= -->
-    <section class="section video-promo" id="video-intro" aria-labelledby="video-intro-title">
-      <div class="video-promo-bg" aria-hidden="true">
-        <div class="video-grid-overlay"></div>
-        <div class="video-particles" id="video-particles"></div>
-      </div>
-
-      <div class="container">
-        <div class="video-promo-wrapper animate-on-scroll">
-
-          <!-- Contenido textual -->
-          <div class="video-promo-content">
-            <span class="section-tag video-tag">✨ Descubre tu potencial digital</span>
-            <h2 class="video-title" id="video-intro-title">
-              Mira cómo transformamos <span class="text-gradient">ideas en realidad</span>
-            </h2>
-            <p class="video-description">
-              En menos de 1 minuto, conoce nuestra metodología y ve ejemplos reales
-              de nuestros prototipos diseñados para impulsar tu negocio.
-            </p>
-
-            <div class="video-highlights" role="list">
-              <div class="highlight-item" role="listitem">
-                <span class="highlight-icon" aria-hidden="true">🎯</span>
-                <span>Enfoque estratégico</span>
-              </div>
-              <div class="highlight-item" role="listitem">
-                <span class="highlight-icon" aria-hidden="true">⚡</span>
-                <span>Entrega rápida</span>
-              </div>
-              <div class="highlight-item" role="listitem">
-                <span class="highlight-icon" aria-hidden="true">🔒</span>
-                <span>Soporte garantizado</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reproductor de video -->
-          <div class="video-promo-player">
-            <div class="video-container">
-
-              <!-- Placeholder del video (se oculta al reproducir) -->
-              <div class="video-placeholder" id="video-placeholder">
-
-                <div class="video-play-overlay" id="video-play-btn" role="button" tabindex="0"
-                  aria-label="Reproducir video de introducción">
-                  <div class="play-button" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24">
-                      <use href="#icon-play" />
-                    </svg>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- Video real (se muestra al reproducir) -->
-              <video id="promo-video" class="video-element" controls preload="none" muted playsinline
-                style="display: none;" aria-label="Video promocional de RootCLI">
-                <source src="desarrollo_web.mp4" type="video/mp4">
-                <source src="desarrollo_web.webm" type="video/webm">
-                Tu navegador no soporta la reproducción de video.
-                <a href="desarrollo_web.mp4" download>Descargar video</a>
-              </video>
-
-            </div>
-          </div>
-
+      <div class="hero-visual" data-aos="zoom-in" data-aos-delay="300">
+        <div class="hero-img-wrap">
+          <img
+            src="https://image.qwenlm.ai/public_source/22dbcd98-2f9e-4833-be14-54632d32d526/1b6001c6e-0c3f-4ced-8eee-2bb959a84d29.png"
+            alt="Marketing digital con Meta Ads - ROOTCLI" loading="eager" width="600" height="600" />
         </div>
-
-        <!-- Scroll indicator -->
-        <div class="video-scroll-indicator" aria-hidden="true">
-          <span>Explora nuestros planes</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <use href="#icon-chevron-down" />
-          </svg>
+        <div class="hero-float-card c1">
+          <div class="ic"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <div class="val">+</div>
+            <div class="lbl2">ROAS promedio</div>
+          </div>
+        </div>
+        <div class="hero-float-card c2">
+          <div class="ic"><i class="fas fa-bullseye"></i></div>
+          <div>
+            <div class="val">+</div>
+            <div class="lbl2">CTR promedio</div>
+          </div>
         </div>
       </div>
-    </section>
-
- <!-- CTA / DIAGNÓSTICO GRATUITO -->
-<section class="pricing section" id="diagnostico">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="section-tag">🎯 Oferta especial</span>
-            <h2 class="section-title">¿Por qué tu negocio no está consiguiendo más clientes?</h2>
-            <p class="section-description">
-                Descubrí los errores que te están costando ventas y recibí un plan de acción personalizado para vender más.
-            </p>
-        </div>
-
-        <!-- Banner de oferta -->
-        <div style="text-align:center; margin-bottom: 48px;">
-            <div style="display:inline-flex; align-items:center; gap:10px; padding:14px 28px; background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(16,185,129,0.05)); border:1px solid rgba(0,255,136,0.3); border-radius:50px; animation: float 3s ease-in-out infinite;">
-                <span style="font-size:1.3rem;">🚀</span>
-                <span style="color:#00ff88; font-weight:700; font-size:0.95rem;">DIAGNÓSTICO 100% GRATUITO — Respuesta en menos de 24 horas</span>
-            </div>
-        </div>
-
-        <!-- CONTENEDOR PRINCIPAL DEL CTA -->
-        <div style="max-width: 900px; margin: 0 auto; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 48px 32px;">
-            
-            <!-- QUÉ VAS A RECIBIR -->
-            <div style="text-align:center; margin-bottom: 40px;">
-                <h3 style="font-size: 1.8rem; margin-bottom: 16px; color: var(--color-text-primary);">
-                    📊 Recibí un diagnóstico completo de tu negocio
-                </h3>
-                <p style="color: var(--color-text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
-                    Analizamos tus redes sociales y presencia digital para mostrarte exactamente qué estás haciendo mal y cómo arreglarlo.
-                </p>
-            </div>
-
-            <!-- LISTA DE BENEFICIOS -->
-            <div style="max-width: 600px; margin: 0 auto 40px;">
-                <ul style="list-style: none; padding: 0; margin: 0;">
-              
-                    <li style="display:flex; align-items:flex-start; gap:12px; margin-bottom:20px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff88" style="flex-shrink:0; margin-top:2px;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <div>
-                            <strong style="color: var(--color-text-primary); display:block; margin-bottom:4px;">Revisión de Instagram y Facebook</strong>
-                            <span style="color: var(--color-text-secondary); font-size:0.95rem;">Evaluamos tu perfil, contenido y engagement</span>
-                        </div>
-                    </li>
-                    <li style="display:flex; align-items:flex-start; gap:12px; margin-bottom:20px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff88" style="flex-shrink:0; margin-top:2px;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <div>
-                            <strong style="color: var(--color-text-primary); display:block; margin-bottom:4px;">Detección de errores críticos</strong>
-                            <span style="color: var(--color-text-secondary); font-size:0.95rem;">Identificamos los problemas que te están costando ventas</span>
-                        </div>
-                    </li>
-                    <li style="display:flex; align-items:flex-start; gap:12px; margin-bottom:20px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff88" style="flex-shrink:0; margin-top:2px;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <div>
-                            <strong style="color: var(--color-text-primary); display:block; margin-bottom:4px;">Plan de acción personalizado</strong>
-                            <span style="color: var(--color-text-secondary); font-size:0.95rem;">Te damos recomendaciones concretas y priorizadas para vender más</span>
-                        </div>
-                    </li>
-                    <li style="display:flex; align-items:flex-start; gap:12px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff88" style="flex-shrink:0; margin-top:2px;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        <div>
-                            <strong style="color: var(--color-text-primary); display:block; margin-bottom:4px;">Informe en PDF + Video explicativo</strong>
-                            <span style="color: var(--color-text-secondary); font-size:0.95rem;">Todo claro y fácil de entender</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- CÓMO FUNCIONA -->
-            <div style="background: rgba(0,255,136,0.05); border: 1px solid rgba(0,255,136,0.2); border-radius: 16px; padding: 32px; margin-bottom: 40px;">
-                <h4 style="text-align:center; font-size:1.3rem; margin-bottom:24px; color:var(--color-text-primary);">
-                    ⚡ Cómo funciona (3 pasos simples)
-                </h4>
-                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:24px;">
-                    <div style="text-align:center;">
-                        <div style="width:50px; height:50px; background:rgba(0,255,136,0.2); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:700; color:#00ff88; margin-bottom:12px;">1</div>
-                        <strong style="display:block; margin-bottom:8px; color:var(--color-text-primary);">Completás el formulario</strong>
-                        <span style="color:var(--color-text-secondary); font-size:0.9rem;">5 minutos de tu tiempo</span>
-                    </div>
-                    <div style="text-align:center;">
-                        <div style="width:50px; height:50px; background:rgba(0,255,136,0.2); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:700; color:#00ff88; margin-bottom:12px;">2</div>
-                        <strong style="display:block; margin-bottom:8px; color:var(--color-text-primary);">Analizamos tu negocio</strong>
-                        <span style="color:var(--color-text-secondary); font-size:0.9rem;">Nuestro equipo hace el trabajo</span>
-                    </div>
-                    <div style="text-align:center;">
-                        <div style="width:50px; height:50px; background:rgba(0,255,136,0.2); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:700; color:#00ff88; margin-bottom:12px;">3</div>
-                        <strong style="display:block; margin-bottom:8px; color:var(--color-text-primary);">Recibís tu diagnóstico</strong>
-                        <span style="color:var(--color-text-secondary); font-size:0.9rem;">En menos de 24 horas</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA PRINCIPAL -->
-            <div id="diagnostico-form" style="text-align:center;">
-                <h3 style="font-size:1.5rem; margin-bottom:16px; color:var(--color-text-primary);">
-                    🎁 Solicitá tu diagnóstico gratuito ahora
-                </h3>
-                <p style="color:var(--color-text-secondary); margin-bottom:24px; font-size:1rem;">
-                    Cupos limitados esta semana. No te quedes sin el tuyo.
-                </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd13zmQagsZ75jEY6uYfecInKcm5h3rYuAnq94kQp-wmVMwzA/viewform?usp=publish-editor" 
-                   class="btn btn-primary btn-large" 
-                   target="_blank"
-                   style="display:inline-flex; align-items:center; gap:12px; padding:20px 48px; font-size:1.2rem; font-weight:700; box-shadow: 0 10px 30px rgba(0,255,136,0.3);">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    Quiero mi diagnóstico gratuito
-                </a>
-                <p style="color:var(--color-text-muted); font-size:0.85rem; margin-top:16px;">
-                    🔒 100% gratuito • Sin compromiso • Tus datos están seguros
-                </p>
-            </div>
-
-        </div>
-
-        <!-- MENSAJE DE AGRADECIMIENTO (se muestra después de completar) -->
-        <div id="diagnostico-gracias" class="pricing-cta" style="display:none; margin-top:48px;">
-            <div style="font-size: 3rem; margin-bottom: 16px;">✅</div>
-            <h3>¡Gracias por tu interés!</h3>
-            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-                En las próximas <strong>24 horas</strong> analizaremos tu negocio y recibirás un diagnóstico personalizado directamente en tu correo electrónico.
-            </p>
-            <p style="margin-top: 20px; color: var(--color-text-secondary);">
-                Mientras tanto, si tenés alguna consulta urgente, no dudes en escribirnos por WhatsApp.
-            </p>
-            <a href="https://wa.me/59896854828?text=Hola!%20Acabo%20de%20solicitar%20un%20diagnóstico%20gratuito" 
-               class="btn btn-outline" 
-               target="_blank"
-               style="margin-top: 24px;">
-                💬 Escribir por WhatsApp
-            </a>
-        </div>
-
-        <!-- PREGUNTAS FRECUENTES (OPCIONAL) -->
-        <div class="upsells-section" style="margin-top: 64px;">
-            <h3 class="upsells-title">❓ Preguntas frecuentes</h3>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="upsell-card" style="text-align:left; margin-bottom:16px;">
-                    <h4>¿Realmente es gratis?</h4>
-                    <p style="color: var(--color-text-secondary); margin:0;">Sí, 100% gratis. No hay costos ocultos ni compromisos. Queremos que conozcas nuestro trabajo.</p>
-                </div>
-                <div class="upsell-card" style="text-align:left; margin-bottom:16px;">
-                    <h4>¿Qué pasa después de recibir el diagnóstico?</h4>
-                    <p style="color: var(--color-text-secondary); margin:0;">Vos decidís. Si querés que te ayudemos a implementar las mejoras, podemos hablar. Si no, el diagnóstico es tuyo.</p>
-                </div>
-                <div class="upsell-card" style="text-align:left;">
-                    <h4>¿Cuánto tiempo toma?</h4>
-                    <p style="color: var(--color-text-secondary); margin:0;">Menos de 24 horas hábiles. Vos solo invertís 5 minutos en completar el formulario.</p>
-                </div>
-            </div>
-        </div>
-
     </div>
+  </section>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-bolt"></i> Nuestros Servicios</span>
+        <h2 class="section-title">Todo lo que necesitas para <span class="gradient-text">crecer</span></h2>
+        <p class="section-subtitle">Soluciones integrales de marketing digital especializadas en Meta Ads, chatbots y
+          desarrollo web. Cada servicio diseñado para maximizar tu retorno de inversión.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" data-aos="fade-up">
+          <div class="service-icon"><i class="fab fa-meta"></i></div>
+          <h3>Meta Ads</h3>
+          <p>Gestión integral de campañas en todo el ecosistema Meta con estrategia, segmentación y optimización
+            avanzada.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="service-icon"><i class="fab fa-instagram"></i></div>
+          <h3>Instagram Ads</h3>
+          <p>Anuncios visuales de alto impacto en Instagram Feed, Stories y Reels para conectar con tu audiencia ideal.
+          </p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fab fa-facebook"></i></div>
+          <h3>Facebook Ads</h3>
+          <p>Campañas en Facebook con segmentación precisa y formatos que convierten: video, carrusel, lead ads y más.
+          </p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="service-icon"><i class="fas fa-user-plus"></i></div>
+          <h3>Generación de Leads</h3>
+          <p>Sistemas automatizados para captar clientes potenciales calificados con formularios y embudos optimizados.
+          </p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-redo-alt"></i></div>
+          <h3>Remarketing</h3>
+          <p>Recupera visitantes que no convirtieron con estrategias de retargeting inteligente y secuencias
+            persuasivas.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="service-icon"><i class="fas fa-filter"></i></div>
+          <h3>Embudos de Conversión</h3>
+          <p>Diseño de funnels completos: desde la captación hasta la venta, con landing pages y automatizaciones.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Optimización de Campañas</h3>
+          <p>Análisis diario de métricas clave, A/B testing y ajustes continuos para mejorar el rendimiento.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="service-icon"><i class="fas fa-palette"></i></div>
+          <h3>Creatividades Publicitarias</h3>
+          <p>Diseño de anuncios visuales y videos que detienen el scroll y generan clics de alta calidad.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon"><i class="fas fa-search-dollar"></i></div>
+          <h3>Auditorías</h3>
+          <p>Revisión profunda de tus campañas actuales con informe detallado y recomendaciones accionables.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="450">
+          <div class="service-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Consultoría</h3>
+          <p>Asesoramiento estratégico personalizado para que tu equipo interno domine Meta Ads como un profesional.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>Chatbots</h3>
+          <p>Automatización inteligente de respuestas en WhatsApp y redes sociales. Atención 24/7, calificación de leads
+            y seguimiento automático.</p>
+        </article>
+
+        <article class="service-card" data-aos="fade-up" data-aos-delay="550">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Desarrollo Web</h3>
+          <p>Sitios web profesionales y landing pages optimizadas para conversión. Diseño responsive, rápido y enfocado
+            en resultados.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= POR QUÉ ELEGIRNOS ================= -->
+  <section class="section" id="resultados" style="background:var(--color-bg-secondary)">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-trophy"></i> Por qué ROOTCLI</span>
+        <h2 class="section-title">Estamos para<span class="gradient-text"> ayudarte</span></h2>
+        <p class="section-subtitle">Hemos realizado estudios y análisis para demostrar nuestro impacto en el crecimiento
+          de tu negocio.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="stat-card" data-aos="zoom-in">
+          <div class="stat-num"><span data-count="5">0</span>+</div>
+          <div class="stat-lbl">Campañas optimizadas</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-num"><span data-count="30">0</span>+</div>
+          <div class="stat-lbl">Personas alcanzadas</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-num"><span data-count="95">0</span>%</div>
+          <div class="stat-lbl">Interacción</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-num"><span data-count="70">0</span>%</div>
+          <div class="stat-lbl">Oportunidad de crecimiento</div>
+        </div>
+      </div>
+
+      <div class="why-features">
+        <div class="feature" data-aos="fade-right">
+          <div class="feature-ic"><i class="fas fa-bolt"></i></div>
+          <div>
+            <h4>Respuesta rápida</h4>
+            <p>Atendemos tu consulta en menos de 2 horas en horario laboral.</p>
+          </div>
+        </div>
+        <div class="feature" data-aos="fade-right" data-aos-delay="100">
+          <div class="feature-ic"><i class="fas fa-user-tie"></i></div>
+          <div>
+            <h4>Atención personalizada</h4>
+            <p>Un especialista asignado a tu cuenta, no un call center.</p>
+          </div>
+        </div>
+        <div class="feature" data-aos="fade-right" data-aos-delay="200">
+          <div class="feature-ic"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <h4>Reportes transparentes</h4>
+            <p>Dashboards en tiempo real con las métricas que realmente importan.</p>
+          </div>
+        </div>
+        <div class="feature" data-aos="fade-right" data-aos-delay="300">
+          <div class="feature-ic"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <h4>Sin contratos eternos</h4>
+            <p>Quédate porque ves resultados, no porque firmaste un papel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESO ================= -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-route"></i> Nuestro Proceso</span>
+        <h2 class="section-title">Cómo <span class="gradient-text">trabajamos</span></h2>
+        <p class="section-subtitle">Un método probado en más de 300 campañas. Transparente, ordenado y enfocado en
+          resultados.</p>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">01</div>
+          <div class="timeline-content">
+            <h3>Diagnóstico gratuito</h3>
+            <p>Analizamos tu situación actual, objetivos y oportunidades. Sin costo, sin compromiso.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">02</div>
+          <div class="timeline-content">
+            <h3>Análisis del negocio</h3>
+            <p>Estudiamos tu mercado, competencia, buyer persona y propuesta de valor única.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">03</div>
+          <div class="timeline-content">
+            <h3>Creación de estrategia</h3>
+            <p>Diseñamos el plan de medios, segmentación, creatividades y embudo de conversión.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">04</div>
+          <div class="timeline-content">
+            <h3>Lanzamiento</h3>
+            <p>Activamos las campañas con tracking completo y pixel configurado correctamente.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">05</div>
+          <div class="timeline-content">
+            <h3>Optimización diaria</h3>
+            <p>Ajustamos pujas, audiencias y creatividades basándonos en datos reales.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">06</div>
+          <div class="timeline-content">
+            <h3>Escalado</h3>
+            <p>Una vez validado el ROAS, escalamos la inversión manteniendo la rentabilidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS DETALLADOS ================= -->
+  <section class="section" id="servicios-detallados">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-rocket"></i> Cómo trabajamos</span>
+        <h2 class="section-title">Nuestros <span class="gradient-text">servicios</span></h2>
+        <p class="section-subtitle">Un proceso claro y estratégico para llevar tu negocio al siguiente nivel con Meta
+          Ads, chatbots y desarrollo web.</p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- SERVICIO 1: AUDITORÍA -->
+        <div class="plan-card" data-aos="fade-up">
+          <div class="plan-name">
+            <i class="fas fa-search" style="color: var(--primary); margin-right: 0.5rem;"></i>
+             Auditoría + Publicidad
+          </div>
+          <div class="plan-badge" style="background: linear-gradient(135deg, #e90a0a, #FF2B2B);">Mas solicitada</div>
+          <div class="plan-desc">Solución completa: analizamos tu negocio y gestionamos tus campañas para maximizar resultados.</div>
+          <ul class="plan-features">
+             <li><i class="fas fa-check"></i> Auditoría completa y gratuita</li>
+            <li><i class="fas fa-check"></i> Análisis profundo del negocio</li>
+            <li><i class="fas fa-check"></i> Revisión de redes sociales actuales</li>
+            <li><i class="fas fa-check"></i> Análisis de la competencia</li>
+            <li><i class="fas fa-check"></i> Identificación de oportunidades</li>
+            <li><i class="fas fa-check"></i> Configuración profesional de campañas</li>
+            <li><i class="fas fa-check"></i> Optimización diaria de rendimiento</li>
+            <li><i class="fas fa-check"></i> Segmentación avanzada de audiencias</li>
+            <li><i class="fas fa-check"></i> Estrategias de remarketing</li>
+            <li><i class="fas fa-check"></i> Reportes detallados mensuales</li>
+            <li><i class="fas fa-check"></i> Soporte continuo por WhatsApp</li>
+          </ul>
+
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd13zmQagsZ75jEY6uYfecInKcm5h3rYuAnq94kQp-wmVMwzA/viewform?usp=dialog"
+           class="btn btn-primary btn-plan">
+            <i class="fas fa-calendar-check"></i> <span>Solicitar Auditoría</span>
+          </a>
+        </div>
+
+
+
+
+
+        <!-- SERVICIO 4: CHATBOTS -->
+        <div class="plan-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="plan-name">
+            <i class="fas fa-robot" style="color: var(--primary); margin-right: 0.5rem;"></i>
+            Chatbots Inteligentes
+          </div>
+          <div class="plan-desc">Automatiza la atención al cliente y califica leads 24/7 sin perder la personalización.
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Chatbots para WhatsApp y redes sociales</li>
+            <li><i class="fas fa-check"></i> Atención automática 24/7</li>
+            <li><i class="fas fa-check"></i> Calificación automática de leads</li>
+            <li><i class="fas fa-check"></i> Integración con CRM y herramientas</li>
+            <li><i class="fas fa-check"></i> Flujos conversacionales personalizados</li>
+            <li><i class="fas fa-check"></i> Reportes de interacciones</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScTFOOGtzBdjiHe2dpqNfYWyAPVd9OcGKAiUX91f9YK98iatA/viewform?usp=publish-editor"
+            class="btn btn-secondary btn-plan">
+            <i class="fas fa-file-alt"></i> <span>Solicitar Auditoría</span>
+          </a>
+        </div>
+
+        <!-- SERVICIO 5: DESARROLLO WEB -->
+        <div class="plan-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="plan-name">
+            <i class="fas fa-code" style="color: var(--primary); margin-right: 0.5rem;"></i>
+            Desarrollo Web
+          </div>
+          <div class="plan-desc">Sitios web profesionales y landing pages optimizadas para convertir visitantes en
+            clientes.</div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Diseño web profesional y moderno</li>
+            <li><i class="fas fa-check"></i> Landing pages de alta conversión</li>
+            <li><i class="fas fa-check"></i> Diseño responsive (móvil y desktop)</li>
+            <li><i class="fas fa-check"></i> Optimización de velocidad (SEO)</li>
+            <li><i class="fas fa-check"></i> Integración con campañas publicitarias</li>
+            <li><i class="fas fa-check"></i> Mantenimiento y actualizaciones</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9Q8i-rpVtKOUNE4qO4y8aI4nwJLndbd8fGOjFN0V6rURjQw/viewform?usp=publish-editor"
+            class="btn btn-secondary btn-plan">
+            <i class="fas fa-file-alt"></i> <span>Solicitar Auditoría</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ¿CÓMO CALCULAMOS EL PRECIO? -->
+      <div class="pricing-explanation" data-aos="fade-up">
+        <span class="section-tag">
+          <i class="fas fa-calculator"></i> Transparencia Total
+        </span>
+        <h3 class="pricing-title">
+          ¿Cómo calculamos el <span class="gradient-text">precio</span>?
+        </h3>
+        <p class="pricing-text">
+          Cada empresa es diferente. Antes de elaborar una propuesta analizamos tu negocio, tus objetivos y tu
+          presupuesto
+          para ofrecerte una <strong style="color: #fff;">estrategia personalizada</strong>. Así pagas únicamente por lo
+          que realmente necesitas.
+        </p>
+
+        <div class="pricing-checks">
+          <div class="pricing-check">
+            <i class="fas fa-check-circle"></i>
+            <span>Diagnóstico gratuito</span>
+          </div>
+          <div class="pricing-check">
+            <i class="fas fa-check-circle"></i>
+            <span>Sin compromiso</span>
+          </div>
+          <div class="pricing-check">
+            <i class="fas fa-check-circle"></i>
+            <span>Propuesta personalizada en menos de 24 horas</span>
+          </div>
+        </div>
+
+        <a href="#contacto" class="btn btn-primary btn-pricing">
+          <i class="fas fa-file-alt"></i>
+          <span>Completar formulario de contacto</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA LANDING PAGE ================= -->
+<section class="section" id="cta-auditoria">
+  <div class="container">
+    <div class="section-header" data-aos="zoom-in">
+      <span class="section-tag">
+        <i class="fas fa-chart-line"></i> Auditoría Gratuita
+      </span>
+
+      <h2 class="section-title">
+        Descubre por qué tu negocio
+        <span class="gradient-text">no está generando las ventas que debería.</span>
+      </h2>
+
+      <p class="section-subtitle">
+        Analizamos tu negocio, detectamos los principales problemas y te mostramos
+        exactamente qué debes mejorar para conseguir más clientes.
+      </p>
+
+      <!-- Flechas -->
+      <div class="cta-arrows">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+
+      <a href="https://TU-FORMULARIO.com"
+         class="btn btn-primary btn-plan">
+        <i class="fas fa-calendar-check"></i>
+        <span>Solicitar auditoría gratuita</span>
+      </a>
+    </div>
+  </div>
 </section>
 
-    <!-- PLANES: servicios
-    <section class="section services" id="servicios" aria-labelledby="servicios-title">
-      <div class="container">
-        <div class="section-header animate-on-scroll">
-          <span class="section-tag">Servicio técnico profesional</span>
-          <h2 class="section-title" id="servicios-title">Mantenimiento y <span class="text-gradient">Reparación</span>
-          </h2>
-          <p class="section-description">
-            Reparamos y optimizamos tus dispositivos con atención profesional.
-            PCs, consolas, celulares y más — con garantía y servicio a domicilio.
-          </p>
-        </div>
-
-        <div class="services-grid" role="list">
-
-          <article class="service-card animate-on-scroll" role="listitem" aria-labelledby="service-pc-title">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="12" rx="2" />
-                <path d="M8 21h8" />
-                <path d="M12 15v6" />
-                <path d="M7 8h2m-2 3h4" />
-                <circle cx="16" cy="9" r="2" />
-              </svg>
-            </div>
-            <div class="service-number" aria-hidden="true">01</div>
-            <h3 class="service-title" id="service-pc-title">PCs y Laptops</h3>
-            <p class="service-desc">
-              Diagnóstico completo, limpieza interna, cambio de pasta térmica,
-              formateo, optimización del sistema y reemplazo de componentes.
-            </p>
-            <ul class="service-features" role="list">
-              <li>Limpieza y mantenimiento preventivo</li>
-              <li>Cambio de pasta térmica y ventiladores</li>
-              <li>Formateo e instalación de SO</li>
-              <li>Upgrade de RAM, SSD y componentes</li>
-              <li>Eliminación de virus y malware</li>
-            </ul>
-            <a href="#contacto" class="service-link">
-              Solicitar servicio
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <use href="#icon-arrow-right" />
-              </svg>
-            </a>
-          </article>
-
-          <article class="service-card animate-on-scroll" role="listitem" aria-labelledby="service-consolas-title">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 11h4v4H6z" />
-                <path d="M14 11h4" />
-                <path d="M16 9v4" />
-                <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <path d="M8 14h.01" />
-                <path d="M16 14h.01" />
-              </svg>
-            </div>
-            <div class="service-number" aria-hidden="true">02</div>
-            <h3 class="service-title" id="service-consolas-title">Consolas</h3>
-            <p class="service-desc">
-              Reparación de PlayStation, Xbox y Nintendo Switch. Mantenimiento
-              completo, cambio de lectora, reparación de joysticks y más.
-            </p>
-            <ul class="service-features" role="list">
-              <li>Limpieza interna y cambio de pasta térmica</li>
-              <li>Reparación de lectora de discos</li>
-              <li>Reemplazo de joysticks y gatillos</li>
-              <li>Solución de errores de encendido y HDMI</li>
-              <li>Actualización de firmware y software</li>
-            </ul>
-            <a href="#contacto" class="service-link">
-              Solicitar servicio
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <use href="#icon-arrow-right" />
-              </svg>
-            </a>
-          </article>
-
-          <article class="service-card animate-on-scroll" role="listitem" aria-labelledby="service-moviles-title">
-            <div class="service-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="7" y="2" width="10" height="20" rx="2" />
-                <path d="M12 18h.01" />
-                <path d="M9 6h6" />
-                <path d="M10 10l4 4" />
-                <path d="M14 10l-4 4" />
-              </svg>
-            </div>
-            <div class="service-number" aria-hidden="true">03</div>
-            <h3 class="service-title" id="service-moviles-title">Celulares y Tablets</h3>
-            <p class="service-desc">
-              Cambio de pantalla, batería, puerto de carga y reparación de placa.
-              Trabajo con iPhone, Samsung, Xiaomi y otras marcas.
-            </p>
-            <ul class="service-features" role="list">
-              <li>Cambio de pantalla y vidrio</li>
-              <li>Reemplazo de batería</li>
-              <li>Reparación de puerto de carga</li>
-              <li>Arreglo de problemas de audio y altavoz</li>
-              <li>Recuperación de datos y reseteo</li>
-            </ul>
-            <a href="#contacto" class="service-link">
-              Solicitar servicio
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <use href="#icon-arrow-right" />
-              </svg>
-            </a>
-          </article>
-
-        </div>
+  <!-- ================= FAQ ================= -->
+  <section class="section" id="faq" style="background:var(--color-bg-secondary)">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"><i class="fas fa-question-circle"></i> FAQ</span>
+        <h2 class="section-title">Preguntas <span class="gradient-text">frecuentes</span></h2>
+        <p class="section-subtitle">Resolvemos las dudas más comunes sobre nuestros servicios.</p>
       </div>
-    </section> -->
 
-    <!-- PLANES: servicios
-    <section class="section about" id="nosotros" aria-labelledby="nosotros-title">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-visual animate-on-scroll" aria-hidden="true">
-            <div class="about-image-wrapper">
-              <div class="about-image-placeholder">
-                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <div class="about-image-border"></div>
-            </div>
-
-            <div class="about-float-card float-card-1">
-              <span class="float-number">99%</span>
-              <span class="float-label">Satisfacción</span>
-            </div>
-            <div class="about-float-card float-card-2">
-              <span class="float-number">24/7</span>
-              <span class="float-label">Soporte</span>
-            </div>
-          </div>
-
-          <div class="about-content animate-on-scroll">
-            <span class="section-tag">Quiénes somos</span>
-            <h2 class="section-title" id="nosotros-title">Tecnología con <span class="text-gradient">Pasión</span></h2>
-            <p class="about-text">
-              Somos tecnólogos en informática con más de 3 años de experiencia en el desarrollo de software y soluciones
-              informáticas, enfocados en brindar servicios eficientes, confiables y adaptados a las necesidades de cada
-              cliente.
-            </p>
-            <p class="about-text">
-              Nuestro objetivo es brindar soluciones eficientes, innovadoras y de alta
-              calidad tanto para empresas como para usuarios individuales. Cada proyecto
-              es una oportunidad para superar expectativas.
-            </p>
-
-            <div class="about-values" role="list">
-              <div class="value-item" role="listitem">
-                <div class="value-icon" aria-hidden="true">🎯</div>
-                <div>
-                  <h4>Precisión</h4>
-                  <p>Atención al detalle en cada línea de código</p>
-                </div>
-              </div>
-              <div class="value-item" role="listitem">
-                <div class="value-icon" aria-hidden="true">🚀</div>
-                <div>
-                  <h4>Innovación</h4>
-                  <p>Tecnologías actuales y mejores prácticas</p>
-                </div>
-              </div>
-              <div class="value-item" role="listitem">
-                <div class="value-icon" aria-hidden="true">🤝</div>
-                <div>
-                  <h4>Compromiso</h4>
-                  <p>Soporte continuo post-entrega</p>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contacto" class="btn btn-primary btn-glow">
-              <span>Contáctanos.</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                aria-hidden="true">
-                <use href="#icon-arrow-right" />
-              </svg>
-            </a>
+      <div class="faq-list" data-aos="fade-up">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué es Meta Ads y por qué debería invertir en ello?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Meta Ads es la plataforma publicitaria de Meta (Facebook e Instagram) que te
+              permite llegar a más de 3.000 millones de usuarios con segmentación avanzada. Es el canal más eficiente
+              para generar leads y ventas con ROI medible.</div>
           </div>
         </div>
-      </div>
-    </section>-->
 
-    <section class="section trajectory" id="trayectoria" aria-labelledby="trayectoria-title">
-      <div class="container">
-
-        <!-- Header con mensaje motivacional -->
-        <div class="section-header animate-on-scroll text-center">
-          <span class="section-tag">Nuestro Camino</span>
-          <h2 class="section-title" id="trayectoria-title">Proyectos <span class="text-gradient">y Demos</span>
-          </h2>
-
-        </div>
-
-
-
-        <div class="projects-grid" role="list">
-
-          <!-- Template 1: Panadería (Índice 3) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="3" data-type="demo" role="listitem"
-            aria-labelledby="demo-panaderia-title">
-            <div class="project-carousel" role="region" aria-label="Galería del template Panadería">
-              <a href="https://panaderiaweb-azure.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="demos/panaderia/hero.jpg" alt="Vista principal - Template Panadería" class="carousel-img"
-                      loading="lazy" decoding="async" width="800" height="450">
-                  </div>
-                </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-ecommerce">Ecommerce</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title" id="demo-panaderia-title">🥐 Prototipo Panadería Artesanal</h3>
-              <p class="project-desc">
-                Template optimizado para panaderías y pastelerías. Incluye catálogo de productos, horarios, pedidos
-                por
-                WhatsApp y sección de "productos del día". Diseño cálido y apetitoso.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Perfecto para mostrar productos visuales y generar pedidos rápidos desde el celular."
-                </blockquote>
-                <cite class="testimonial-author">— Ideal para negocios locales</cite>
-              </div>
-            </div>
-          </article>
-
-          <!-- Template 2: Forestal (Índice 4) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="4" data-type="demo" role="listitem"
-            aria-labelledby="demo-forestal-title">
-            <div class="project-carousel" role="region" aria-label="Galería del template Forestal">
-              <a href="https://forestalweb.vercel.app/" class="carousel-link" target="_blank" rel="noopener noreferrer">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="demos/forestal/hero.jpg" alt="Vista principal - Template Forestal" class="carousel-img"
-                      loading="lazy" decoding="async" width="800" height="450">
-                  </div>
-                </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-corporate">Corporativo</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title" id="demo-forestal-title">🌲 Template Empresa Forestal</h3>
-              <p class="project-desc">
-                Diseño profesional para empresas del sector forestal. Secciones para servicios, sustentabilidad,
-                proyectos y contacto B2B. Enfoque serio, confiable y orientado a resultados.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Transmite profesionalismo y es ideal para presentar servicios a clientes corporativos."
-                </blockquote>
-                <cite class="testimonial-author">— Sector industrial y agro</cite>
-              </div>
-            </div>
-          </article>
-
-
-
-          <!-- Template 4: Peluquería (Índice 6) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="6" data-type="demo" role="listitem"
-            aria-labelledby="demo-peluqueria-title">
-            <div class="project-carousel" role="region" aria-label="Galería del template Peluquería">
-              <a href="https://peluqueriaweb.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="demos/peluqueria/hero.jpg" alt="Vista principal - Template Peluquería"
-                      class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
-                  </div>
-                </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-services">Servicios</span>
-                <span class="tag tag-web">Web</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title" id="demo-peluqueria-title">✂️ Template Peluquería & Estética</h3>
-              <p class="project-desc">
-                Diseño elegante para salones de belleza. Incluye galería de trabajos, lista de servicios con precios,
-                reserva de turnos por WhatsApp y sección de promociones.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Visualmente atractivo y fácil de usar para que los clientes agenden sin complicaciones."
-                </blockquote>
-                <cite class="testimonial-author">— Sector belleza y bienestar</cite>
-              </div>
-            </div>
-          </article>
-
-
-
-          <!-- Template 6: Artesanías (Índice 8) -->
-          <article class="project-card animate-on-scroll demo-card" data-project="8" data-type="demo" role="listitem"
-            aria-labelledby="demo-artesanias-title">
-            <div class="project-carousel" role="region" aria-label="Galería del template Artesanías">
-              <a href="https://artesaniaweb.vercel.app/" class="carousel-link" target="_blank"
-                rel="noopener noreferrer">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="demos/artesanias/hero.jpg" alt="Vista principal - Template Artesanías"
-                      class="carousel-img" loading="lazy" decoding="async" width="800" height="450">
-                  </div>
-                </div>
-                <span class="carousel-click-overlay" aria-hidden="true">
-                  <svg class="link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                  <span class="link-text">Ver demo →</span>
-                </span>
-              </a>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span class="tag tag-ecommerce">Ecommerce</span>
-                <span class="tag tag-handmade">Handmade</span>
-                <span class="tag tag-demo">Demo</span>
-              </div>
-              <h3 class="project-title" id="demo-artesanias-title">🎨 Template Artesanías & Handmade</h3>
-              <p class="project-desc">
-                Diseño cálido y auténtico para artesanos. Destaca la historia detrás de cada pieza, proceso de
-                creación,
-                envíos y opción de pedidos personalizados por WhatsApp.
-              </p>
-              <div class="project-testimonial">
-                <svg class="testimonial-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                  aria-hidden="true">
-                  <path
-                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote class="testimonial-quote">
-                  "Perfecto para contar la historia de tu marca y conectar emocionalmente con tus clientes."
-                </blockquote>
-                <cite class="testimonial-author">— Artesanos y creadores</cite>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-
-      <!-- Divider motivacional -->
-      <div class="trajectory-divider animate-on-scroll" aria-hidden="true">
-        <div class="divider-content">
-          <span class="divider-icon">💡</span>
-          <p class="divider-text">
-            <strong>De la idea a la realidad:</strong> Cada prototipo es el primer paso.
-            Cada proyecto entregado es una lección que nos impulsa a seguir creciendo.
-          </p>
-        </div>
-      </div>
-
-
-
-      </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- MODAL DE GALERÍA (Genérico: funciona para Proyectos y Templates) -->
-    <!-- ======================================================================= -->
-    <div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true"
-      aria-label="Galería de imágenes del proyecto" hidden>
-
-      <div class="modal-overlay" id="modal-overlay" aria-hidden="true"></div>
-
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <h3 class="modal-title" id="modal-title">Proyecto</h3>
-          <span class="modal-counter" id="modal-counter" aria-live="polite">1 / 3</span>
-          <button class="modal-close" id="modal-close" aria-label="Cerrar galería">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              aria-hidden="true">
-              <use href="#icon-close" />
-            </svg>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuánto tiempo tardan en verse los resultados?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
           </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Los primeros resultados suelen aparecer entre 7 y 14 días. La optimización
+              completa y el escalado rentable se alcanzan entre 30 y 60 días, dependiendo de la industria y el
+              presupuesto.</div>
+          </div>
         </div>
 
-        <div class="modal-image-container">
-          <img src="" alt="" class="modal-image" id="modal-image">
-
-          <button class="modal-nav modal-prev" id="modal-prev" aria-label="Imagen anterior">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              aria-hidden="true">
-              <use href="#icon-chevron-left" />
-            </svg>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuál es la inversión mínima recomendada en pauta?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
           </button>
-          <button class="modal-nav modal-next" id="modal-next" aria-label="Imagen siguiente">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              aria-hidden="true">
-              <use href="#icon-chevron-right" />
-            </svg>
-          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Recomendamos un mínimo de $500 USD mensuales en inversión publicitaria para
+              obtener datos suficientes y resultados medibles. El presupuesto ideal depende de tu industria y objetivos.
+            </div>
+          </div>
         </div>
 
-        <div class="modal-thumbnails" id="modal-thumbnails" role="tablist" aria-label="Miniaturas de imágenes"></div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿La auditoría gratuita tiene algún compromiso?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Ninguno. La auditoría es 100% gratuita y sin compromiso. Analizamos tus
+              campañas actuales (si las tienes) y te entregamos un informe con oportunidades de mejora, aunque no
+              contrates nuestros servicios.</div>
+          </div>
+        </div>
 
-        <p class="modal-description" id="modal-description"></p>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Trabajan con cualquier tipo de industria?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sí. Cada industria tiene su estrategia específica y la adaptamos a tu caso.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Hay contratos de permanencia?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">No. Trabajamos mes a mes. Queremos que te quedes porque ves resultados, no
+              porque firmaste un contrato. Puedes cancelar con 15 días de aviso.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué incluye el reporte mensual?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Incluye métricas clave como ROAS, CTR, CPA, conversiones, alcance, frecuencia
+              y recomendaciones estratégicas para el siguiente mes. En planes Profesional y Premium, los reportes son
+              semanales.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Ustedes crean las creatividades publicitarias?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sí. Según tu plan, incluimos desde 2 hasta creatividades ilimitadas por mes:
+              imágenes, videos y copys optimizados para convertir. También podemos trabajar con material que tú nos
+              proporciones.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cómo miden el éxito de una campaña?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Definimos pautas desde el inicio. Usamos el Pixel de Meta y la API de
+              Conversiones para tracking preciso. Todo se mide, todo se optimiza.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué pasa si mis campañas actuales no funcionan?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Empezamos con una auditoría completa para identificar qué está fallando:
+              segmentación, creatividades, embudo, landing page, etc. Luego reconstruimos la estrategia desde cero con
+              un enfoque basado en datos.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué tipo de chatbots desarrollan?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Desarrollamos chatbots inteligentes para WhatsApp, Facebook Messenger e
+              Instagram. Pueden automatizar respuestas frecuentes, calificar leads, agendar citas y mucho más. Se
+              integran con tu CRM y herramientas de marketing.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Desarrollan sitios web completos o solo landing pages?</span>
+            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Desarrollamos landing pages específicas para campañas publicitarias. Todos optimizados para conversión y
+              velocidad.</div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info animate-on-scroll">
-            <span class="section-tag">Hablemos</span>
-            <h2 class="section-title" id="contacto-title">Contáctanos <span class="text-gradient">Hoy</span></h2>
-            <p class="contact-description">
-              ¿Tienes un proyecto en mente? Cuéntanos tu idea y te ayudaremos
-              a hacerla realidad. Respuesta garantizada en menos de 24 horas.
-            </p>
-
-            <div class="contact-details">
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">📧</div>
-                <div>
-                  <h4>Email</h4>
-                  <a href="mailto:contacto@techsolutions.com">rootclitech@gmail.com</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">📱</div>
-                <div>
-                  <h4>Teléfono</h4>
-                  <a href="tel:+598096854828">+598 96 854 828</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon" aria-hidden="true">📍</div>
-                <div>
-                  <h4>Ubicación</h4>
-                  <span>Paysandú, Uruguay</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-form-wrapper animate-on-scroll">
-            <form class="contact-form" id="contact-form" novalidate aria-label="Formulario de contacto">
-              <div class="form-group">
-                <label for="name" class="form-label">Nombre completo</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required
-                  autocomplete="name">
-                <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required
-                  autocomplete="email">
-                <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="message" class="form-label">Mensaje</label>
-                <textarea id="message" name="message" class="form-input form-textarea"
-                  placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
-                <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-glow btn-full" id="submit-btn">
-                <span class="btn-text">Enviar Mensaje</span>
-                <span class="btn-loader" hidden aria-hidden="true">
-                  <span class="spinner"></span>
-                </span>
-                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" aria-hidden="true">
-                  <use href="#icon-send" />
-                </svg>
-              </button>
-
-              <div class="form-success" id="form-success" hidden role="status" aria-live="polite">
-                <div class="success-icon" aria-hidden="true">✓</div>
-                <h4>¡Mensaje Enviado!</h4>
-                <p>Te responderemos en menos de 24 horas.</p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" id="footer" role="contentinfo">
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col footer-brand">
-          <a href="#hero" class="footer-logo">
-            <span class="logo-icon" aria-hidden="true">⚡</span>
-            <span class="logo-text">Root<span class="logo-highlight">CLI</span></span>
+        <div class="footer-brand">
+          <a href="#inicio" class="nav-logo">
+            <span class="dot"></span>ROOTCLI
           </a>
-          <p class="footer-desc">
-            Soluciones tecnológicas integrales para impulsar tu presencia digital
-            y mantener tu hardware funcionando al máximo.
-          </p>
-          <div class="social-links" role="list" aria-label="Redes sociales">
-            <a href="https://www.facebook.com/people/Rootcli-TECH/61574289395704/" class="social-link"
-              aria-label="Facebook" target="_blank" rel="noopener noreferrer" role="listitem">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="fill: #ffffff;"
-                aria-hidden="true">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.315 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </a>
-            <a href="https://x.com/RootCLI" class="social-link" aria-label="Twitter/X" target="_blank"
-              rel="noopener noreferrer" role="listitem">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/rootclitech/" class="social-link" aria-label="Instagram" target="_blank"
-              rel="noopener noreferrer" role="listitem">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-              </svg>
-            </a>
+          <p>Agencia especializada en Meta Ads, chatbots y desarrollo web. Escalamos negocios con campañas de alto
+            rendimiento y resultados medibles.</p>
+          <div class="footer-socials">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61574289395704" class="footer-social"
+              aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a target="_blank" href="https://www.instagram.com/rootclitech/" class="footer-social"
+              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
           </div>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-heading">Navegación</h4>
-          <ul class="footer-links">
-            <li><a href="#hero">Inicio</a></li>
+          <h4>ENLACES</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#resultados">Resultados</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-heading">Servicios</h4>
-          <ul class="footer-links">
+          <h4>SERVICIOS</h4>
+          <ul>
+            <li><a href="#servicios">Meta Ads</a></li>
+            <li><a href="#servicios">Facebook Ads</a></li>
+            <li><a href="#servicios">Instagram Ads</a></li>
+            <li><a href="#servicios">Chatbots</a></li>
             <li><a href="#servicios">Desarrollo Web</a></li>
-            <li><a href="#servicios">APIs & Backend</a></li>
-            <li><a href="#servicios">Mantenimiento PC</a></li>
-            <li><a href="#servicios">Reparación Consolas</a></li>
-            <li><a href="#contacto">Consultoría</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-heading">Contacto</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:rootclitech@gmail.com">rootclitech@gmail.com</a></li>
-            <li><a href="tel:+59896854828">+598 96 854 828</a></li>
-            <li><span>Paysandú, Uruguay</span></li>
+          <h4>CONTACTO</h4>
+          <ul>
+            <li><a href="https://wa.me/59896854828" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +598
+                96 854 828</a></li>
+
           </ul>
         </div>
       </div>
 
-      <div class="footer-divider" aria-hidden="true"></div>
-
       <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> TechSolutions. Todos los derechos reservados.</p>
-        <p class="footer-credit">Hecho con <span class="heart" aria-hidden="true">❤️</span> y mucho ☕</p>
+        <div>© 2026 ROOTCLI. Todos los derechos reservados.</div>
+        <div>
+          <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · <a
+            href="cookies.html">Cookies</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-      aria-hidden="true">
-      <use href="#icon-chevron-up" />
-    </svg>
-  </button>
+  <!-- ================= WHATSAPP FLOTANTE ================= -->
+  <a href="https://wa.me/59896854828" class="whatsapp-float" target="_blank" rel="noopener"
+    aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-  <!-- Scripts optimizados con defer para no bloquear renderizado -->
-  <script src="script.js" defer></script>
-  <script src="config.js" defer></script>
-
-  <!-- EmailJS con defer y carga asíncrona -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer
-    crossorigin="anonymous"></script>
-
-  <!-- Inicialización de EmailJS después de que el DOM esté listo -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (typeof emailjs !== 'undefined') {
-        emailjs.init({
-          publicKey: 'iue1o-aumZvmMhLaV',
-          blockHeadless: false,
-          limitRate: { throttle: 5000 }
-        });
-      }
-    });
-  </script>
-
-  <!-- Vercel Insights optimizado -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-
-  <!-- Facebook Pixel optimizado (carga diferida) -->
-  <script>
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(function () {
-        var img = new Image();
-        img.height = 1;
-        img.width = 1;
-        img.style.display = 'none';
-        img.src = 'https://www.facebook.com/tr?id=3802612696701770&ev=PageView&noscript=1';
-        document.body.appendChild(img);
-      });
-    }
-  </script>
+  <!-- ================= SCRIPTS CDN ================= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
